@@ -1,0 +1,285 @@
+Received: from BL3PR02MB8913.namprd02.prod.outlook.com (2603:10b6:208:3b4::12)
+ by CY8PR02MB9201.namprd02.prod.outlook.com with HTTPS; Sun, 12 Oct 2025
+ 09:29:21 +0000
+Received: from CY8PR10CA0023.namprd10.prod.outlook.com (2603:10b6:930:4f::19)
+ by BL3PR02MB8913.namprd02.prod.outlook.com (2603:10b6:208:3b4::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9203.10; Sun, 12 Oct
+ 2025 09:29:17 +0000
+Received: from CY4PEPF0000E9D7.namprd05.prod.outlook.com
+ (2603:10b6:930:4f:cafe::ab) by CY8PR10CA0023.outlook.office365.com
+ (2603:10b6:930:4f::19) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9203.12 via Frontend Transport; Sun,
+ 12 Oct 2025 09:29:12 +0000
+Authentication-Results: spf=pass (sender IP is 2a00:1450:4864:20::531)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 2a00:1450:4864:20::531 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2a00:1450:4864:20::531; helo=mail-ed1-x531.google.com; pr=C
+Received: from mail-ed1-x531.google.com (2a00:1450:4864:20::531) by
+ CY4PEPF0000E9D7.mail.protection.outlook.com (2603:10b6:92f::1001:0:5) with
+ Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id
+ 15.20.9228.7 via Frontend Transport; Sun, 12 Oct 2025 09:29:16 +0000
+Received: by mail-ed1-x531.google.com with SMTP id 4fb4d7f45d1cf-634a3327ff7so6896786a12.1
+        for <eccb@erau.edu>; Sun, 12 Oct 2025 02:29:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1760261355; x=1760866155; darn=erau.edu;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=R5LNnwCRxMFeCkmDTrOjLa6no5mM4Cj033+ByKbVmXE=;
+        b=gnuejl7LGocWRQnITg6DmRsInkATsnyBvwYoR0GYbPu+m2F0SMsnXA+Ukd4REKaA9v
+         Ds+nL6GALiAei1HsS+RExjFr50ZnH2EKFRVnb0N+gjFwJbGHPGLF91CfkNfurMxYHMtM
+         5ra5y/KDnpLpibrVuqHkvpaxTs93bIsTTS4o8PM67+L7FVR4GnsbyQEft0CaLP66h1Dx
+         h4Z6IE7wvG2ZlfoBZobm1XN20IiJQ0aL0zteLlGpQ2q0BCPYaPv/du0DK+tkRz6yfqGR
+         bIowQC1i1C86LyIoYtgU/wfvaC/Ia0lGz2XXkK6jv/TWr3P1JRLrvX4YLjt1eeIq3jQ+
+         nCLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1760261355; x=1760866155;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=R5LNnwCRxMFeCkmDTrOjLa6no5mM4Cj033+ByKbVmXE=;
+        b=nq+aUGma18Ltc6stVce4Sb9mK9Wuj4tS6IsgtdBT8BNL0p019o2Qiia8X8EA7o6eQ7
+         SLr/U6zyC1KOy7otU8BhymuXBd7I+m+LYPy0yPHk6A5E0+cA9JbgpFJ9NhxNhhVszci+
+         1byYiVbvsCotJs+Wl1E9+HlrEXxGoV1t84gp6kzvOP860xC6lZ97AHBmXzo286PlTfR6
+         ANLDSZtyeacxLM0KU8XCpBDz7IGjx72V22Rd8p3Bu8W43EE6JpSlttvq1KwN/7PYudNy
+         YgubhPXgnWkljMeuTEloKY47hzJsB7iqaY9kHRFlcBb/vqNoRkWRrclNCo4JvlRTKbcc
+         Xa6g==
+X-Gm-Message-State: AOJu0Yz4SiYZvhlgtBgJ0GXJYdzk+v6e9kMrQdRnNkI7qzBbIpj4qeW7
+	xRxdLA67psVpxETf+FO1tXvvusPtNza/lEwtWgC7z8PrMpi1AEXFJU+U9wzEZ8NIaw7ypDbv+Yj
+	DjeMxrF14/x6RiwVuIplBV2mIM8CJ4HgZckwBF3A=
+X-Gm-Gg: ASbGnct/8Tai9R0La5V5tMhkYkYS0uUxmiXgC0gJUk85CYzQqyo8DxY0LRT3YHQ4TaG
+	VFo5XEMIqfPH2HeCUnFGn8iRjbqNPClwdzceJt5rIOyRJZ5F2VLUsxDCIdRhfu4wIbqC6wB/X6j
+	H7t1IwoGGafFUJQ+efpHM1ZjahxqcpSiGiBp0DtU7Rq09dR+PZ8YXMukNNqdeHCYPUAnqtK3kvl
+	19jiI3t4XH0Px7NcnjnnNYvWxd/Z9xtIItZLKFAMBo=
+X-Google-Smtp-Source: AGHT+IFdX93v5Uq8r+56NNGGLDZMDFix3dw5j0L8qZZIK3+9lGoaXP5ud1JgD0ehHclQ34TgVkTgKriIvP4Fsi22Zgw=
+X-Received: by 2002:a17:907:3f1c:b0:b3e:26ae:7288 with SMTP id
+ a640c23a62f3a-b50aa48e3b6mr1862068466b.8.1760261354483; Sun, 12 Oct 2025
+ 02:29:14 -0700 (PDT)
+From: "Mohamed Al Marzooqi Advocates & Consultancy" <info.mohamedalmarzooqiadvocates@gmail.com>
+Date: Sun, 12 Oct 2025 10:29:03 +0100
+X-Gm-Features: AS18NWBnfJnERQkkGNsSPqH4coG-tpgmVmPXH4n0gToJAmDwpi4VtKXQRiHHp8k
+Message-ID: <CABa_6VmSbgFRQkzaCF_vNFDSM2_Nv9ZkviqsGTuFVKx5G5EiyA@mail.gmail.com>
+Subject: [EXTERNAL] Attention: Camila A. Jaramillo Abarca
+To: eccb@erau.edu
+Content-Type: multipart/alternative; boundary="000000000000bef1e30640f2c899"
+Return-Path: info.mohamedalmarzooqiadvocates@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Oct 2025 09:29:16.6005
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 1ebad20c-5d43-47f0-e2c9-08de0971d06d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 6931c963-07b7-4156-ab0e-35d1f79035b8:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CY4PEPF0000E9D7:EE_|BL3PR02MB8913:EE_|CY8PR02MB9201:EE_
+X-MS-Exchange-Organization-AuthSource: CY4PEPF0000E9D7.namprd05.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 1ebad20c-5d43-47f0-e2c9-08de0971d06d
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|7093399015|8096899003;
+X-Forefront-Antispam-Report: CIP:2a00:1450:4864:20::531;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-ed1-x531.google.com;PTR:mail-ed1-x531.google.com;CAT:NONE;SFS:(13230040)(7093399015)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Oct 2025 09:29:16.5145
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1ebad20c-5d43-47f0-e2c9-08de0971d06d
+X-MS-Exchange-CrossTenant-Id: 6931c963-07b7-4156-ab0e-35d1f79035b8
+X-MS-Exchange-CrossTenant-AuthSource: CY4PEPF0000E9D7.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL3PR02MB8913
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.0856356
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9203.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	dwl:1;ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4712097)(4999163)(920097)(831242)(255002)(410001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UDBwcnp4SUc5VnNOYnJOWnFqMzc5ZWJFMGo3SWFaZGdrQ1loWjNUVHIvVTQ4?=
+ =?utf-8?B?MGhhTWtJK1JsbEFNb3hPTG4xeXZUdHI5Y01EZWhadXAzK3JlRUdpclFGalBW?=
+ =?utf-8?B?aktXeUpRVit4QjNNbmhHYlRwdDNHRmpDSkdtME1BYkNucmhDTjI0amh2WFVu?=
+ =?utf-8?B?L2hhNDRES1NhZVIvSk9jeWd4ZlloZExDVFZ5enBScno1MmF3c0xLQ3pkdGlx?=
+ =?utf-8?B?SytZUHA3MnBnNHlOcTBhYWdrNDVvZDVGd1BKTG15L1dKZngvNnZIN2w1VDN6?=
+ =?utf-8?B?TGoxQkFEQ1V0N3FUZUFQcmsvRHZZTEFTbFpRK0srbTkranRCWVVZL0dwSnJn?=
+ =?utf-8?B?UDdaV0hVbUh2Y2F0K1FjV01KMVJWN0Z3eVNMbU52dldiSFFBbjhxVXBhT0dQ?=
+ =?utf-8?B?ZGswUWJTaHhWUUhoWGoyNXBWM0xhUGJJQzE4MUZXRm9pRTkwck9IRk5CUHR5?=
+ =?utf-8?B?NjNSazZWT203QVk4SnpGZFE2MXZtd3VVY0VMYWl3VlZzVllSVDFNUk9QM2U4?=
+ =?utf-8?B?TTR0ZW15MDFlNTREK1M3d0NLVnlLaFdoS2hoamRrNVVMYW00ZDJSVTcwUWtH?=
+ =?utf-8?B?LzllcU9rbTFQN2x6dHhId2Q1K2ZzYWN0TWM4TVRWTW91VThmWW56SlpiQWFZ?=
+ =?utf-8?B?RHVmR213QndRWnk4cDg3d2JoVDhBWnNyckQ2bGpyMXc1ZWt5Q09MQ3Q2amdh?=
+ =?utf-8?B?cXJTYTl5cTJFcFNzSXFSZEtFeDBmTktBbGpzYmF0VlpVODArWVBUQ095S1E3?=
+ =?utf-8?B?T0drRDc1UndPcUY2Y1dUdis2TjQ5SGVYc1Q0RHRldXR5RDI3MHN6UENpMWpY?=
+ =?utf-8?B?cERZSDd0bEMweGROV0RLUUp6Wk41SGdTZmo3Skk5WGRmdzl3L0JsZ3VDVHFu?=
+ =?utf-8?B?NFRkRWxuSmdDd3l2UzgySmlhRUdXSFVFT3k3UUFDa3dlWTQ0UDV0SjhMa1FZ?=
+ =?utf-8?B?SDRtMHBOd29ncldXVis2R3VRRTExNkNBL2pPaURib29kVjdCR3pEeWdQdEZ2?=
+ =?utf-8?B?NjZZK2NKckxqWklyUDBPRmNiSUd6TUdDajFHeGE1Mzh3ckNnaFVyQ0lzeWkx?=
+ =?utf-8?B?bEFscnRFRFFmR0NTbE9YaSsra3BkUlVHUW9JUjRMdjNwWXdkUFRwN0JaOVJ0?=
+ =?utf-8?B?MldlMnNkMFZmNDBibHVMT21iVXRQemRMNitLLzI3ZWNwalkwb0VzTVdTTnhJ?=
+ =?utf-8?B?aFU2YkY5WFJpTjVPNkxnaGRZNFp4NGhVYUlSUHBKSFRQdVVwQ2VIR3Y2VUxT?=
+ =?utf-8?B?ZTRpeEFYWGd6SUR4R0o4NWgvQUQ3MjJZaUQ5aHNvdEN1eWQzWXh3UzA2Zm5Y?=
+ =?utf-8?B?dWRmZmVQYllZWVltcGpYZnIyZksvM0RzclhHSW5QMG9qMWMwTXhKeE5LbkNa?=
+ =?utf-8?B?dThvUHdqaTFUN0tYZjNFcUN2dHN4NVRBdzJrdVRRS0o5WHpZYXFONkhEbERi?=
+ =?utf-8?B?K0hFUkRiek41YStLaHkwdUdNVjM1N1V4Q1dXR0NQSVNjdENaU2lvWFFlQWx0?=
+ =?utf-8?B?emhBK2c4QUxDV24yNjBISnpnb3lBUDJhbG1tRzgvMTFYcnpGeVE1Yk9EUWpC?=
+ =?utf-8?B?YmZyZWdkMkErRkl2SjlUc1QrWEgxR096bTFpNW55ejNiUURNcldhSHlkY1NQ?=
+ =?utf-8?B?amJ2WitWaFhmdXhaZWIvVDlSVEtTcHlnclVaZHNGZm9YK3gzRTJnR2todmdr?=
+ =?utf-8?B?U0FFM3dKRUttSVhiZDVLTXV4TmMwUHJpOGhGN01RTGowU3YrOFE1d1daUlJk?=
+ =?utf-8?B?YWNVem5lcHZDQzNTN1hPb2hXbWNtMmt5MFhDUzdXaGhNcEp6NmFSMGZTQ25I?=
+ =?utf-8?B?ZDViOTZmQXg5akpLL2d0Q0dybXRjcU1QOW1DZUluOGRuQUpnOW1pdFE5ZDJi?=
+ =?utf-8?B?Mi84YVN2QTlpbjB5U1grRVNyQTdyU1FkREdISjlOVWlNdCtoYjh0Zi9CQlhK?=
+ =?utf-8?B?OHhlQlB3QVZJMXlqd2dld25NaStYSjlLZVJFQWgyalcvSE95WURtUDJDOFF3?=
+ =?utf-8?B?bno4QkkrNmZ6QjBreCtZaWhSYVdkN1dRVFUxK3lpdHRsd3ljYXhSKytqa3hT?=
+ =?utf-8?B?SWNVMGRZUzltVjQwVmtyUHF6U1h6UU4wSjE1N1RBL2NvblpmNTJ0L25SMVhN?=
+ =?utf-8?B?NzdXUnBOWS96cXVCTjhlUGtXSUdqd3dnMGM5TlZESW5YZHViVFlFR3F2R3do?=
+ =?utf-8?B?YVE1ZnY0UUltWkxZZnB4YTY1bGdpbHBCaHBRMzVCeTJIK3dvMFIwbnYzM3hu?=
+ =?utf-8?B?aHdTeTJQTzY4VUhzN2ppd0lQQXA1VnRPM0VLV1dnTUhxMmpiZGJsSjJtMEw5?=
+ =?utf-8?B?ZFB6YTg2SWlKVUtpUFUzaitCYllReGd3VXRIRU1QTlVYY3NTVnhRQlNkS3J4?=
+ =?utf-8?B?bFRyWGxENWtkYW1QOFZpYzBydWFLdFZHcENUK1RyVUdLcWxmZmljeUxiU2Ft?=
+ =?utf-8?B?dE9haE43VHRxSS9raFkyM3IyYkk1Uy9xM0U5ZnJNYUVKSDF1anE2azRmaTVI?=
+ =?utf-8?B?RGpOLzJmSFhFYWNYSHU3WXBmbU10OE5tUkR0Nkt1QStxdUNPU2NJaG96K1Vu?=
+ =?utf-8?B?SFVQRHZndzlrNHAzRXJBMWFhbmdTbDFNTm5HWEJOMzIrTlc4aU55S2xTNmtF?=
+ =?utf-8?B?dHNYZ0V1QVF0Q3pmekZDdElkbFBmQU5PNWVXL29keGc1ZHVqWEYvM2x0VjR6?=
+ =?utf-8?B?S2hzMUlIVWZQQXZBY3dNMThETkRqUjNtVGMzbjd3V2pFRFYvTjVFQm51Tmxh?=
+ =?utf-8?B?MXU3RFlGcHgwV3ozbXdDdUkxYWlHTWo3cnlRRmg0UkJqSVFTSWlEcktsQkMx?=
+ =?utf-8?B?OHZVVDFqN1E0cVZZcFg0QXV1N3BGcXFtc1pLd2N4TmMxRW1jVzZaaXErcVN1?=
+ =?utf-8?B?MjZPenBzWGtrZ3ZRVnZjdHRJejNOcjZxMllhdGpXNmQ4Nm9xcDUrVnluejBU?=
+ =?utf-8?B?ZlYraFBYZG0zU25BYTE2WVZMOFA0QWdjYU5LSmxBVmwrOENaaFpmTUNycVBX?=
+ =?utf-8?B?NXJBaThUSy8wRm9OU2puSjljZVZyQmJ0N0ZudEZ4VmQwam1KWG1lS1A4R0Fl?=
+ =?utf-8?B?SUlYVjN6ZTBTbTYrVjZTYTBwQlFheG1OdVJPZlZHVUpoQTFCNytlOHBTeFFr?=
+ =?utf-8?B?ZGRrQWNkaXpUQjVXVTJ1WTNmY3JvUFJLTklqZllyRS9pQmJOYTZvUHk4QVNE?=
+ =?utf-8?B?RDkxQVdQWkFpbkNEZmgwb0kyS2tWY00vVko2dEdJcXhFZ1R0T2dURlZnRXVK?=
+ =?utf-8?B?cERvVE5lOFRTdW1wUTg1VmZIQnppd3k2WHZZdG9yaVRUVG9YcG9mVmIxZzd6?=
+ =?utf-8?B?VThlN3czUzhFNi8yR3RIVkFVeGNIS0pOUjMwSjNwWkYycU81VjB3blZJcEVC?=
+ =?utf-8?B?RHdyYU1tbGFWMVlpaXFoVnFUOVF6dzNiL1VhZlZWcjAxRXhtOWFxb0crSVpH?=
+ =?utf-8?B?VEJDZkFxZ0dXa3FGc2VxSHA1TTJZZFNkTm43L3RYSnk4MXJjdXpza25WTlo1?=
+ =?utf-8?B?cVNkUHIveS8rWmtQQmNYcGRwN1JCWTdNMnBlSFVqWkhJbDg3Wkl2MUFrRklH?=
+ =?utf-8?B?QmlUZFNlbTZFRnUxTFdqeWt6czNOK2pOYVVabEVIeTdKano4RDBNL0pyU3Z5?=
+ =?utf-8?B?OXl4QWNNRTE0QnVpM3llQkMvK29VQVVNd1FIZnRuc29sSmNxRGJnS3JRQzQw?=
+ =?utf-8?B?dHZDN0JTa29FWnVIckVCRW4yR1lpbXdERzVGeG9KeXhhVldlY2pJdjNSNld0?=
+ =?utf-8?B?OVlGMW45Q1FtOHNvbkEvSXYwWm1uUHMxK3B4NGN4WGloVFl4ZnpxT0hXQnpL?=
+ =?utf-8?B?eDdQYjh2d0dNeWFjWjNjckpaZjBPY0tDT3Rnb29yaEdScER6Myt4VS95WUUy?=
+ =?utf-8?B?QUJpUk5HRFlwcjR2VFFHcmQvdEpkTWRJMzZYODI2Z29QVkwvMWs1SmlqRGFw?=
+ =?utf-8?B?emlLcEdvNFhTcmVmd2QwVEpaV084Zz09?=
+MIME-Version: 1.0
+
+--000000000000bef1e30640f2c899
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+External Sender: Use caution with links, attachments, or when sharing infor=
+mation.
+
+
+
+--
+Attention: Camila A. Jaramillo Abarca
+
+I got your contact in the course of my inquiry to locate relations of my de=
+ceased client who died with his family in a car crash on 5th August 2024. P=
+lease I need your assistance to repatriate the unclaimed deposit which my D=
+eceased Client left behind in a Finance Company. The finance company in pos=
+session of the deposit that contains this fund has been asking me to provid=
+e the next of kin.
+
+Since his demise they are threatening to confiscate the deposit as "Unclaim=
+ed Deposit". Rather than leaving the fund confiscated, I decided to trace h=
+is last name over the Internet, to locate any member of his family hence I =
+contacted you. Based on the fact that you share the same last name with my =
+deceased client I seek your consent and assistance to nominate you as my de=
+ceased client's relation under legal process and risk free to repatriate th=
+e fund as I have the jurisdiction as the deceased personal attorney to test=
+ify the deceased relationship with you.
+
+Also I have the documents to complete the legal procedures. What I require =
+is your willingness to assist me and to treat the transaction as a personal=
+ confidential matter until the conclusion that I will be entitled to 3% com=
+mission as gratification to my services to you. Kindly reply to me for furt=
+her information and commencement of the transaction.
+
+Sincerely,
+Mohamed Al Marzooqi
+Mohamed Al Marzooqi Advocates & Consultancy
+E-mail: info.mohamedalmarzooqiadvocates@gmail.com<mailto:info.mohamedalmarz=
+ooqiadvocates@gmail.com>
+
+--000000000000bef1e30640f2c899
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"min-width: 100%;background-color:#FFEB9C;border-left:10px solid #87330=
+1;font-size:14px;line-height:1.5;font-family:Arial,sans-serif;color:#333333=
+;text-align:left;" role=3D"presentation">
+<tbody>
+<tr>
+<td style=3D"padding:5px 10px;"><span style=3D"color:#873301;"><b>External =
+Sender:</b></span> Use caution with links, attachments, or when sharing inf=
+ormation.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div>
+<div dir=3D"ltr">
+<div><br clear=3D"all">
+</div>
+<div><br>
+</div>
+<span class=3D"gmail_signature_prefix">-- </span><br>
+<div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signatur=
+e">
+<div dir=3D"ltr">
+<div style=3D"color:rgb(34,34,34)">Attention:&nbsp;<span style=3D"color:rgb=
+(0,0,0);font-family:Lato,sans-serif;font-size:18px">Camila A. Jaramillo Aba=
+rca</span></div>
+<div style=3D"color:rgb(34,34,34)"><br>
+</div>
+<div style=3D"color:rgb(34,34,34)">I got your contact in the course of my i=
+nquiry to locate relations of my deceased client who died with his family i=
+n a car crash on 5th August 2024. Please I need your assistance to repatria=
+te the unclaimed deposit which my
+ Deceased Client left behind in a Finance Company. The finance company in p=
+ossession of the deposit that contains this fund has been asking me to prov=
+ide the next of kin.</div>
+<div style=3D"color:rgb(34,34,34)"><br>
+</div>
+<div style=3D"color:rgb(34,34,34)">Since his demise they are threatening to=
+ confiscate the deposit as &quot;Unclaimed Deposit&quot;. Rather than leavi=
+ng the fund confiscated, I decided to trace his last name over the Internet=
+, to locate any member of his family hence I
+ contacted you. Based on the fact that you share the same last name with my=
+ deceased client I seek your consent and assistance to nominate you as my d=
+eceased client's relation under legal process and risk free to repatriate t=
+he fund as I have the jurisdiction
+ as the deceased personal attorney to testify the deceased relationship wit=
+h you.</div>
+<div style=3D"color:rgb(34,34,34)"><br>
+</div>
+<div style=3D"color:rgb(34,34,34)">Also I have the documents to complete th=
+e legal procedures. What I require is your willingness to assist me and to =
+treat the transaction as a personal confidential matter until the conclusio=
+n that I will be entitled to 3% commission
+ as gratification to my services to you. Kindly reply to me for further inf=
+ormation and commencement of the transaction.</div>
+<div style=3D"color:rgb(34,34,34)"><br>
+</div>
+<div style=3D"color:rgb(34,34,34)">Sincerely,</div>
+<div style=3D"color:rgb(34,34,34)">Mohamed Al Marzooqi</div>
+<div style=3D"color:rgb(34,34,34)">Mohamed Al Marzooqi Advocates &amp; Cons=
+ultancy</div>
+<div style=3D"color:rgb(34,34,34)">E-mail:&nbsp;<a href=3D"mailto:info.moha=
+medalmarzooqiadvocates@gmail.com" style=3D"color:rgb(17,85,204)" target=3D"=
+_blank">info.mohamedalmarzooqiadvocates@gmail.com</a></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--000000000000bef1e30640f2c899--

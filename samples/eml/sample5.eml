@@ -1,0 +1,400 @@
+Received: from BL3PR02MB8162.namprd02.prod.outlook.com
+ (2603:10b6:208:35d::15) by BYAPR02MB5110.namprd02.prod.outlook.com with
+ HTTPS; Thu, 9 Oct 2025 20:24:27 +0000
+Received: from BN9PR03CA0399.namprd03.prod.outlook.com
+ (2603:10b6:408:111::14) by BL3PR02MB8162.namprd02.prod.outlook.com
+ (2603:10b6:208:35d::15) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9203.10; Thu, 9 Oct
+ 2025 20:24:23 +0000
+Received: from BN3PEPF0000B073.namprd04.prod.outlook.com
+ (2603:10b6:408:111:cafe::d3) by BN9PR03CA0399.outlook.office365.com
+ (2603:10b6:408:111::14) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9203.10 via Frontend Transport;
+ Thu, 9 Oct 2025 20:24:23 +0000
+Received: from mail-pl1-f228.google.com (209.85.214.228) by
+ BN3PEPF0000B073.mail.protection.outlook.com (10.167.243.118) with
+ Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id
+ 15.20.9203.9 via Frontend Transport; Thu, 9 Oct 2025 20:24:23 +0000
+Received: by mail-pl1-f228.google.com with SMTP id
+ d9443c01a7336-267f0fe72a1so10196575ad.2        for <riveyl@erau.edu>; Thu,
+ 09 Oct 2025 13:24:23 -0700 (PDT)
+Received: from [10.7.18.68] ([149.40.50.40])        by smtp-relay.gmail.com
+ with ESMTPS id d9443c01a7336-29034f5e7d7sm2985365ad.63.2025.10.09.13.24.22
+        for <riveyl@erau.edu>        (version=TLS1_3
+ cipher=TLS_AES_256_GCM_SHA384 bits=256/256);        Thu, 09 Oct 2025
+ 13:24:22 -0700 (PDT)
+Authentication-Results: spf=none (sender IP is 209.85.214.228)
+ smtp.mailfrom=zicotech.com.gt; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=none
+ header.from=kingsiii.com;compauth=softpass reason=202
+Received-Spf: None (protection.outlook.com: zicotech.com.gt does not
+ designate permitted sender hosts)
+X-Google-Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1760041462; x=1760646262;
+        h=importance:message-id:date:subject:to:from:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=VlLShlmw89fJ0gymT4nkJ0gk46eg1a/DVRd6Iytn814=;
+        b=IOUiT2NE85WPavfcPZY/Uz0Jsohzi5wt+8o+ybPZo5zfTujgDIJFCofCV/XcQjNIer
+         yswOTrBSIa36wtmWqG1zn+ZJNuivki24JG0+a3vwRGFKXua8y81r+qKeHVQaEh3AI/Ei
+         Y0RiNNQEoK3YD8uTtffJ04YaMXHGBn1TRfYs/qt51X+bGaESnaoxhe1rMuEoYbBOWxnV
+         hV9QuRqPTqzJQJ9+C/PZN4Ac85YwjL2o1nxs0yWfKBpxz0lfZ9OzTAYhODWj5hThP1ei
+         HV0PXBj9dbGN9+O5WYu9rtNyXsRMNGdtR9OFFrHHepYIOW0TPbp30x/oGD34eJKlfmVX
+         zohg==
+X-Gm-Message-State:
+ AOJu0YwqJkdKh5srdsI1KEmuFRwEZzcU+WSLeXEblVHbX1rnkYY0+5LJ
+	cLh4QW5pwE+ig6IEIV6kWSc5mR0UJ+NtjhCAdReUmWG/OdQpV5rS+bNhVXwwDhwSeMUIGbswCze
+	JtuZWiQ/QdGWWVafMro1UX5ywYmgn4INQV1beHoAHUQeF
+X-Gm-Gg:
+ ASbGnctTwgl4wzJlJZiP5BPGLeK6h3Odc5QuTgZap1tj19CAnC4V7vaiN6JaJhk5Due
+	5DSlZTVyym4Ni/OHOv+aeS7SDtucSLko+HJVD8YJPyri3WPFkL1XMOuDnuOUmVT00CHnAHjY2ZO
+	2lIfTGFXV1vDuOHxKCkpInL50jgy7h8qivwFchbbJ0OadrI9By1qQl7NhtpZNwDZJfxz/yPSEd4
+	UU3WD375qeo8M1nmnjYommn8KkMHeMGNg0coKm2Vu5dWrUYA16wD8pnQGdc4/eWv+EUYb1zuPWH
+	XeCTvmq2NsjrMB2r0+zp3fzlnjv3IjVP/iuJ16BZUlc448w0hEa+LA==
+X-Google-Smtp-Source:
+ AGHT+IHd03iF6cbO7L+EkYTrn5WkI0cGT8f9Jr5aZc5e69yQwn081556Utna7nWKVrQkFf0fKChmdrRHRqjX
+X-Received: by 2002:a17:903:247:b0:266:3098:666 with SMTP id
+ d9443c01a7336-290273449c5mr98534025ad.32.1760041462573;        Thu, 09 Oct
+ 2025 13:24:22 -0700 (PDT)
+Return-Path: postmaster@zicotech.com.gt
+X-Relaying-Domain: zahlene-microsoftonline.com
+Content-Type: multipart/mixed;
+ boundary="----sinikael-?=_1-17600458972230.18995298025928475"
+MIME-Version: 1.0
+From: service@kingsiii.com
+To: Lisa Rivey <RIVEYL@erau.edu>
+Subject: =?UTF-8?B?b25oODI2ODIwNDlGVzogKENvbXBsZXRlIHdpdGggZVNpZ24pUGxl?=
+ =?UTF-8?B?YXNlIERvY3VtZW50IHNpZ25lZCBSZXF1ZXN0IGZvciBSZXZpPSBT?=
+ =?UTF-8?B?TUswOTY3NjIwMzQyMzA5RE9D?=
+Date: Thu, 9 Oct 2025 20:24:08 +0000
+Message-Id: <176004144860.8988.1635773166044531543@kingsiii.com>
+X-Accept-Language: en-us, en
+X-Priority: 1 (Highest)
+X-Msmail-Priority: High
+Importance: High
+X-Ms-Exchange-Organization-Expirationstarttime: 09 Oct 2025 20:24:23.6416
+ (UTC)
+X-Ms-Exchange-Organization-Expirationstarttimereason: OriginalSubmit
+X-Ms-Exchange-Organization-Expirationinterval: 1:00:00:00.0000000
+X-Ms-Exchange-Organization-Expirationintervalreason: OriginalSubmit
+X-Ms-Exchange-Organization-Network-Message-Id:
+ 88325d36-8411-49ff-1f98-08de0771d603
+X-Eopattributedmessage: 0
+X-Eoptenantattributedmessage: 6931c963-07b7-4156-ab0e-35d1f79035b8:0
+X-Ms-Exchange-Organization-Messagedirectionality: Incoming
+X-Ms-Publictraffictype: Email
+X-Ms-Traffictypediagnostic:
+ BN3PEPF0000B073:EE_|BL3PR02MB8162:EE_|BYAPR02MB5110:EE_
+X-Ms-Exchange-Organization-Authsource:
+ BN3PEPF0000B073.namprd04.prod.outlook.com
+X-Ms-Exchange-Organization-Authas: Anonymous
+X-Ms-Office365-Filtering-Correlation-Id:
+ 88325d36-8411-49ff-1f98-08de0771d603
+X-Ms-Exchange-Atpmessageproperties: SA|SL
+X-Ms-Exchange-Organization-Scl: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|240412061799012|231020011799012|12012899012|43022699015|8096899003|7053199007|20103199012|43540500003;
+X-Forefront-Antispam-Report:
+ CIP:209.85.214.228;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-pl1-f228.google.com;PTR:mail-pl1-f228.google.com;CAT:NONE;SFS:(13230040)(240412061799012)(231020011799012)(12012899012)(43022699015)(8096899003)(7053199007)(20103199012)(43540500003);DIR:INB;
+X-Ms-Exchange-Crosstenant-Originalarrivaltime: 09 Oct 2025 20:24:23.6386
+ (UTC)
+X-Ms-Exchange-Crosstenant-Network-Message-Id:
+ 88325d36-8411-49ff-1f98-08de0771d603
+X-Ms-Exchange-Crosstenant-Id: 6931c963-07b7-4156-ab0e-35d1f79035b8
+X-Ms-Exchange-Crosstenant-Authsource:
+ BN3PEPF0000B073.namprd04.prod.outlook.com
+X-Ms-Exchange-Crosstenant-Authas: Anonymous
+X-Ms-Exchange-Crosstenant-Fromentityheader: Internet
+X-Ms-Exchange-Transport-Crosstenantheadersstamped: BL3PR02MB8162
+X-Ms-Exchange-Transport-Endtoendlatency: 00:00:03.9876518
+X-Ms-Exchange-Processed-By-Bccfoldering: 15.20.9203.007
+X-Ms-Exchange-Externalinoutlookresult: NotEnabled
+X-Microsoft-Antispam-Mailbox-Delivery:
+ ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4712097)(4999163)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+ 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
+Content-Transfer-Encoding: 7bit
+
+------sinikael-?=_1-17600458972230.18995298025928475
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"><meta name=3D"Generator" content=3D"Microsoft Word 15 =
+(filtered medium)"><style>
+<!--
+@font-face
+	{font-family:"Cambria Math"}
+@font-face
+	{font-family:Calibri}
+@font-face
+	{font-family:Aptos}
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline}
+span.gmailsignatureprefix
+	{}
+span.EmailStyle21
+	{font-family:"Aptos",sans-serif;
+	color:windowtext}
+.MsoChpDefault
+	{font-size:10.0pt}
+@page WordSection1
+	{margin:1.0in 1.0in 1.0in 1.0in}
+div.WordSection1
+	{}
+ol
+	{margin-bottom:0in}
+ul
+	{margin-bottom:0in}
+-->
+</style></head><body><table cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>=
+<td style=3D"background:rgb(247,247,247); width:700px; padding:20px; =
+margin:10px"><p><font size=3D"6">DocuSign</font> </p><div align=3D"center" =
+style=3D"background:rgb(30,76,161); padding:20px; color:#EFEFEF"><br><font =
+size=3D"4">Your document is ready to be reviewed and sign</font> =
+<p>&nbsp;</p><a href=3D"https://docs.google.com/presentation/d/1hshqmlJMVOw=
+Nh4Q1JrIQfhRLpuLrA1gpMGs-BGhOc80/preview" style=3D"font-size:14px; =
+font-weight:bold; text-decoration:none; padding:12px 24px; =
+display:inline-block; color:#000000; background-color:#fdb913; =
+border-radius:4px">REVIEW DOCUMENT </a></div></td></tr></tbody></table><div=
+ style=3D"font-family:Ubuntu,Helvetica,Arial,sans-serif; font-size:13px; =
+line-height:1.5; text-align:left; color:#000000"><p =
+style=3D"font-size:11px; font-family:Ubuntu,Helvetica,Arial"><span =
+style=3D"font-family:Helvetica,sans-serif; font-size:12px">Please review =
+and sign. Document can only be viewed by <span style=3D"background-color:ye=
+llow">riveyl@erau.edu</span> <br><br>Thank you for choosing DocuSign. =
+</p><p>&nbsp;</p></div><p style=3D"font-size:10px">&nbsp;<br>Confidential =
+information intended only for the use of the individual or entity named =
+above. If you have received this as error, please notify the sender =
+immediately and delete from your email. Any unauthorized disclosure, =
+copying, distribution, or use of the information contained in this fax is =
+strictly prohibited. </p><div></div><div></div><div></div><div></div><div><=
+/div><div></div><div class=3D"g4Y3U"></div><div></div><p>&nbsp;<br></p><p>&=
+nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;</p><p>&nbsp;</p><p=
+>&nbsp;</p>&nbsp;<br><p></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br>=
+</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>&nbsp;<br><p></p><p>&nbsp;<br></=
+p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&n=
+bsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbs=
+p;<br></p><p>&nbsp;<br></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>&nbsp;<br=
+><p></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br></p=
+><p>&nbsp;<br></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>&nbsp;<br><p></p><=
+p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp;<br></p><p>&nbsp=
+;<br></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><meta name=3D"Generator" =
+content=3D"Microsoft Word 15 (filtered medium)"><style>
+<!--
+@font-face
+	{font-family:"Cambria Math"}
+@font-face
+	{font-family:Calibri}
+@font-face
+	{font-family:"Segoe UI"}
+@font-face
+	{font-family:Aptos}
+@font-face
+	{font-family:remialcxesans}
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline}
+span.EmailStyle20
+	{font-family:"Calibri",sans-serif;
+	color:windowtext}
+.MsoChpDefault
+	{font-size:10.0pt}
+@page WordSection1
+	{margin:1.0in 1.0in 1.0in 1.0in}
+div.WordSection1
+	{}
+-->
+</style><div class=3D"WordSection1"><p class=3D"MsoNormal">Dear All,</p><p =
+class=3D"MsoNormal">&nbsp;</p><p class=3D"MsoNormal">I just wanted to thank=
+ all of you for your attendance at Monday\u2019s Round Table.&nbsp; I hope =
+that you found it informative. I particularly want to thank Dr. White for =
+leading an excellent discussion.&nbsp; Have a wonderful and Happy =
+Thanksgiving!</p><p class=3D"MsoNormal">&nbsp;</p><p =
+class=3D"MsoNormal">Meredith</p><p class=3D"MsoNormal">&nbsp;</p><p =
+class=3D"MsoNormal">&nbsp;</p><div><div style=3D"border:none; =
+border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0in 0in 0in"><p =
+class=3D"MsoNormal"><b>From:</b> Stephanie Zitani &lt;szitani@sunrise-detox=
+.com&gt; <br><b>Sent:</b> Monday, November 20, 2023 8:52 AM<br><b>To:</b> =
+Castro, Meredith [JANUS] &lt;MCastr80@ITS.JNJ.com&gt;; Robert White =
+&lt;robwhite89@gmail.com&gt;<br><b>Cc:</b> Kristen Overton =
+&lt;Koverton@thecounselingcenter.com&gt;; Jonathan Blauvelt =
+&lt;JBlauvelt@sunrise-detox.com&gt;; Alicia Jennings =
+&lt;Ajennings@thecounselingcenter.com&gt;; Robert White =
+&lt;RWhite@sunrise-detox.com&gt;; Leeann Still &lt;LStill@sunrise-detox.=
+com&gt;; Natasha Osei &lt;NOsei@thecounselingcenter.com&gt;; McGovern, =
+Dillon [JANUS NON-J&amp;J] &lt;DMcGove6@ITS.JNJ.com&gt;; Warren Connelly =
+&lt;Wc@Praesumhealthcare.com&gt;; Ikenna Usonwu &lt;IUsonwu@thecounselingce=
+nter.com&gt;; Alexa Eisenhauer &lt;AEisenhauer@sunrise-detox.=
+com&gt;<br><b>Subject:</b> Re: [EXTERNAL] RE: Round Table with Robert White=
+, DNP: Management Strategies of Treatment-Resistant =
+Depression</p></div></div><p class=3D"MsoNormal">&nbsp;</p><div><p =
+class=3D"MsoNormal"><span style=3D"font-family:&quot;Aptos&quot;,=
+sans-serif; color:black">&nbsp;Hello,</span></p></div><div><p =
+class=3D"MsoNormal"><span style=3D"font-family:&quot;Aptos&quot;,=
+sans-serif; color:black">&nbsp;</span></p></div><div><p =
+class=3D"MsoNormal"><span style=3D"font-family:&quot;Aptos&quot;,=
+sans-serif; color:black">&nbsp; Alexa Eisenhauser , Ikenna</span><span =
+style=3D"font-size:8.0pt; font-family:&quot;Aptos&quot;,sans-serif; =
+color:black"> </span><span style=3D"font-size:8.0pt; =
+font-family:&quot;Segoe UI&quot;,sans-serif; color:#424242; =
+background:white">usonwu and Warren, Will be joining us today .=
+</span></p></div><div><p class=3D"MsoNormal"><span style=3D"font-family:&qu=
+ot;Aptos&quot;,sans-serif; color:black">&nbsp;</span></p></div><div =
+class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><hr =
+size=3D"2" width=3D"98%" align=3D"center"></div><div =
+id=3D"divRplyFwdMsg"><div><table class=3D"MsoNormalTable" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.=
+0%"><tbody><tr><td valign=3D"top" style=3D"padding:0in 0in 0in 0in"><table =
+class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tbody><tr><td valign=3D"top" style=3D"padding:11.25pt =
+0in 0in 0in"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tbody><tr><td style=3D"padding:0in 0in 3.75pt 3.=
+0pt"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><tbody><tr><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><b><span style=3D"color:#606060">Stephanie&nbsp;Zitani<=
+/span></b><b><span style=3D"font-size:1.0pt; font-family:&quot;remialcxesan=
+s&quot;,serif; color:white">\u200b</span></b><b><span =
+style=3D"color:#606060"></span></b></p></td></tr><tr><td valign=3D"top" =
+style=3D"padding:0in 0in 0in 0in"><table class=3D"MsoNormalTable" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><b><span style=3D"color:gray">Executive&nbsp;Director</=
+span></b></p></td><td valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><b><span style=3D"color:gray">,&nbsp;</span></b></p></t=
+d><td valign=3D"top" style=3D"padding:0in 0in 0in 0in"></td></tr></tbody></=
+table></td></tr><tr><td valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p=
+ class=3D"MsoNormal"><span style=3D"color:#2F332F">t:</span><span =
+style=3D"color:gray">&nbsp;<a href=3D"tel:732-797-2505" =
+target=3D"_blank"><span style=3D"color:gray; text-decoration:none">732-797-=
+2505</span></a></span></p></td></tr><tr><td valign=3D"top" =
+style=3D"padding:0in 0in 0in 0in"><p class=3D"MsoNormal"><span =
+style=3D"color:#2F332F">f:</span><span style=3D"color:gray">&nbsp;<a =
+href=3D"tel:" target=3D"_blank"><span style=3D"color:gray; =
+text-decoration:none">732-797-2506</span></a></span></p></td></tr><tr><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><span style=3D"color:#2F332F">e:</span><span =
+style=3D"color:gray">&nbsp;<a href=3D"mailto:szitani@sunrise-detox.com" =
+target=3D"_blank"><span style=3D"color:gray; text-decoration:none">szitani@=
+sunrise-detox.com</span></a></span></p></td></tr><tr><td valign=3D"top" =
+style=3D"padding:0in 0in 0in 0in"><table class=3D"MsoNormalTable" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><span style=3D"color:#2F332F">a:&nbsp;</span></p></td><=
+td valign=3D"top" style=3D"padding:0in 0in 0in 0in"><table =
+class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tbody><tr><td valign=3D"top" style=3D"padding:0in 0in =
+0in 0in"><p class=3D"MsoNormal"><span style=3D"color:gray">16&nbsp;Whitesvi=
+lle&nbsp;Rd&nbsp;St.&nbsp;A</span></p></td></tr><tr><td valign=3D"top" =
+style=3D"padding:0in 0in 0in 0in"><table class=3D"MsoNormalTable" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><span style=3D"color:gray">Toms&nbsp;River</span></p></=
+td><td valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><span style=3D"color:gray">,&nbsp;</span></p></td><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><span style=3D"color:gray">NJ</span></p></td><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><span style=3D"color:gray">,</span></p></td><td =
+valign=3D"top" style=3D"padding:0in 0in 0in 0in"><p =
+class=3D"MsoNormal"><span style=3D"color:gray">&nbsp;08753</span></p></td><=
+/tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></t=
+d></tr><tr><td valign=3D"top" style=3D"padding:0in 0in 0in 0in"><table =
+class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tbody><tr><td valign=3D"top" style=3D"padding:5.25pt 0in=
+ 0in 0in"><p class=3D"MsoNormal"><span style=3D"color:gray">With 9 =
+award-winning residential detox centers, we provide the safest, most =
+comfortable medical detox available near you.&nbsp;</span></p></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table></td></tr>=
+</tbody></table></td></tr><tr><td valign=3D"top" style=3D"padding:0in 0in =
+0in 0in"><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><tbody><tr><td =
+valign=3D"top" style=3D"padding:18.75pt 0in 0in 0in"><table =
+class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+width=3D"100%" style=3D"width:100.0%"><tbody><tr><td style=3D"padding:0in =
+0in 0in 0in"><p class=3D"MsoNormal" style=3D"text-align:justify"><b><span =
+style=3D"font-size:8.5pt; color:#000001; background:white">CONFIDENTIALITY =
+NOTICE:</span></b><span style=3D"font-size:8.5pt; color:#000001; =
+background:white">&nbsp;The information contained in this email, including =
+any attachment(s), is confidential information that may be privileged and =
+exempt from disclosure under applicable law, and is intended only for the =
+exclusive use by the person(s) mentioned above as recipient(s). If you are =
+not the intended recipient, you are hereby notified that any disclosure, =
+copying, distribution, or use of the information contained herein is =
+strictly prohibited and may be unlawful. If you received this transmission =
+in error, please immediately contact the sender and destroy the material in=
+ its entirety, whether in electronic or hard copy format.</span><span =
+style=3D"color:#000001; background:white"><br></span><span =
+style=3D"font-size:8.5pt; color:#000001; background:white">\u200b</span><sp=
+an style=3D"color:#000001; background:white"><br></span><span =
+style=3D"font-size:7.5pt; color:#000001; background:white">\u200b</span><b>=
+<span style=3D"font-size:9.0pt; color:#000001">=EF=BF=BD</span></b><span =
+style=3D"font-size:7.5pt; color:#000001">&nbsp;2023 Sunrise Detox&nbsp;Toms=
+ River, LLC.&nbsp;16 Whitesville Rd St. A,&nbsp;NJ,&nbsp;08753.</span><span=
+ style=3D"color:#000001"></span></p></td></tr></tbody></table></td></tr></t=
+body></table></td></tr></tbody></table></div><p class=3D"MsoNormal"><b><spa=
+n style=3D"color:black">From:</span></b><span style=3D"color:black">&nbsp;C=
+astro, Meredith [JANUS] &lt;<a href=3D"mailto:MCastr80@ITS.JNJ.=
+com">MCastr80@ITS.JNJ.com</a>&gt;<br><b>Sent:</b>&nbsp;Monday, November 20,=
+ 2023 8:49 AM<br><b>To:</b>&nbsp;Robert White &lt;<a =
+href=3D"mailto:robwhite89@gmail.com">robwhite89@gmail.=
+com</a>&gt;<br><b>Cc:</b>&nbsp;Kristen Overton &lt;<a =
+href=3D"mailto:Koverton@thecounselingcenter.com">Koverton@thecounselingcent=
+er.com</a>&gt;; Jonathan Blauvelt &lt;<a href=3D"mailto:JBlauvelt@sunrise-d=
+etox.com">JBlauvelt@sunrise-detox.com</a>&gt;; Alicia Jennings &lt;<a =
+href=3D"mailto:Ajennings@thecounselingcenter.com">Ajennings@thecounselingce=
+nter.com</a>&gt;; Robert White &lt;<a href=3D"mailto:RWhite@sunrise-detox.=
+com">RWhite@sunrise-detox.com</a>&gt;; Leeann Still &lt;<a =
+href=3D"mailto:LStill@sunrise-detox.com">LStill@sunrise-detox.com</a>&gt;; =
+Stephanie Zitani &lt;<a href=3D"mailto:szitani@sunrise-detox.=
+com">szitani@sunrise-detox.com</a>&gt;; Natasha Osei &lt;<a =
+href=3D"mailto:NOsei@thecounselingcenter.com">NOsei@thecounselingcenter.=
+com</a>&gt;; McGovern, Dillon [JANUS NON-J&amp;J] &lt;<a =
+href=3D"mailto:DMcGove6@ITS.JNJ.com">DMcGove6@ITS.JNJ.=
+com</a>&gt;<br><b>Subject:</b>&nbsp;[EXTERNAL] RE: Round Table with Robert =
+White, DNP: Management Strategies of Treatment-Resistant Depression</span> =
+</p><div><p class=3D"MsoNormal">&nbsp;</p></div></div><p>Dear All,=
+</p><p>&nbsp;</p><p>We are looking forward to our Medical Round Table =
+Dinner this evening at Caf=EF=BF=BD Italia in Toms River, NJ at 5:30.&nbsp;=
+ Please call me or email me if there are any changes in your attendee =
+status.&nbsp; Thank you!</p><p>&nbsp;</p><p>Meredith</p><p>&nbsp;</p><p>Mer=
+edith Castro, PharmD, MBA, CCP</p><p>Sr. Medical Science Liaison, =
+NJ/NYC</p><p>Neuroscience Medical Affairs</p><p>Janssen Scientific Affairs,=
+ LLC</p><p>Phone: 610-554-5503</p><p><a href=3D"mailto:Mcastr80@its.jnj.=
+com">Mcastr80@its.jnj.com</a></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>=
+-----Original Appointment-----<br><b>From:</b>&nbsp;Castro, Meredith =
+[JANUS]<br><b>Sent:</b>&nbsp;Monday, November 6, 2023 3:38 =
+PM<br><b>To:</b>&nbsp;Castro, Meredith [JANUS]; Robert =
+White<br><b>Cc:</b>&nbsp;Kristen Overton; Jonathan Blauvelt; Alicia =
+Jennings; Robert White; Dawneisha Spratley; Leeann Still; Stephanie Zitani;=
+ Natasha Osei; Alexa Eisenhauer; McGovern, Dillon [JANUS =
+NON-J&amp;J]<br><b>Subject:</b>&nbsp;Round Table with Robert White, DNP: =
+Management Strategies of Treatment-Resistant Depression<br><b>When:</b>&nbs=
+p;Monday, November 20, 2023 5:30 PM-8:00 PM (UTC-05:00) Eastern Time (US =
+&amp; Canada).<br><b>Where:</b>&nbsp;Caffe Italia 2414 NJ-37 Toms River, =
+NJ</p><p>&nbsp;</p><p>Dear All,</p><p>&nbsp;</p><p>We are excited to host a=
+ Round Table Discussion on Management Strategies of Treatment -Resistant =
+Depression.&nbsp; This will be a focused, interactive discussion =
+facilitated by Robert White, DNP, ANP, PMH-N, FNP-BC and intended for =
+clinicians practicing in psychiatry settings. As this intended to be a more=
+ intimate group, space is limited so please respond directly (via =
+acceptance or direct email) if you are able to attend.=
+&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;</p><p>Dinner will start at 5:30 pm.=
+&nbsp; Please contact me or Dr. White directly with any questions.=
+&nbsp;</p><p>&nbsp;</p><p>Thank you!</p><p>Meredith Castro, PharmD, MBA, =
+CCP</p><p>Sr. Medical Science Liaison, NJ/NYC</p><p>Neuroscience Medical =
+Affairs</p><p>Janssen Scientific Affairs, LLC</p><p>Phone: =
+610-554-5503</p><p><a href=3D"mailto:Mcastr80@its.jnj.com">Mcastr80@its.jnj=
+.com</a></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div></span></body></ht=
+ml>
+------sinikael-?=_1-17600458972230.18995298025928475--

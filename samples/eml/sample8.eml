@@ -1,0 +1,501 @@
+Received: from PA4PR04CU001.outbound.protection.outlook.com
+ (2a01:111:f403:c20a::7) by MWH0EPF000A6735.mail.protection.outlook.com
+ (2603:10b6:30f:fff5::41b) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9137.12 via Frontend Transport; Fri,
+ 19 Sep 2025 20:20:25 +0000
+Received: from MWH0EPF000A6735.namprd04.prod.outlook.com
+ (2603:10b6:a03:2ef:cafe::e3) by SJ0PR03CA0184.outlook.office365.com
+ (2603:10b6:a03:2ef::9) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9137.17 via Frontend Transport; Fri,
+ 19 Sep 2025 20:20:25 +0000
+Received: from AM0PR03CA0007.eurprd03.prod.outlook.com (2603:10a6:208:14::20)
+ by PA2PR10MB8435.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:102:419::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9137.16; Fri, 19 Sep
+ 2025 20:20:22 +0000
+Received: from [127.0.0.1] (162.19.145.51) by
+ AM3PEPF0000A799.mail.protection.outlook.com (10.167.16.104) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9137.12
+ via Frontend Transport; Fri, 19 Sep 2025 20:20:22 +0000
+Received: from AM3PEPF0000A799.eurprd04.prod.outlook.com
+ (2603:10a6:208:14:cafe::4) by AM0PR03CA0007.outlook.office365.com
+ (2603:10a6:208:14::20) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9137.16 via Frontend Transport; Fri,
+ 19 Sep 2025 20:20:22 +0000
+Received: from CH3PR02MB10009.namprd02.prod.outlook.com
+ (2603:10b6:610:19b::12) by BN0PR02MB8016.namprd02.prod.outlook.com with
+ HTTPS; Fri, 19 Sep 2025 20:20:58 +0000
+Received: from SJ0PR03CA0184.namprd03.prod.outlook.com (2603:10b6:a03:2ef::9)
+ by CH3PR02MB10009.namprd02.prod.outlook.com (2603:10b6:610:19b::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9137.14; Fri, 19 Sep
+ 2025 20:20:26 +0000
+From: "Lindd2 Administrator 180012" <julie@visionprofiles.co.uk>
+To: "Lind, Denise A." <LINDD2@erau.edu>
+Subject: [EXTERNAL] Erau Payroll Update Upcoming 0:26_Seconds REF#dafbe7442ac6c107ea070b04f32e1cdf 9/19/2025
+Date: Fri, 19 Sep 2025 16:20:22 -0400
+Message-ID: <ca7bcc7c-330d-a3c9-cf04-ba7aa69ea6d2@visionprofiles.co.uk>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0000_01DC311F.F6703C10"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQHcKaLpEoVsrcEGH0imDSqf/AGXEA==
+Authentication-Results: spf=permerror (sender IP is 2a01:111:f403:c20a::7)
+ smtp.mailfrom=visionprofiles.co.uk; dkim=pass (signature was verified)
+ header.d=visionprofiles.co.uk;dmarc=bestguesspass action=none
+ header.from=visionprofiles.co.uk;compauth=pass reason=109
+X-MS-Exchange-Authentication-Results: spf=permerror (sender IP is
+ 162.19.145.51) smtp.mailfrom=visionprofiles.co.uk; dkim=none (message not
+ signed) header.d=none;dmarc=none action=none
+ header.from=visionprofiles.co.uk;
+X-EOPAttributedMessage: 1
+X-MS-TrafficTypeDiagnostic: AM3PEPF0000A799:EE_|PA2PR10MB8435:EE_|MWH0EPF000A6735:EE_|CH3PR02MB10009:EE_|BN0PR02MB8016:EE_
+X-MS-Office365-Filtering-Correlation-Id: 68f75f97-7c81-4b7c-08c2-08ddf7b9f7c0
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230040|1800799024|34020700016|36860700013|82310400026|376014|8096899003;
+X-Microsoft-Antispam-Message-Info-Original: =?utf-8?B?Ulk1Uzd3MVZZOHBNTGo5NFo1amJLSzBNWmdYUXExSWM0bGFJQ3pCUlNFeGMx?=
+ =?utf-8?B?TkxVcm1nc2w5RVd5dHBsVWdLdjhOVWlVTnhtT3RqQTZ4d1hpbUdQMFFQZHRJ?=
+ =?utf-8?B?VkRDSHdmb1ppdGpYejA0NWZKak1GOWhUaUpRZEg0eWNwUUVZZnNSQ1N5NU82?=
+ =?utf-8?B?Q2M3OUk4VkRpY1NvU3U1TFhRZGxYTG5BYUdWZlI4N1FhNmdEc0xpcVJLVG1z?=
+ =?utf-8?B?ZUpSWDJWMUFvMmRBUmU2WEFzNjN2YzhQenZqbThmVEs4bldTZVdqYVM2eEhQ?=
+ =?utf-8?B?Qko1NUhYdmp1dGZjMGo1ZWtnNzZBVVU0a0g0bkFtZ2o4UXRmMSs0bVdOT2hC?=
+ =?utf-8?B?aW5nc1lWNEg1RFZocTBqVFNRWG50K1VCNHBoUExDeTBkWkZlZXZwNGY3MEF1?=
+ =?utf-8?B?VnlIVTRTV0pPRnlMVElHbUpDbVBWSjI5VEJRVUdsL3JFYm53cUJib2xMaitH?=
+ =?utf-8?B?S1hmU3dwLzBHOTFIeVV5Smk1SlgxOU1FS1B0aGZoZG4zcjhiWWxTVzJVYmEv?=
+ =?utf-8?B?anpKM0ZDbTZXWFZMcG1MVTVrZ1prNXBjR3l1ZVZUWUM0am1HMVR2TTlxSUF1?=
+ =?utf-8?B?WFltMFhZN2locjZ2dThsV0R1MG1XcHZta0tWd1phVDBMSEdYa21YSWZ4eStG?=
+ =?utf-8?B?SmpPSktLUmNvNGxlT2crbFk2UEJ4K2o2bE1QU2ZEcFVPdjU3WmF5UkE2K1M0?=
+ =?utf-8?B?OStESHlpU00wYzZub3ZLL0tzWjViUTY0QmcwcSs4ZUgyZFE5OUtrT1l5NDVl?=
+ =?utf-8?B?WWhlS3hjYXdZRHp
+	IWnNIcVRMV1FpMEpRVzkxREVDZVM2SndwUzFHMmZ6c1dV?=
+ =?utf-8?B?LzNNTlByWUNldnVvMW16TDdqVlAvMnZ0a1RWQnU3M1JWeC9IUVpWMGVRdlBn?=
+ =?utf-8?B?dmdPVk85eUQ2OXJ2OW56UFVSR2JEU3JMb01DTFhEVTI5WlVVL21SeVROTk9a?=
+ =?utf-8?B?TjRsejBZQSt2Z2dPcm1ycThmalY5V2Y0ZUt1dmpoTm5RVmxzWUQ2bzY5WWE2?=
+ =?utf-8?B?ekFLNVd4eWM5c3JmbENCT0UvQ0dIblc5c2FFTndiemtMc09seDNJREROZzZs?=
+ =?utf-8?B?MWRodytkL3pQM3ZWOVhBYTU5S2FKc3dscnFHc0dyQVdISmhOWnJvbDVVOXM2?=
+ =?utf-8?B?eXFiWUVYQkhyNlI3bmI4eDdBSXpwSk5kTitGTkZNWjNrKzBVZ2dKZXZ3NEhE?=
+ =?utf-8?B?VnJTZklwRldOaGhrRS94Qnl3RGZrdit5TU1iZXk3bk9WZmJkSGFrbGhSemFB?=
+ =?utf-8?B?UDRVbUNUNWY1a3RoYzcyNlFTaExZWEg3Ymw4bERwUlJLVlFMTU5RdjVpTWNY?=
+ =?utf-8?B?WGJ5aDBJYTcyNDlNMFQwaU9yTXduK3lHU3ZqRWpvM1NPcXFEc1hVTUdtOC85?=
+ =?utf-8?B?VnVaNzdFdk9qcVNpdXlmZ3g0WEdtbjVTaDZSWklLMXlBVjBYbHJPaTFjclVV?=
+ =?utf-8?B?VWdaWUxFVDVYa1hHSjdJVlZjbEdGaFRieUNVdnlWQVV4UXNDeWVFZW54YTlR?=
+ =?utf-8?B?TnFQRXZCeExnWTlkZmVvRzJWZHcwYlpVS2wrVGF6eDkvRkMyclR1dy9Vamk3?=
+ =?utf-8?B?aHRmRVBST2ZLd3NualEyY3B5TnBVZFZpbnlDUWM1
+	UkRzZ3JGWmtKTWJ4OVlU?=
+ =?utf-8?B?SUsvdmU5ZUwzdWgvQzZGRU9EMGFtcEc3S3RGeHRYaTd3THMvaGVaQjU3MXdF?=
+ =?utf-8?B?ZXZXdFIxU2w3UDdmUzFSQTFqQmtxUGRSYmk5MlpBOHMxRDNnQjFBM2hoa0o3?=
+ =?utf-8?B?TFNXbDJOb2RSWFpHeGR3UGtNQjNPSjRrbjNxcFdSbGk0WDZBMVdobmt6a3k0?=
+ =?utf-8?B?eTE5WGsxNnYzV3owTisrR3V4Y3ppbTdSVzRWbWhId0FPUkY5RkFzNVUrNmdP?=
+ =?utf-8?B?STJURjRTQ1VkR1dCbFVpeE95TmltTlBVN05tMTZjK2FjK0o0ek1WL0NYeHNO?=
+ =?utf-8?Q?VbckrmVyPyL0BowU6UeN3gOuiLmHB35r?=
+X-Forefront-Antispam-Report-Untrusted: CIP:162.19.145.51;CTRY:FR;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:[127.0.0.1];PTR:ip51.ip-162-19-145.eu;CAT:NONE;SFS:(13230040)(1800799024)(34020700016)(36860700013)(82310400026)(376014)(8096899003);DIR:OUT;SFP:1102;
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH3PR02MB10009
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PA2PR10MB8435
+X-MS-Exchange-Organization-ExpirationStartTime: 19 Sep 2025 20:20:25.4046
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 68f75f97-7c81-4b7c-08c2-08ddf7b9f7c0
+X-EOPTenantAttributedMessage: 6931c963-07b7-4156-ab0e-35d1f79035b8:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: MWH0EPF000A6735.namprd04.prod.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: MWH0EPF000A6735.namprd04.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource: MWH0EPF000A6735.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs: c8be0171-6917-4e1c-8f5b-08ddf7b9f5dd
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|35042699022|20103199012|8096899003|43540500003;
+X-Forefront-Antispam-Report: CIP:2a01:111:f403:c20a::7;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:PA4PR04CU001.outbound.protection.outlook.com;PTR:mail-francecentralazlp170130007.outbound.protection.outlook.com;CAT:NONE;SFS:(13230040)(35042699022)(20103199012)(8096899003)(43540500003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 19 Sep 2025 20:20:25.0603
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 68f75f97-7c81-4b7c-08c2-08ddf7b9f7c0
+X-MS-Exchange-CrossTenant-Id: 6931c963-07b7-4156-ab0e-35d1f79035b8
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=575de832-00ac-430c-af4f-b6ff6ef696f7;Ip=[162.19.145.51];Helo=[[127.0.0.1]]
+X-MS-Exchange-CrossTenant-AuthSource: MWH0EPF000A6735.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:33.8872752
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9137.005
+X-Microsoft-Antispam-Mailbox-Delivery: ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4712097)(4999163)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info: =?us-ascii?Q?4cZRwlv65XxLo565WU9Sq+1nZOY2Ayfq6vlvTYGg6w3lIhDQjO5TkU7iHXlr?=
+ =?us-ascii?Q?dsmFNpR8vUqbm/c9lQ3MJCuvY6dvt19KWoFFID+tLzOlXs0ImYWAzWwn/7Id?=
+ =?us-ascii?Q?dipcZ/0pm7WHOh0tt7Olo2jZ+3UdGo+AiMssKtveZOIeqHhnkPf36dRipdfe?=
+ =?us-ascii?Q?F5PvzsVaaPOFcjXesois8zBd2oAG5whp4BX8XXWWkGrrdbVgMg65Lik0dX52?=
+ =?us-ascii?Q?kM/pgOqTk3Qgs5Qm8PjCO+heXeqmHvBvwwqdSt1quQtf1TuOedANIhqmsHlv?=
+ =?us-ascii?Q?EpBd50Pj9TIT+abTvVOW6Ph4DXzE9uSQeAqULnaTxcI7siaMzU3JzG2lua8j?=
+ =?us-ascii?Q?0J0rieGoWbfAQNpNiVqatM4SskFJfXwNmhblfmWxnnfyyPJz9p+Q+4WUtk+p?=
+ =?us-ascii?Q?gftgzOd/L7VdB9dULb4Z/QfmCn2VFZojQe/hgZXq9zn0S5uMJSVI2lBT/72Q?=
+ =?us-ascii?Q?jupFuWW3xP7dt8mm6sgBqgtxC7GqbJQ1VLeJTAh/Dk30LBUWzxbogtKKivJg?=
+ =?us-ascii?Q?IGigUL6mAzMjYHfGgDZvBC+pr5oKdGTRYZveJ61Xi31W/FFkX/bZHao1t2Sy?=
+ =?us-ascii?Q?awuD1yCalqhOxQ3uJRTi/0rFHHasqPYitwE9EtkiSjRRBhQ2lA6RQ1yhCNjB?=
+ =?us-ascii?Q?lP51TEXLfJb3tRRC/LILnbDoDI6alW2fUmEexlxjCZNLPruh2IIw92Z4I1kk?=
+ =?us-ascii?Q?0UEUsEAOkqRQ7o/U2Z5vjgEA2b89nudoKwyUwLgKgWdqnsy7nP8
+	Os9NdhW0a?=
+ =?us-ascii?Q?2PQ3Wz/tArOsyVxcNbaNlUyAvZnTgEazHNNSCAmOkZnj3dhRx8UkxBYt1Vt6?=
+ =?us-ascii?Q?L5pXOo6VbQcwninoPt1j6/onzEo1O4TBh0JOL5IBTflXd+s6LZzyM5FZHLQx?=
+ =?us-ascii?Q?ZMT+to5eRAddaAHdCgzZ//GoCX+bTJSQouwxDHqauL8fpMdpcG9/iYl4X2pI?=
+ =?us-ascii?Q?8VvkEGvNJzr58wdoD6ScZ4x64/9kryrc9E5wKUHeU0yof7eu3qrttC8L1onH?=
+ =?us-ascii?Q?nDl1T/+nqEZUVliDgBJwdYfSBcLr7ivfTknaHqz20XKLroCGfGS2ljktT4qL?=
+ =?us-ascii?Q?przIUAQtV0rwKuRdNElaN9hmttSnT929yrgxvaDGvfzB+grrLs+LlJHs6NB6?=
+ =?us-ascii?Q?LJ1kAyFI7l7zalHTIkTQ/oaE3zmRWK5TDuTej1g3ebeNAqPknW9gSBZ7OpIU?=
+ =?us-ascii?Q?vniV0KmRRc53Kr967iGv9HoQ416MzWg59NSoB/HFJSdxXipW+6by0B8bSqjk?=
+ =?us-ascii?Q?EfLJ5y/qX+W/f+7rTx/APv53DTupc4WNUGdbqAzWdds1l/T57kwvYbIf418N?=
+ =?us-ascii?Q?+H1lsEVPUNj06jdWTQCUYrnJq7YUW7gt/ioNHQGHarF73pO4WPTsMD5/Amcc?=
+ =?us-ascii?Q?Tq4Hxizb+ImIWSd3VjVZmoElNNAA0ku1+XPFSlFjhcNeAk1xZLGZhwwSewAR?=
+ =?us-ascii?Q?LO1vBK9BhQbyeqwB4ilNEsL0IBWcItHWQqcr7UhLFE5nSqlsEG0WxX+VpaJ5?=
+ =?us-ascii?Q?B2xVVbmNHHeIbcmwYJjr1EJ64iCNDabpZJC3w
+	8Zn05lgQ4+qnne+WDemQ2V7?=
+ =?us-ascii?Q?27q/TCewbkBRIcXccoAP/KqJCSO8oTEDB/zNuRsyw+c6RxAPdozSsfh1Y1k3?=
+ =?us-ascii?Q?TDrsILjt7eyLWGbzW/zffxwFIfFrqKkCSJ7VYvgVrJXKC4qtGkJ/KfmXEboP?=
+ =?us-ascii?Q?8icTaaqrilsdGz4/jUynZfwDmS3eS6VF+uQgWrEutwIne/rlP6ZDdEp2lA/I?=
+ =?us-ascii?Q?KBBXBYuR+M0W/ji8CaR99KxmLvvxPT5UNeXmfvqsKAPbM3p5DHD/+9ibYtbA?=
+ =?us-ascii?Q?zMgF3+oFvMGiSC7t6DwBSnP3uu2wpQJdgUiv7CChe5N9eop4NQef3PDO+PUp?=
+ =?us-ascii?Q?oAWlMjXWxaIbXVBA7cqTkNG6+QBiMu4SzFYthStX3hH+z9mJGCy6dK4EqE8r?=
+ =?us-ascii?Q?X9pRdRK0ZePXOc3r3R/GHWujrlVaQTH+c3kbTyPOHBBJcdVycv2U41ZtkhqS?=
+ =?us-ascii?Q?PpoIjerourCYQa8f+Lf9EubafMhyzIG+ISaQoSobZZyu1oMdDN+mU4IjptTQ?=
+ =?us-ascii?Q?Aq785RxH6FTXcEO/Ugf+0eGKIaFJDFb3suIXnmRWa0ukuEwzBkU/vLFRegZP?=
+ =?us-ascii?Q?qjtesj1hwAfhCkIdN2e8qMY6N0+JTU8UQD63iqLotvUNVN7B2yJhVVxXbEuO?=
+ =?us-ascii?Q?kLuCRonfNskg4Zc+dtHZfEmAPguTJ4TCWdiH7qJPo/Dg2vXXxcvPPikCCEcJ?=
+ =?us-ascii?Q?dj6rwDM074oRzejtisfN8y3GVvsUd4iSTwlwojtnlHXowGSgJZlVqBnC2D2V?=
+ =?us-ascii?Q?0M6Mm8oG//8kHzP6W2Lz4Mp
+	RfUfhV2WKEHuHUZdT8zMP4o9sJDtlnQiPHtx3?=
+ =?us-ascii?Q?Wdn9EPU=3D?=
+Content-Language: en-us
+x-ms-exchange-organization-originalclientipaddress: 2a01:111:f403:c20a::7
+x-ms-exchange-organization-originalserveripaddress: 2603:10b6:30f:fff5::41b
+received-spf: PermError (protection.outlook.com: domain of visionprofiles.co.uk used an invalid SPF mechanism)
+arc-seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none; b=FBdaT88fU9sYKjcpKyvxlm6q0oknoCWrBP7dsRdk08GTC3aKF4d/jhuEPvFp+aCg31fMJmTWEplzETN6NyZHZH8A6vDJ2Xh1h/75hjralYJQJWMlgxvuwsDuZuaJ7i568YM1O3p2Pi0KNqks3L0pk6y83VdYZLaP6Hu9t0dx0pPYofYAPdpP/3QywrF9ZryJAMb5YmI3aMUFmg522AZYMhG5avmJfkdZ0oG1ATMMKIUDmpBUCjlPcrpx5cHlUwtXQEPxgHtvLe1QVG6o1qfw88V99SJUTzU/yKPrKXKNcNSA5wTqePYpMv27wgBIAh4Z9nI69/OYV3rc1TufuBLMlg==
+arc-message-signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector10001; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=7SgeArz4TTzqYnEMOb4iGQx4+YSQQllZJEfIjZyqDfE=; b=BAQDXXPtvQXoYtUuhA66RyxlwKXaYjcLwF35t8hBX53pBjrJP0AHOKGaxCUqZyn83M+ZKS0oNySguSdK/19RkTmVqEN2/H+Yk0BduSMRQ7Ex9T534W2jGd8B6V3wvh/I2BcJDX97UG6/C/Ibbh9Tbj4H5jCC85jJ1LB8QMUxL6u2KeLNbIm94vlWzDC07kaB4mOpnbYacU6jo22YDzZnk9KZ8T+w1DBbW/KBFi4hCnWekMmqyOyAX+PYE9QwfB5x6T7MXierF2xeo70/baWX8qsgIC7veJMcGkIY4VvQy6JMYayy43ZszATCvEtbi6xZ2Bc9tLNyd0NnzzRzFChf/A==
+arc-authentication-results: i=1; mx.microsoft.com 1; spf=permerror (sender ip is 162.19.145.51) smtp.rcpttodomain=erau.edu smtp.mailfrom=visionprofiles.co.uk; dmarc=none action=none header.from=visionprofiles.co.uk; dkim=none (message not signed); arc=none (0)
+dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=visionprofiles.co.uk; s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=7SgeArz4TTzqYnEMOb4iGQx4+YSQQllZJEfIjZyqDfE=; b=MOqdCye3SdYA7BATnUv1Aiqq6EyjJrOPccxHKHyUMWB04sg3VsU5xlrOAVvbKpqabgwsLKTqDeBPT2oPtFF2zUgjBLlCEcoMlrt7Fy/Icg5WM29wEJ5Qr/yYdCuGpAsHl7kNI1IGYTH1+H5VCFDSq3MjA5N2NOIF6FN5pGvof7k=
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0000_01DC311F.F6703C10
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+External Sender: Use caution with links, attachments, or when sharing =
+information.	=20
+
+
+
+DocuSign
+
+
+Lindd2 , A document has been sent to you. To view the details of your =
+document, click the button below.=20
+
+=20
+
+Review =
+<https://www.surveymonkey.com/tr/v1/te/4zWKBuvpReP6JBJX2YHNHQJLGMOQcliWbW=
+WZqkEqVeLb51tT0ofmNUJdfC51iB_2Bld8KxG19hGCs4WIaYpdpwcFHqkcb9ddglqHEr2j54c=
+SLq65zkEkRRFDHbGQzZ6QN38qcnsIHWowDvp2DExC4yLeH6BApmnjMwaFDcM6_2Fw8cM_3Dli=
+ndd2@erau.edu>  Documents=20
+
+=20
+
+
+Reference on the "Review Document" button to view the document sent to =
+you.=20
+
+Thank you for choosing DocuSign!=20
+Document can only be viewed by emi@systemsbuilders.com
+
+CONFIDENTIALITY. This electronic mail and any files transmitted with it =
+may contain information proprietary to The Calwasupply Division or one =
+of its subsidiaries or affiliates, and are intended solely for the use =
+of the individual or entity to whom they are addressed, shall be =
+maintained in confidence and not disclosed to third parties without the =
+written consent of the sender. If you are not the intended recipient or =
+the person responsible for delivering the electronic mail to the =
+intended recipient, be advised that you have received this electronic =
+mail in error and that any use, dissemination, forwarding, printing, or =
+copying of this electronic mail is strictly prohibited.
+
+=20
+
+=20
+
+=20
+
+=20
+
+
+=20
+=20
+
+
+
+=20
+
+
+=20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=20
+
+=20
+
+Sent: Friday, June 6, 2025 6:45 AM
+To: Ashley Williams <ashley@legacyfarmscoffee.com>
+Subject: Re: New customer message on May 27, 2025 at 4:59 pm=20
+=20
+Hi Ashley, just following up. Question- how often do you change the =
+beans you sell, or is it consistently the same options? I really love =
+your Lempira honey-processed beans and am roasting them for a homemade =
+blend!=20
+
+
+On Jun 2, 2025, at 4:44=E2=80=AFPM, Jeff Wolfson =
+<jeffrey.s.wolfson@gmail.com> wrote:
+
+
+
+Thanks Ashley! I just ordered 25lbs for now. I dont have a shipping =
+point yet. Question- how often do you change the beans you sell, or is =
+it consistently the same options? I really love your Lempira =
+honey-processed beans and am roasting them for a homemade blend!=20
+
+
+On May 28, 2025, at 8:25=E2=80=AFPM, Ashley Williams =
+<ashley@legacyfarmscoffee.com> wrote:
+
+
+
+Min weight would be 450 pounds of coffee,  but you need a place with a =
+dock to unload it.  Price depends on where you live and what coffee you =
+choose. =20
+Get Outlook for Android <https://aka.ms/AAb9ysg>=20
+
+
+------=_NextPart_000_0000_01DC311F.F6703C10
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8">
+</head>
+<body>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"min-width: 100%;background-color:#FFEB9C;border-left:10px solid =
+#873301;font-size:14px;line-height:1.5;font-family:Arial,sans-serif;color=
+:#333333;text-align:left;" role=3D"presentation">
+<tbody>
+<tr>
+<td style=3D"padding:5px 10px;"><span =
+style=3D"color:#873301;"><b>External Sender:</b></span> Use caution with =
+links, attachments, or when sharing information.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div>
+<div role=3D"document">
+<div tabindex=3D"0" aria-label=3D"Message body" class=3D"XbIp4 jmmB7 =
+GNqVo allowTextSelection OuGoX" id=3D"UniqueMessageBody_4">
+<div class=3D"BIZfh" data-emailtracker-detector=3D"1">
+<div visibility=3D"visible" data-emailtracker-detector=3D"1">
+<div data-emailtracker-detector=3D"1">
+<div data-emailtracker-detector=3D"1">
+<table cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"background-color: rgb(45, 45, 45) !important; width: 600px; =
+margin: 6px; padding: 15px;" data-ogsb=3D"rgb(247, 247, 247)" =
+data-emailtracker-detector=3D"1">
+<h1 style=3D"font-size:24px;font-weight:bold;margin:0;">DocuSign</h1>
+<div style=3D"color:#EFEFEF;background-color:#1E4CA1;padding:15px;" =
+align=3D"center" data-emailtracker-detector=3D"1">
+<br>
+<span>Lindd2 , A document has been sent to you. To view the details of =
+your document, click the button below.</span>
+<p aria-hidden=3D"true">&nbsp;</p>
+<a style=3D"color: rgb(255, 255, 255) !important; background-color: =
+rgb(88, 61, 0) !important; text-decoration: none; border-radius: 4px; =
+padding: 10px; border: 2px solid rgb(252, 205, 53);" =
+data-auth=3D"NotApplicable" rel=3D"noopener noreferrer" =
+target=3D"_blank" =
+href=3D"https://www.surveymonkey.com/tr/v1/te/4zWKBuvpReP6JBJX2YHNHQJLGMO=
+QcliWbWWZqkEqVeLb51tT0ofmNUJdfC51iB_2Bld8KxG19hGCs4WIaYpdpwcFHqkcb9ddglqH=
+Er2j54cSLq65zkEkRRFDHbGQzZ6QN38qcnsIHWowDvp2DExC4yLeH6BApmnjMwaFDcM6_2Fw8=
+cM_3Dlindd2@erau.edu" data-linkindex=3D"0" title=3D"https://" =
+data-ogsc=3D"black" data-ogsb=3D"rgb(252, 205, 53)">Review
+ Documents</a>
+<p aria-hidden=3D"true">&nbsp;</p>
+</div>
+<br>
+<p style=3D"color: rgb(255, 255, 255) !important; font-size: 12px; =
+text-align: left; margin: 0px; padding-bottom: 20px;" =
+data-ogsc=3D"black">
+Reference on the &quot;Review Document&quot; button to view the document =
+sent to you. <br>
+<br>
+Thank you for choosing DocuSign! <br>
+Document can only be viewed by<span style=3D"vertical-align: baseline; =
+background-color: rgb(50, 50, 0) !important; margin: 0px; padding: 0px; =
+border-width: 0px; color: rgb(255, 255, 255) !important;" data-ogsc=3D"" =
+data-ogsb=3D"yellow">&nbsp;emi@systemsbuilders.com</span></p>
+<p style=3D"font-size:6px;">CONFIDENTIALITY. This electronic mail and =
+any files transmitted with it may contain information proprietary to The =
+Calwasupply Division or one of its subsidiaries or affiliates, and are =
+intended solely for the use of the individual
+ or entity to whom they are addressed, shall be maintained in confidence =
+and not disclosed to third parties without the written consent of the =
+sender. If you are not the intended recipient or the person responsible =
+for delivering the electronic mail to the
+ intended recipient, be advised that you have received this electronic =
+mail in error and that any use, dissemination, forwarding, printing, or =
+copying of this electronic mail is strictly prohibited.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div data-emailtracker-detector=3D"1">
+<p aria-hidden=3D"true">&nbsp;</p>
+<p aria-hidden=3D"true">&nbsp;</p>
+<p aria-hidden=3D"true">&nbsp;</p>
+&nbsp;<br>
+<p>&nbsp;<br>
+&nbsp;</p>
+</div>
+<div data-emailtracker-detector=3D"1"></div>
+<div data-emailtracker-detector=3D"1"><br>
+<br>
+<div data-emailtracker-detector=3D"1">&nbsp;<br>
+<p>&nbsp;<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+<p aria-hidden=3D"true">&nbsp;</p>
+<p aria-hidden=3D"true">&nbsp;</p>
+<div data-emailtracker-detector=3D"1">
+<div id=3D"x_x_divRplyFwdMsg" dir=3D"ltr" =
+data-emailtracker-detector=3D"1"><span style=3D"color: rgb(255, 255, =
+255) !important; font-family: Calibri, sans-serif;" data-ogac=3D"black" =
+data-ogsc=3D"black"><b data-ogsc=3D"" style=3D"color: rgb(255, 255, 255) =
+!important;">Sent:</b><span data-ogsc=3D"" style=3D"color: rgb(255, 255, =
+255) !important;">&nbsp;</span>Friday,
+ June 6, 2025 6:45 AM<br>
+<b data-ogsc=3D"" style=3D"color: rgb(255, 255, 255) =
+!important;">To:</b><span data-ogsc=3D"" style=3D"color: rgb(255, 255, =
+255) !important;">&nbsp;</span>Ashley Williams =
+&lt;ashley@legacyfarmscoffee.com&gt;<br>
+<b data-ogsc=3D"" style=3D"color: rgb(255, 255, 255) =
+!important;">Subject:</b><span data-ogsc=3D"" style=3D"color: rgb(255, =
+255, 255) !important;">&nbsp;</span>Re: New customer message on May 27, =
+2025 at 4:59 pm</span>
+<div aria-hidden=3D"true" data-emailtracker-detector=3D"1">&nbsp;</div>
+</div>
+<div dir=3D"auto" data-emailtracker-detector=3D"1">
+<div dir=3D"ltr" data-emailtracker-detector=3D"1">Hi Ashley, just =
+following up.&nbsp;<span>Question-&nbsp;</span><span>how often do you =
+change the beans you sell, or is it consistently the same options? I =
+really love your Lempira honey-processed beans and am roasting them
+ for a homemade blend!&nbsp;</span></div>
+<div dir=3D"ltr" data-emailtracker-detector=3D"1"></div>
+<div dir=3D"ltr" data-emailtracker-detector=3D"1"><br>
+<blockquote type=3D"cite">On Jun 2, 2025, at 4:44=E2=80=AFPM, Jeff =
+Wolfson &lt;jeffrey.s.wolfson@gmail.com&gt; wrote:<br>
+<br>
+</blockquote>
+</div>
+<blockquote type=3D"cite">
+<div dir=3D"ltr" data-emailtracker-detector=3D"1">
+<div dir=3D"ltr" data-emailtracker-detector=3D"1">Thanks Ashley! I just =
+ordered 25lbs for now. I dont have a shipping point yet. =
+Question-&nbsp;<span>how often do you change the beans you sell, or is =
+it consistently the same options? I really love your Lempira =
+honey-processed
+ beans and am roasting them for a homemade blend!&nbsp;</span></div>
+</div>
+</blockquote>
+<blockquote type=3D"cite">
+<div dir=3D"ltr" data-emailtracker-detector=3D"1">
+<div dir=3D"ltr" data-emailtracker-detector=3D"1"></div>
+<div dir=3D"ltr" data-emailtracker-detector=3D"1"><br>
+<blockquote type=3D"cite">On May 28, 2025, at 8:25=E2=80=AFPM, Ashley =
+Williams &lt;ashley@legacyfarmscoffee.com&gt; wrote:<br>
+<br>
+</blockquote>
+</div>
+<blockquote type=3D"cite">
+<div dir=3D"ltr" data-emailtracker-detector=3D"1">
+<div dir=3D"auto" data-emailtracker-detector=3D"1">Min weight would be =
+450 pounds of coffee,&nbsp; but you need a place with a dock to unload =
+it.&nbsp; Price depends on where you live and what coffee you =
+choose.&nbsp;&nbsp;</div>
+<div id=3D"x_x_x_ms-outlook-mobile-body-separator-line" dir=3D"auto" =
+data-emailtracker-detector=3D"1">
+</div>
+<div id=3D"x_x_x_ms-outlook-mobile-signature" dir=3D"auto" =
+data-emailtracker-detector=3D"1">
+Get<span>&nbsp;</span><a title=3D"https://aka.ms/AAb9ysg" =
+data-linkindex=3D"1" data-auth=3D"NotApplicable" rel=3D"noopener =
+noreferrer" target=3D"_blank" href=3D"https://aka.ms/AAb9ysg" =
+data-ogsc=3D"" style=3D"color: rgb(219, 151, 255) !important;">Outlook =
+for Android</a></div>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"g4Y3U"></div>
+</div>
+</div>
+</body>
+</html>
+
+------=_NextPart_000_0000_01DC311F.F6703C10--

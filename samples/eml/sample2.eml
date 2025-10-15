@@ -1,0 +1,286 @@
+Received: from MN0PR03CA0008.namprd03.prod.outlook.com (2603:10b6:208:52f::15)
+ by PH0PR02MB8810.namprd02.prod.outlook.com (2603:10b6:510:f4::5) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9182.20; Mon, 6 Oct
+ 2025 13:42:56 +0000
+Received: from PH0PR02MB8810.namprd02.prod.outlook.com (2603:10b6:510:f4::5)
+ by SA1PR02MB9760.namprd02.prod.outlook.com with HTTPS; Mon, 6 Oct 2025
+ 13:43:14 +0000
+Received: from mail116-75.us2.msgfocus.com (185.187.116.75) by
+ BL02EPF0001A105.mail.protection.outlook.com (10.167.241.137) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9203.9
+ via Frontend Transport; Mon, 6 Oct 2025 13:42:56 +0000
+Received: from BL02EPF0001A105.namprd05.prod.outlook.com
+ (2603:10b6:208:52f:cafe::37) by MN0PR03CA0008.outlook.office365.com
+ (2603:10b6:208:52f::15) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9182.20 via Frontend Transport; Mon,
+ 6 Oct 2025 13:42:56 +0000
+Reply-To: "ADP Benefits" <notifications_adp_com@msgfocus.com>
+From: "ADP Benefits" <notifications_adp_com@emails.toastmasters.org>
+To: "Bixler, Cindy A." <bixlerc@erau.edu>
+Subject: [EXTERNAL] Confidential: Cindy Bixler ! Your Benefits Package Has Been Updated
+Date: Mon, 6 Oct 2025 09:42:55 -0400
+Message-ID: <000001dc36c7$41c60300$c5520900$@emails.toastmasters.org>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0001_01DC36A5.BAE44CA0"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQHcNscpCfdDpDSqRk2rPukEjgmeqQ==
+Authentication-Results: spf=pass (sender IP is 185.187.116.75)
+ smtp.mailfrom=emails.toastmasters.org; dkim=pass (signature was verified)
+ header.d=msgfocus.com;dkim=pass (signature was verified)
+ header.d=emails.toastmasters.org;dmarc=pass action=none
+ header.from=emails.toastmasters.org;compauth=pass reason=100
+X-Virtual-MTA: vmta116-75
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Oct 2025 13:42:56.3274
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 6f1def05-d233-414f-6687-08de04de419d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 6931c963-07b7-4156-ab0e-35d1f79035b8:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL02EPF0001A105:EE_|PH0PR02MB8810:EE_|SA1PR02MB9760:EE_
+X-MS-Exchange-Organization-AuthSource: BL02EPF0001A105.namprd05.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 6f1def05-d233-414f-6687-08de04de419d
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|5073199012|69100299015|4022899009|7053199007|4076899003|8096899003;
+X-Forefront-Antispam-Report: CIP:185.187.116.75;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail116-75.us2.msgfocus.com;PTR:mail116-75.us2.msgfocus.com;CAT:NONE;SFS:(13230040)(5073199012)(69100299015)(4022899009)(7053199007)(4076899003)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Oct 2025 13:42:56.1161
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6f1def05-d233-414f-6687-08de04de419d
+X-MS-Exchange-CrossTenant-Id: 6931c963-07b7-4156-ab0e-35d1f79035b8
+X-MS-Exchange-CrossTenant-AuthSource: BL02EPF0001A105.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR02MB8810
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:17.9207500
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9182.015
+X-MS-Exchange-ExternalInOutlookResult: NotEnabled
+X-Microsoft-Antispam-Mailbox-Delivery: ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4712097)(4999163)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info: =?us-ascii?Q?pPSTMIxQJGT+1XcwjS1zIqIOzLdNUFLjsMoZX1fu2lVexdSIS2xfpuI3upY8?=
+ =?us-ascii?Q?PN8z/gKY5OjnYFxMNPZvwPz1BRH/VyQCHFWi8Lb2vAIrH+fUt6QSzH2D/Qf4?=
+ =?us-ascii?Q?LNOKLgnjq1d2Uskgt1e5o/OsF4sDc4HSzc6IJS4EDZdvB8QWfo0xYJEHMZjL?=
+ =?us-ascii?Q?Dg6qm+A0f7rFMu4CeIeeDUO4x1rzD4sRBpWLbsmmppGM7tr437EZb7SdPwvN?=
+ =?us-ascii?Q?Xu5TlZ0l7BhbSoD5NNJZJDuFjWTDNWF/jgP38ghzh4dxWXgDQTOisPI1Kcw3?=
+ =?us-ascii?Q?K9iNgmynhhLjr665qh/dQCyzNuY+DiZu+ZOGBTuDMTgsvXYVlhSgBqiOxS+d?=
+ =?us-ascii?Q?QiTyifIneENL/n0WL5bEY90KoAo4pUnM88pELckLxpnADPIOmNxXUPONMqiU?=
+ =?us-ascii?Q?g4i56jEgahtzdLJofG9W8fcoByvUltEU4P/JY+o+32IQFux8MpoIWfWwskei?=
+ =?us-ascii?Q?rQWmnhFj991vXvwFIoN4juUgjYDanUG+tU/xkRgjDOK8yPVAdFFuJmHY6Nz9?=
+ =?us-ascii?Q?WyZdenPZw+4dNQxfxlvv3zMkbAXlguBGvnDxURCGhrQYQwhLRbL0aKEbgHVI?=
+ =?us-ascii?Q?BHtTj++Jek2FXGU5r805u3PS1NV++bjnSQu1g1g+W6AXPM8V29H+hZGE9xCJ?=
+ =?us-ascii?Q?fqOlqkrQt3Q8hb5cUI4jVM+sXxWMaBATASvUXIK9aC9mgu4TsJUarZ3yCfoX?=
+ =?us-ascii?Q?MVAWUKh0OaXmziIJr5o9eIYR5xCS4aquT283CiItJlBvB+7L08h
+	xQ3sFb0LD?=
+ =?us-ascii?Q?/YOwamzLH/gzdkQZU0b4auKjBob31mlELKPmvAgYuTfPN7l5a0IlY1hLjlT/?=
+ =?us-ascii?Q?m3rlEs/rSSUOekD4YT+hTmG+9yHFSav7kjCiDYMJecxztq6pkrKolxpDa6p5?=
+ =?us-ascii?Q?s0BiJfzArPm0ELXOvOYxWcrJ0a14YZW1TMHWF+8P/mIly0L5OIVz7BFgmMW5?=
+ =?us-ascii?Q?Hp1Ok/w7WC8Z6Ftu6tYSVMjembFrsHr88TMvqC21XvRc2Ko8FVpYJuxKy9Rr?=
+ =?us-ascii?Q?jguOx25ZE7ggzmtEKozCIUU0KcyiE/KdPLOMgEn4RXubfeZwr0wi2fSOy0XL?=
+ =?us-ascii?Q?vQfaRTAR22ItReM6neohHb5iQRNsBYhQp/fpcXl9kxg1gbRs+p2mBN4OWx6I?=
+ =?us-ascii?Q?JDCF5ueKG2bEHZEXu4Gvf2z3HyOKTWwX9nKA4qAY8rDMY8xdwgPBTI2g7+nJ?=
+ =?us-ascii?Q?GEv5+Y3yXNB5qIdGIv+oWotEW5aizTso2/0vndb8RHO7OLYniJxZ+ketMWMi?=
+ =?us-ascii?Q?3uBPXu41Y5qrZOpocx9sdUCUi/PloG4iwoWliGjRJwrWS2TcrsfVuN5gCixu?=
+ =?us-ascii?Q?gVzZEb34k60qhIIIcLfrbpB7iMbrhgWhHyIHce9gf7/JNU3XAl/G3SSEPcwy?=
+ =?us-ascii?Q?NGY5XRflY+PdswzsyF/tsYAv+qc0yDSln2oQM/1Jh0DL3rbAohMHFUGaHn6E?=
+ =?us-ascii?Q?PFrG5ZSsEzUyQxiG8jo3jZ6AYm0sH/SD0YAZhHZ6dbk+OI6wMayx4F/UWQ2L?=
+ =?us-ascii?Q?esWu/hMFDeiMdRNeNq4nRfzuV5p5+psTae+8p
+	L0GKh9s7sBbjP72MvPN5CvM?=
+ =?us-ascii?Q?bdpsHJ6R13DVrITlXZWYk1n2+S6xV6O7r5z2rdH+ESyK/M6s0hYpLfwf8EnR?=
+ =?us-ascii?Q?aTKig78rTUZZqA20Nasvq5m5QXSojS1318o/HKceERwYSFTuGADNZlrfALIG?=
+ =?us-ascii?Q?pTE7ALWLgqIw9wDONaL//xqHtCFOJRrwwe8R8kuCvelhx78FoXH0GhPVIH63?=
+ =?us-ascii?Q?d4O/E9rEsMd9byM+XAqS2KCs7wpu6RpAdP22bPlpw7/5gw5txMCh3ZzDmAKh?=
+ =?us-ascii?Q?2Z0yye3DIW8mfN7E5dszhhB7vURILLgzlisv6WFPJQNsFGTa1nsIhBaZJWsf?=
+ =?us-ascii?Q?vOQHyQ3cQs6od51lYYRguEUP/5YqEB9GKWRAu+HpVxaPPRBS0qvaNoOc/fqX?=
+ =?us-ascii?Q?eXMEq5eYw65EwMyBd0ab58NO6kPxm/AyYfjyEqUH4S1adV+LfT9F4A+o83EY?=
+ =?us-ascii?Q?RogYIVzfA2z0+8Gj4JPsCWaaOQckJXD3egqH04q2zI5MR21e/7sRVBk1bj3X?=
+ =?us-ascii?Q?ua/Ux2MbW+hrV1uKoOsH2hq42DwucMPHeFIiRh5aiLydvLDDevpURj496tZ8?=
+ =?us-ascii?Q?UqlSUogvXlm5CfWeYHfledjC9Tv3BobUfyVpI+lh9OzALq2ZF/IdAjwBYVyI?=
+ =?us-ascii?Q?hBi4DM2Rcwya0p7kbvHY1fFurytX2LuOfFwIaIrsXELc2tM06kiV4QIDMJbQ?=
+ =?us-ascii?Q?jOe3Mjp5QYbVSvQZxG6m1kzXfSlbgUNoptq5A0lDJu6SNygZKipeaLzbsKk5?=
+ =?us-ascii?Q?S6c5nzOYGiJBeApLSjry6uI
+	O?=
+List-Unsubscribe: <mailto:mail.swzyasodzzdnexijvgtset@emails.toastmasters.org?subject=Unsubscribe>,<https://emails.toastmasters.org/u/12zufS37BFEBizZNexUPuMiNK/list-unsubscribe>
+Content-Language: en-us
+received-spf: Pass (protection.outlook.com: domain of emails.toastmasters.org designates 185.187.116.75 as permitted sender) receiver=protection.outlook.com; client-ip=185.187.116.75; helo=mail116-75.us2.msgfocus.com; pr=C
+dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=emails.toastmasters.org; s=hrs-dkim;	t=1759758175; bh=vYGQhTtcJQKvuemmYKhrhw7/5GKf3thdDN8oQtBEhdo=;	h=Subject:List-Unsubscribe-Post:Message-ID:Reply-To:To:	 List-Unsubscribe:From:Date:MIME-Version:Content-Type;	b=fhUP8rsWvIVe6FiRtUPr++1OhzKPv51ACodFZUPsO7itmPC18dlS6o+kSmXgQqxqT	 Cvyfma6J0CxfkUYvGJjw2Yai+mV+atwIp41dGuqOs8lbHx72UJqwx+9JFRFiIGTx6q	 mqCJ/KTT+YTRFHCSdWEeo6X0y6dYcsMzB05Yx/ug=
+x-ms-exchange-organization-originalclientipaddress: 185.187.116.75
+x-ms-exchange-organization-originalserveripaddress: 10.167.241.137
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0001_01DC36A5.BAE44CA0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+External Sender: Use caution with links, attachments, or when sharing =
+information.	=20
+
+
+BENEFITS UPDATE NOTIFICATION
+
+
+Personalized Compensation Package
+
+
+Dear Cindy Bixler,
+
+We are writing to inform you of significant enhancements to your total =
+compensation and benefits package. These changes reflect our commitment =
+to rewarding exceptional performance and retaining top talent.
+
+
+Key Updates Include:
+
+
+*	Performance-based salary adjustments effective immediately
+*	Expanded career advancement and training opportunities
+*	Enhanced healthcare and wellness benefits
+
+
+Access Your Benefits Information
+
+VIEW <https://emails.toastmasters.org/c/1O919VVJBQf98ewTtygj8dy0ysLQaf>  =
+BENEFITS DETAILS=20
+
+Click the button above to access your personalized benefits portal
+
+To access your detailed benefits information, please click the button =
+above.
+
+CONFIDENTIAL: This message contains sensitive information for Cindy =
+Bixler at bixlerc@erau.edu only. Unauthorized disclosure is prohibited.
+
+Sincerely,
+
+Human Resources Department
+
+Benefits Team | benefits@erau.edu
+
+  <https://emails.toastmasters.org/t/1vKzbj63oEC85TITPu.png>   =
+<https://emails.toastmasters.org/r/1vKzbj63oEC85TITPu.png>=20
+
+------=_NextPart_000_0001_01DC36A5.BAE44CA0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8">
+<title></title>
+</head>
+<body>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"min-width: 100%;background-color:#FFEB9C;border-left:10px solid =
+#873301;font-size:14px;line-height:1.5;font-family:Arial,sans-serif;color=
+:#333333;text-align:left;" role=3D"presentation">
+<tbody>
+<tr>
+<td style=3D"padding:5px 10px;"><span =
+style=3D"color:#873301;"><b>External Sender:</b></span> Use caution with =
+links, attachments, or when sharing information.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div>
+<div style=3D"width: 100%; background-color: #e9ecef; padding: 30px 0;">
+<div style=3D"max-width: 600px; margin: 0 auto; background-color: =
+#ffffff; border: 1px solid #dee2e6;">
+<!-- Header -->
+<div style=3D"background-color: #495057; padding: 25px;">
+<h2 style=3D"margin: 0; color: #ffffff; font-size: 24px; text-align: =
+center; font-weight: normal;">
+<strong>BENEFITS</strong> UPDATE NOTIFICATION</h2>
+</div>
+<!-- Content -->
+<div style=3D"padding: 35px;">
+<div style=3D"border-bottom: 3px solid #0056B3; padding-bottom: 15px; =
+margin-bottom: 25px;">
+<h3 style=3D"margin: 0; color: #212529; font-size: 18px;">Personalized =
+Compensation Package</h3>
+</div>
+<p style=3D"color: #495057; font-size: 14px; line-height: 1.6; margin: 0 =
+0 20px;">Dear Cindy Bixler,</p>
+<p style=3D"color: #495057; font-size: 14px; line-height: 1.6; margin: 0 =
+0 20px;">We are writing to inform you of significant enhancements to =
+your total compensation and benefits package. These changes reflect our =
+commitment to rewarding exceptional performance
+ and retaining top talent.</p>
+<div style=3D"background-color: #f8f9fa; border: 1px solid #dee2e6; =
+padding: 20px; margin: 20px 0;">
+<h4 style=3D"margin: 0 0 15px; color: #343a40; font-size: 15px;">Key =
+Updates Include:</h4>
+<ul style=3D"margin: 0; padding-left: 20px; color: #495057; font-size: =
+14px;">
+<li style=3D"margin-bottom: 8px;">Performance-based salary adjustments =
+effective immediately</li><li style=3D"margin-bottom: 8px;">Expanded =
+career advancement and training opportunities</li><li =
+style=3D"margin-bottom: 8px;">Enhanced healthcare and wellness =
+benefits</li></ul>
+</div>
+<!-- Button Section -->
+<table cellpadding=3D"0" cellspacing=3D"0" style=3D"margin: 25px 0; =
+border: 2px solid #dee2e6;" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"background-color: #f8f9fa; padding: 30px;">
+<div style=3D"text-align: center;">
+<p style=3D"margin: 0 0 20px; color: #343a40; font-size: 14px; =
+font-weight: bold;">
+Access Your Benefits Information</p>
+<a =
+href=3D"https://emails.toastmasters.org/c/1O919VVJBQf98ewTtygj8dy0ysLQaf"=
+ style=3D"display: inline-block; padding: 15px 40px; background-color: =
+#0056B3; color: #ffffff; text-decoration: none; font-size: 16px; =
+font-weight: bold; border-radius: 5px; border: 2px solid #0056B3;">VIEW
+ BENEFITS DETAILS</a>
+<p style=3D"margin: 20px 0 0; color: #6c757d; font-size: 13px;">Click =
+the button above to access your personalized benefits portal</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p style=3D"color: #495057; font-size: 14px; line-height: 1.6; margin: 0 =
+0 20px;">To access your detailed benefits information, please click the =
+button above.</p>
+<div style=3D"background-color: #fff5f5; border: 1px solid #f8d7da; =
+padding: 12px; margin: 20px 0;">
+<p style=3D"margin: 0; color: #721c24; font-size: =
+12px;"><strong>CONFIDENTIAL:</strong> This message contains sensitive =
+information for Cindy Bixler at bixlerc@erau.edu only. Unauthorized =
+disclosure is prohibited.</p>
+</div>
+<p style=3D"color: #495057; font-size: 14px; margin: 25px 0 =
+0;">Sincerely,<br>
+<br>
+<strong style=3D"color: #212529;">Human Resources =
+Department</strong></p>
+</div>
+<!-- Footer -->
+<div style=3D"background-color: #343a40; padding: 20px; text-align: =
+center;">
+<p style=3D"margin: 0; color: #ffffff; font-size: 12px;">Benefits Team | =
+<span style=3D"color: #adb5bd;">
+benefits@erau.edu</span></p>
+</div>
+</div>
+</div>
+<img src=3D"https://emails.toastmasters.org/t/1vKzbj63oEC85TITPu.png" =
+alt=3D""><!--[if lt mso 12]><img =
+src=3D"https://emails.toastmasters.org/r/1vKzbj63oEC85TITPu.png?c=3D1" =
+alt=3D""><![endif]--><![if gt mso 11]>
+<img src=3D"https://emails.toastmasters.org/r/1vKzbj63oEC85TITPu.png" =
+alt=3D""><![endif]>
+</div>
+</body>
+</html>
+
+------=_NextPart_000_0001_01DC36A5.BAE44CA0--

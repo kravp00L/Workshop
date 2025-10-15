@@ -1,0 +1,221 @@
+Received: from SJ5PEPF000001D7.namprd05.prod.outlook.com
+ (2603:10b6:a03:180:cafe::c9) by BY5PR13CA0033.outlook.office365.com
+ (2603:10b6:a03:180::46) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9115.9 via Frontend Transport; Sat, 6
+ Sep 2025 12:09:19 +0000
+Received: from BY5PR13CA0033.namprd13.prod.outlook.com (2603:10b6:a03:180::46)
+ by CH8PR02MB10813.namprd02.prod.outlook.com (2603:10b6:610:2b6::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9094.17; Sat, 6 Sep
+ 2025 12:09:18 +0000
+Received: from 126.254.27.34.bc.googleusercontent.com ([34.27.254.126]:54937 helo=instance-20250830-224535)
+	by server.elgbank.com with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <admin@aeaagroup.com>)
+	id 1uurjH-000000056rp-46Fs
+	for wwstuaff@erau.edu;
+	Sat, 06 Sep 2025 20:09:16 +0800
+Received: from server.elgbank.com (103.47.29.23) by
+ SJ5PEPF000001D7.mail.protection.outlook.com (10.167.242.59) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9094.14
+ via Frontend Transport; Sat, 6 Sep 2025 12:09:17 +0000
+Received: from CH8PR02MB10813.namprd02.prod.outlook.com
+ (2603:10b6:610:2b6::14) by BN7PR02MB4050.namprd02.prod.outlook.com with
+ HTTPS; Sat, 6 Sep 2025 12:09:19 +0000
+From: "Emails Pending Delivery" <admin@aeaagroup.com>
+To: "WW Student Affairs" <wwstuaff@erau.edu>
+Subject: [EXTERNAL] Incoming Email Notice
+Date: Sat, 6 Sep 2025 08:09:16 -0400
+Message-ID: <000001dc20b9$21d68de0$6583a9a0$@aeaagroup.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0001_01DC2097.9B024500"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQHcHycTeAHULZEVBkSmgY9mSTMadg==
+Authentication-Results: spf=pass (sender IP is 103.47.29.23)
+ smtp.mailfrom=aeaagroup.com; dkim=fail (signature did not verify)
+ header.d=aeaagroup.com;dmarc=bestguesspass action=none
+ header.from=aeaagroup.com;compauth=pass reason=109
+X-AntiAbuse: Original Domain - erau.edu
+X-AntiAbuse: Primary Hostname - server.elgbank.com
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - aeaagroup.com
+X-Get-Message-Sender-Via: server.elgbank.com: authenticated_id: admin@aeaagroup.com
+X-Authenticated-Sender: server.elgbank.com: admin@aeaagroup.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Sep 2025 12:09:18.2666
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 0f0e4675-26c6-4b0c-dbfd-08dded3e3498
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 6931c963-07b7-4156-ab0e-35d1f79035b8:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: SJ5PEPF000001D7:EE_|CH8PR02MB10813:EE_|BN7PR02MB4050:EE_
+X-MS-Exchange-Organization-AuthSource: SJ5PEPF000001D7.namprd05.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 0f0e4675-26c6-4b0c-dbfd-08dded3e3498
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|3072899012|2092899012|12012899012|8096899003|83080400003|7053199007|532500022;
+X-Forefront-Antispam-Report: CIP:103.47.29.23;CTRY:SG;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:server.elgbank.com;PTR:server.elgbank.com;CAT:NONE;SFS:(13230040)(3072899012)(2092899012)(12012899012)(8096899003)(83080400003)(7053199007)(532500022);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Sep 2025 12:09:17.8841
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0f0e4675-26c6-4b0c-dbfd-08dded3e3498
+X-MS-Exchange-CrossTenant-Id: 6931c963-07b7-4156-ab0e-35d1f79035b8
+X-MS-Exchange-CrossTenant-AuthSource: SJ5PEPF000001D7.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH8PR02MB10813
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1135617
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9094.017
+X-Microsoft-Antispam-Mailbox-Delivery: ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4712097)(4999163)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info: =?us-ascii?Q?Yjqdje55wegggOo81YAJkLmIXdgAIU4Cotgko9DpGWa7iv85rGaSjWsGphoE?=
+ =?us-ascii?Q?fOi5LG0ANNLx7B8B8bDIhqOXWtS81t1dPQXe1gbUFkOIIX43quQQTovpIHOn?=
+ =?us-ascii?Q?5WI/Yplun0EmquOBTyBlNZ5MPmM/n2tYwZFDwn/q/10j12Si0CYTac7hyCmf?=
+ =?us-ascii?Q?uZLJS5ftpWqHWflxaHD+g5KC4jawGZmMIxBiu/D+LUJ1OFCF5DG3/ojFPPaU?=
+ =?us-ascii?Q?QNR3UJQqbsMDzt2TxovQQESf4Yr7whlFY42gzMoAUqvR4fPpEWy3ZR5i0FV1?=
+ =?us-ascii?Q?L0F9dGcWk6BV7bG+r4MbVMlAb4w8aHmPZD2OyXrVUotWWhBSFij4hjwBgMFo?=
+ =?us-ascii?Q?VgrN26Byo6zrOlyhFb/pL+Fx7V+RSOM11hccmS6vcNlFnZnAJG8MNhmfmHrK?=
+ =?us-ascii?Q?FD6r1iXax0CZDpYJnVqffIHw1Lf3TxeajJzMxOFRTwY+2HR/KpM4FVOWp5VX?=
+ =?us-ascii?Q?U5yDyUVhA8alBp2TXJRxwM7MD1lp3oAX+aOMivQsSAr5OkbMYNRsU2rhFK7z?=
+ =?us-ascii?Q?f677WutqsWZ5LdrPE3LHUf8W7tHVeeMwQaKzHFHOGfBnHCnaNkg1kpvW5vtQ?=
+ =?us-ascii?Q?y2hDclmFMkF1KwwKp5K1XJeRxLRUPc+bHHiAwBZutedLG6bmYz1DXz7zbCg+?=
+ =?us-ascii?Q?52kQB8lwh0sUg3HIejhp39UK7LBpESvfTFLMsL7SSOfsEzrraR+wYFkFnHRY?=
+ =?us-ascii?Q?lX7Qpe0Tdj1MPQZ/De5KMbo6j/6gSelFjPT4ayEa56+2QrSHEHS
+	Tgwpx/ch+?=
+ =?us-ascii?Q?SOEsrBTvEeT17DX8CenqyfgM2lqHUlP2L0Xr9eNtBeVErRTbm8r+Dfd/DDTv?=
+ =?us-ascii?Q?32mpTmwyKQtucyeHOhnxlmyp5S5//zxN8cFQ0YQWJUsYrvwSotbNTJ7BychU?=
+ =?us-ascii?Q?PMHksXH2jUdtyf+fLwD1JF/WjuXkKGFdnrdQ17abjrQEpztkD3Ki90OIw4M6?=
+ =?us-ascii?Q?nE7sJwGKy8gMVsDiTgeyqxVYR1cHvQdLZwSIkKbMnltq/Mkc7/zrW6lZPazi?=
+ =?us-ascii?Q?2cJ3G6aQRJ6p/tAty7W0NfYrUaFvGr8qFVS6ej3EoRfJid+Wp7LiBSYEqTZ2?=
+ =?us-ascii?Q?uDJ9CkwYwjT48Nd+3L3V69BMHKFU3kSsTl65KlVul5bHmexq1YDHfXBklD3p?=
+ =?us-ascii?Q?7oJZRRwH6hquBj/53H+Jwk33sCqElyRheb0zaKN/BIBgemz2WNP+bo0aRpeN?=
+ =?us-ascii?Q?LKcIK12Zr4J2VHnByNqqLMJS8nXNfNJgi3hTL1DKD2o6uizfv7C8x0VCJ70k?=
+ =?us-ascii?Q?ZLPzYbkFMPr4FWi573g85KgLd67VnSBz5NL7gA9tImxzPlMC3Uhs34HOOdw/?=
+ =?us-ascii?Q?bkH/TjAWTAXBUvwD57Y88E09ym/gWNHtwSf1bHP5zgthkhfZUanQ0ysRk5al?=
+ =?us-ascii?Q?SfFrTVDSiftbeRHaUfuXuSAzO3s341QqfauxEJyRu/ToZ3co7fmPLFqSlYqC?=
+ =?us-ascii?Q?IdIVNaLmHifgnES4YqQ0+Yb3NbluLvJ3odJTTBaYbbTh5De+mZ6cYTeWGR5L?=
+ =?us-ascii?Q?DO62C1ZoK0t7SvyJKCsFc02lY188tz5gVa+3M
+	vv80kh5ySWV4b7nYV2ojpa/?=
+ =?us-ascii?Q?/RZl5PhyKWLSMHgFoRSzhdXdNGsRIa53QjBI3rCxciJnaDFM/UqGvC5HA8PH?=
+ =?us-ascii?Q?Fzp7jmW7GBYOEtLkztZJnGzPmWIbJ5ObcFhBrL5vzVfKbKx6mjyOYbgkkB0R?=
+ =?us-ascii?Q?bVEDfjK8tqS9c8+QjXQ04MnFiMHYXSTDdp5Va69FPDOtMAfXlsaFtxje8nmj?=
+ =?us-ascii?Q?C6ep7yfbOkRuqm8nCHDGuPZxpcuRveNBfC3zb4RcSI332ys1ajE16ADsWONq?=
+ =?us-ascii?Q?QZ6yzHkXJTNMtoHeWUQl/p+cCT8P2Nbzyh9LZK5NbyFK2ZvpwhLgk1nAQoWm?=
+ =?us-ascii?Q?Z6VbKz1ZxlX9pmlSA9K8oRCOD6ICvpDOZFjLmZ30YKSDLwrvQpmkkqeJbB/h?=
+ =?us-ascii?Q?MdpxFz0tdZD6x4akdvDlkQnrjGSPEwVAkLf4+Z6WFQok1CEWiQhHaJgSnf+9?=
+ =?us-ascii?Q?MwPwJleXZeTmKZXys9rCWFeGR4IpnctW+28P581xBD/yGInQb82zMTVNbToZ?=
+ =?us-ascii?Q?4Or2dM6vzPBYO7bofHNc635/bs1e2W+zvGMCNfGjktKPqVD2oSKo2xMfwgqH?=
+ =?us-ascii?Q?uuS44Dbr3kCD1niuf9Mlsc+UzzSZG1u5DwiQ+QXXWQ2mrPVl3Mg6Cyf92KCn?=
+ =?us-ascii?Q?7TCRKmBRePI28vwcCLKtTtWBAnJ9wKEWmn1Tf1FKrCvo1enYzOJwzc2xkkfX?=
+ =?us-ascii?Q?RNQhR3LG7gpvaaqN7wjJ53ODD2Fd9jv1541rdCz7qQ=3D=3D?=
+Content-Language: en-us
+received-spf: Pass (protection.outlook.com: domain of aeaagroup.com designates 103.47.29.23 as permitted sender) receiver=protection.outlook.com; client-ip=103.47.29.23; helo=server.elgbank.com; pr=C
+dkim-signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;	d=aeaagroup.com; s=default; h=Content-Transfer-Encoding:Content-Type:Subject:	Date:To:From:MIME-Version:Sender:Reply-To:Message-ID:Cc:Content-ID:	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:	List-Subscribe:List-Post:List-Owner:List-Archive;	bh=d+3+L4pnq1DMUg/2cBfa0yQDHSJT2h92cNR0d+b4FeM=; b=K5YFCANwX6ZVfR/ONU5n/L0Jx6	oUwyuApDbz1ZUvwJcuD+rKeWyuZKFgonkfKcKkB+qIQNxTSlmp3UtX0XkL28DMa6dlTn8fbOfl0Az	q2GVKpmy5W5I6H3e6InjQDf0H6zfSqgrZ53PWxKsKQIHM9OojIP2ZwhcUAorJwpzPhev+cfeNH5Ce	vrGeuprxfWX09X+oJwZfocUtEOcqojUdGohwepE0efW+tiFbWq4vKpyW3Ki/k4rPxNmGTaN59tQOL	7Ao+bDx04EeuCJVzxrO0PLvwhVDYp5SCuLYlZyctgILGazi0i4am4UmRFkF2PFUaDeMurHeE8fcAh	+LB4iYyA==;
+x-ms-exchange-organization-originalclientipaddress: 103.47.29.23
+x-ms-exchange-organization-originalserveripaddress: 10.167.242.59
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0001_01DC2097.9B024500
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+External Sender: Use caution with links, attachments, or when sharing =
+information.=09
+
+Microsoft Notification=09
+Microsoft has prevented the delivery of 12 incoming messages to =
+wwstuaff@erau.edu inbox.
+
+Your held messages are saved in your mailbox quarantine due to a =
+temporary system error.=09
+RELEASE MESSAGES =09
+Sincerely,
+Microsoft Support Team
+=C2=A9 2025 Microsoft IT Services=09
+=09
+
+------=_NextPart_000_0001_01DC2097.9B024500
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8">
+</head>
+<body>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"min-width: 100%;background-color:#FFEB9C;border-left:10px solid =
+#873301;font-size:14px;line-height:1.5;font-family:Arial,sans-serif;color=
+:#333333;text-align:left;" role=3D"presentation">
+<tbody>
+<tr>
+<td style=3D"padding:5px 10px;"><span =
+style=3D"color:#873301;"><b>External Sender:</b></span> Use caution with =
+links, attachments, or when sharing information.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div>
+<table role=3D"presentation" style=3D"PADDING-BOTTOM: 20px; PADDING-TOP: =
+20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<table role=3D"presentation" style=3D"BORDER-TOP: #ddd 1px solid; =
+BORDER-RIGHT: #ddd 1px solid; BACKGROUND: #ffffff; BORDER-BOTTOM: #ddd =
+1px solid; PADDING-BOTTOM: 30px; PADDING-TOP: 30px; PADDING-LEFT: 30px; =
+BORDER-LEFT: #ddd 1px solid; PADDING-RIGHT: 30px; border-radius: 6px" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"600">
+<tbody>
+<tr>
+<td style=3D"FONT-SIZE: 18px; FONT-WEIGHT: bold; COLOR: #333; =
+PADDING-BOTTOM: 15px">
+Microsoft Notification</td>
+</tr>
+<tr>
+<td style=3D"FONT-SIZE: 14px; COLOR: #333; LINE-HEIGHT: 22px">Microsoft =
+has prevented the delivery of
+<strong>12 incoming messages</strong> to <strong>wwstuaff@erau.edu =
+inbox</strong>.<br>
+<br>
+Your held messages are saved in your mailbox quarantine due to a =
+temporary system error.</td>
+</tr>
+<tr>
+<td style=3D"PADDING-BOTTOM: 25px; PADDING-TOP: 25px; PADDING-LEFT: 0px; =
+PADDING-RIGHT: 0px" align=3D"center">
+<a style=3D"FONT-SIZE: 14px; TEXT-DECORATION: none; BACKGROUND: #0078d7; =
+FONT-WEIGHT: bold; COLOR: #fff; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; =
+PADDING-LEFT: 25px; PADDING-RIGHT: 25px; border-radius: 4px" =
+href=3D"https://ploy.ru.com/d">RELEASE MESSAGES
+</a></td>
+</tr>
+<tr>
+<td style=3D"FONT-SIZE: 13px; COLOR: #555; PADDING-TOP: =
+10px">Sincerely,<br>
+Microsoft Support Team<br>
+=C2=A9 2025 Microsoft IT Services</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+
+------=_NextPart_000_0001_01DC2097.9B024500--

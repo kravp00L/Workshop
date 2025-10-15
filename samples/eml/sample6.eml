@@ -1,0 +1,389 @@
+Received: from MW4PR02MB7394.namprd02.prod.outlook.com (2603:10b6:303:7d::7)
+ by SA1PR02MB8384.namprd02.prod.outlook.com with HTTPS; Fri, 10 Oct 2025
+ 19:02:59 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=YxW/d3buNBKM+Y7zpW4GMhMma5X4sSVjV9s5BujMHtgOESGwZ3PFBjhYHwLxehxnDZsH0ZYnVk+V80B1Ta+ygAGsRJR2mKXdXJ7i60HEpyDw0U07yf7PZtvOesflPQ12Nq0T+fB2CtHVyhKt0BwMwEt2JLEG7q7gGzQYSd+WhZ3QJoZRBbCrtstnPI6tGcS16q/x0j2NZBLy2rOrIKyTz8khoioJVG5VD6DIX3a78bwyV0TtXCT4Ij1pPloUIxEhxqCyLxMOFwCn9SafZJc/J8GPB+PnrFFJW3MwVKt2GF/Uv6UQDXnIs88fZB3RK1RexB7Cc5GREscjjldUGGiKgw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=cdt5nQqZWgOZdgQrU3PKniTmsXi+OTULqLYFQD7PxbU=;
+ b=l6jPIhAyd0//n53hhUufiq6EeZQJ+AChigNbXU6xYa/3j221nTP4e6ZqwNf2r2OgTqw61hA+U6TXLRS9a0c9fSZe3VYctqr66O9J/NKGIZfJpZ/bCP4/HbowjbP9GIJWphPw5uXbn3KaRkvKjyUXSmS8giqoobwSchoOHTQSCL3T+f6cphgoG+yDyi6cuIirL2I3bU3mZZxNNW1hhWdXAdgszj/SIypkhA7E88g0laBlrGLcLHyQjhiSEaNx8jMeTVoutmdKUCGRm4a8qrZZFBEuo/Ma9PuIvxxs/wKuOh66oC9TnPHz5T02no4YV7lqn1pgmLaR7SfKJAT0WGKFGw==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a01:111:f403:c111::5) smtp.rcpttodomain=erau.edu
+ smtp.mailfrom=microsoftonline.com; dmarc=pass (p=reject sp=reject pct=100)
+ action=none header.from=microsoftonline.com; dkim=pass (signature was
+ verified) header.d=microsoftonline.com; arc=pass (0 oda=0 ltdi=1)
+Received: from DM6PR02CA0094.namprd02.prod.outlook.com (2603:10b6:5:1f4::35)
+ by MW4PR02MB7394.namprd02.prod.outlook.com (2603:10b6:303:7d::7) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9203.10; Fri, 10 Oct
+ 2025 19:02:57 +0000
+Received: from DS2PEPF0000343E.namprd02.prod.outlook.com
+ (2603:10b6:5:1f4:cafe::74) by DM6PR02CA0094.outlook.office365.com
+ (2603:10b6:5:1f4::35) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9203.10 via Frontend Transport; Fri,
+ 10 Oct 2025 19:02:56 +0000
+Authentication-Results: spf=pass (sender IP is 2a01:111:f403:c111::5)
+ smtp.mailfrom=microsoftonline.com; dkim=pass (signature was verified)
+ header.d=microsoftonline.com;dmarc=pass action=none
+ header.from=microsoftonline.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of microsoftonline.com
+ designates 2a01:111:f403:c111::5 as permitted sender)
+ receiver=protection.outlook.com; client-ip=2a01:111:f403:c111::5;
+ helo=DM1PR04CU001.outbound.protection.outlook.com; pr=C
+Received: from DM1PR04CU001.outbound.protection.outlook.com
+ (2a01:111:f403:c111::5) by DS2PEPF0000343E.mail.protection.outlook.com
+ (2603:10b6:2c:400:0:1005:0:9) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9228.7 via Frontend Transport; Fri,
+ 10 Oct 2025 19:02:55 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=BIhbBWay4Nzqz9rixgvoi89PNWblgKmR+BoQtnts61dy0ncHrmhkv6tfuc2VODjqjXU6EgQfXB+isx+t40ZrEs3DpkiXLBADTz+4PD3WaiE75EfU47IOgt0NXIc0rs5Km1iHdKmnJWmuGmc6MiGnTG3fl+0mU7l6mBhkzojx1AEHm2ibgT1+Jk2MdzQDsRWZffgOsElPZDyf5KNrEldeNRWpCXaTxa7x/CCT0jDlFKV51TGxs46n4bft3GTSMRFRDDd34Ro44VQ9C3qO35ncakFWNXsHPvQ1Vg+gQLteRxA8RYtWY5MElIpn7NxN0ovbgvuPJgAJVlXMVEyLX2FD0g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=cdt5nQqZWgOZdgQrU3PKniTmsXi+OTULqLYFQD7PxbU=;
+ b=NK38JM4OVgVw1rw3WemAYW+lR0tAt03lt6CrTUf1nS7XUwKu3915oG8mNhoPLq49Jl+LoMCoT1f8BsETPAn7hqs4hq4/4g98ZaHXFqfohzZGYGMVyJxuUCeF35Kv+8g7SdU5feN1tRFg6yHHIa29pxTpyLXbw0CvDw7o5jtiWkPFSXSosBEwMKGRl84ByPpF7MDh59+Ysh9Qxjo9FwQEi/v3Rxe9CmkOluRCXjTCHcc+hNMiTtwov1Qyg6AB9u7NyTc+DmSzTTNUBMZlBQYj15quIakofGX1uE0+B2aN9pOxioflXqQ+a0rnB/lmeddnkJVDbr5amWZWN7SckXYmnA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+Received: from substrate.office.com (2603:10b6:a03:448::5) by
+ SJ0PR19MB6865.namprd19.prod.outlook.com with HTTP via
+ SJ0PR13CA0092.NAMPRD13.PROD.OUTLOOK.COM; Fri, 10 Oct 2025 19:02:52 +0000
+DKIM-Signature: v=1; a=rsa-sha256; d=microsoftonline.com; s=s1024;
+	c=relaxed/relaxed; t=1760122972; h=from:to:cc:subject:date:messageid;
+	bh=cdt5nQqZWgOZdgQrU3PKniTmsXi+OTULqLYFQD7PxbU=;
+	b=M6PtaMtcCp5CAXTb3pQ/kctOM9zGtm+db4xmW8PE3NV0fnGJhxfyvCcym5Bw6MroI9FyvbAwLa4
+	mMy2yxTdIsLcGxoVDs068qZ2L9LGcPopeB+WBe7JuihI0CpCynEw9s7zsBFgXx9fSN8wX9lSQ2dN/
+	C6vPVLoteoJBnsXPHYA=
+From: msonlineservicesteam@microsoftonline.com
+To: waldock@erau.edu
+Subject: [EXTERNAL] Windows Defender membership fee 335 USD charged. If
+ unknown to you, verify via code or reach 18283904406 for help account email
+ verification code
+Date: Fri, 10 Oct 2025 19:02:52 +0000
+Message-ID: <[31f2d3b13d934c6fb34a19ce890c3f7d-JFZGS42DN5WW25LONFRWC5DJN5XFA3DBORTG64TNFVIHE33EFVGVOMKQPREUCTKTKNIFE7CTKNIFERLNMFUWY7CFPBXVG3LUOA======@microsoft.com]>
+X-MS-Iris-MetaData: =?utf-8?q?{=22Type=22=3Anull=2C=22Fields=22=3A{=22InstanceID=22=3A=2231f2d3b1-3d93-4c6f-b34a-?=
+ =?utf-8?q?19ce890c3f7d=22=2C=22ActivityID=22=3A=22ba9824df-3d9b-4442-817b-4577573a5?=
+ =?utf-8?q?14c=22}}?=
+X-TsbHttpDeliveryResponseType: Success
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+client-request-id: 31f2d3b1-3d93-4c6f-b34a-19ce890c3f7d
+request-id: 31f2d3b1-3d93-4c6f-b34a-19ce890c3f7d
+Return-Path: msonlineservicesteam@microsoftonline.com
+X-MS-TrafficTypeDiagnostic: SJ0PR19MB6865:EE_ICP|DS2PEPF0000343E:EE_|MW4PR02MB7394:EE_|SA1PR02MB8384:EE_
+X-MS-Exchange-SenderADCheck: 0
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230040|69100299015|376014|61400799027|8096899003|4076899003|15920700032;
+X-Microsoft-Antispam-Message-Info-Original: =?utf-8?B?K09xRERjTzRML09PUGdkMlZJVmFoK2huNjRaRUNib2craFJCSlk3Njl0RGRR?=
+ =?utf-8?B?d3pUR3NQb25vNmQwSzlUTGdickpSWkphNVkxNS9kUk1MeTVHQktDdlZIenB5?=
+ =?utf-8?B?dWVKU0M4TXd2c1VhNHdFbWl3b3JDZnlEYUdGaktabXYvTk4yeWF1eG91ME1Y?=
+ =?utf-8?B?ckdoaUhPL0RjbEttWHJtdzFvM1ZRdml1WXJid05zYlFtTFhtTklneUhJdVhi?=
+ =?utf-8?B?cG9ESDYwRFB3TG1nZlprTjA0YkpPZkxlajlaaXFSQUMxTWcxMkNyMXRRZGt5?=
+ =?utf-8?B?V1NFYmtNYXN0SWZVbG9vZ1ZWTjFQVFc5UFVIOVRsVVUrOGdwUDFiZnpYcnVh?=
+ =?utf-8?B?T3A1bVVxQW5vbFN0MG5qVXVOanRoTlFjTjJBTUFOMXRjTS9qNUFOS2hWUTBl?=
+ =?utf-8?B?TlYreUYwM0J5QllhODVPVjZ3aE9lTUtZM1o2TXREK1dlanUzZHg3TU1WaG93?=
+ =?utf-8?B?N1FxclNlYUR4bWl0S25hSlVxNTRJa0NLaEo0MWtrU0NTd2EwbklzUDZLV2ZB?=
+ =?utf-8?B?TldiYk9OQ2t0T3I4V0dHTlRpd2k2c0J1UXN4djhTWjZDWGdmbEFub1k5ZkRO?=
+ =?utf-8?B?eEVhb3QwVmFoWmZJVFBZYWF0RVQvT3VScHRhQ3FOQVBZL1M5MXkrWnRLeERh?=
+ =?utf-8?B?UHdoVi9JMVlzMmNhUTlHZ0xicFVsZ0FnNCtrMnNYSUtER0NzMmpta2pUYWZt?=
+ =?utf-8?B?V2NHVkpLQ2lnOWtHZzdzemM5UWt5ZUJoc25xT0t5a3ZhWjhmNHNGT2M1bi9P?=
+ =?utf-8?B?Y3lVWUc0WGZ3MCs3UjVoUE9UTitvQnlyZUZ3eDZsaHo0R1c4eVNuKytPVC9J?=
+ =?utf-8?B?NGd0RkpPVEkvU0hwcUZlVENYYkhBS2JvZGFXQVhjSnYyaWdSRFBZSzk1SUQ3?=
+ =?utf-8?B?Tys5bnhBUDYrVDBXRWVSMG5NQzR0WGVVWkMxdDlJNzh0NzJiNjdwN2h5YSt0?=
+ =?utf-8?B?Y2xEaCtlN2pNMCt5QlZnTzc5NHhQNHhreTFCa3hpYkE5ZUYrQnc1QklHYzJl?=
+ =?utf-8?B?LzVJWDMyT2NVdUk4dDg4cUlCeUl5UEhYSFM5RGlTTFcvK0JxYm83UUE4enRE?=
+ =?utf-8?B?dmJxRWxnaDd2NmdmdXJPWGhDNGxUSVFtVVRtenkzY0JDS2VTWEYwL2thZjdw?=
+ =?utf-8?B?ZzNpOFhXcnoyYjBpTEhIQ3RlZWJZenpLUG5NSGJXbkYzaFlTYkJTWHY5ZGtC?=
+ =?utf-8?B?UU91aVd3aFFWcEtvV1RwVlpoTmt2ZHlNUzFhelZrZHdJY1czVUdZY1RGd04x?=
+ =?utf-8?B?QVBKT0FuOUYzUm1KM3VIU2c0YjRXZWZaaEx5Y2c1bnJMYmd0d1lXaGFDUDBB?=
+ =?utf-8?B?WHJhbVlmUEtwSmFmYi9IQlZ4TEFpNXl6cm1UY1AxN0kybFVLSmtBOU1FK2s0?=
+ =?utf-8?B?SE10TG5qNE5WRW5qbzkyU0xEemEraVdhU1h5WDg3QURJWkZFczVBUGt3RHlL?=
+ =?utf-8?B?MmlrZjFRZkxJa3dWdHVwQVVuaWRHWEpmKzMvTHdxZUhqelNVMGhRN1VvOE1W?=
+ =?utf-8?B?TFlWa3BFcnBFQWlFMUw3MEhPTFh3YyszcisvRlBTVTF1NkNRRkJlTUN3aHBB?=
+ =?utf-8?B?cXQ3OFZKZHdYL2hOZjdycWJBcWZiODYxa013TitlNExibUZYMjdEUWVTcFo2?=
+ =?utf-8?B?SFBrbHMvVVo3SzAzeTNRWmtLdE5rdDNkbUo4VmJqYys2OG12M2JTTld5emF0?=
+ =?utf-8?B?YXJSQVdrL09iNEtLb1M3ODhPVkxxSWFnaHpHRStyOGgzcFRFamxFVWQyWDJJ?=
+ =?utf-8?B?allBcHhCb0xBYlVpeUFoQ1RabEFyQVVDWnlidERNaFg1TjNSbXZNVlArWnZp?=
+ =?utf-8?B?VEdud29YcGF2akdldGloQVNwTGpBR3FYYit0NDF3NDFuaVhGQTZ4aFFWRFZI?=
+ =?utf-8?B?bHg3MGk5V3ZVcGRpcldOYlBvWEFoOU9Ycm5ZSnduZ3Vuc1E9PQ==?=
+X-Forefront-Antispam-Report-Untrusted: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:;PTR:;CAT:NONE;SFS:(13230040)(69100299015)(376014)(61400799027)(8096899003)(4076899003)(15920700032);DIR:OUT;SFP:1020;
+X-MS-Exchange-AntiSpam-MessageData-Original-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-Original-0: Tgksa9iRBfFRoFCwlvQW6i0FBuu2MV8y5X2z4K39OcdvHxV44tJy4RFpDMVG+wUxfCzWFpaAjo6ETKC0WU5ayVeYZxzIoE4+0XOYyIxR80q4T1UFlMb13uGRxTD0Q6y6nlgckA/B17cMEZ9jawhPeVlGUmhMRdABX6kP6ffp2+NpGaRReM8QeesC8VeCfwtuqjdka5s6hQAGKTEQTzoLtgcrH6D212zD4VKovc73Yy63L9PoZQ0s+GB0lpASrD6jqPu6a0ScWjIn766OoTmHcxRDkEkrGyUMfulcGJN07qavaTDS/to3GrHpIAS5yfF1VUs/e/QE+B6jQGVFOy/TyFUh2k9kQDnV7ljy+aL/ef/OQszeNOKHn7yvZFUDmOqxj+INNTPMRJimZJIfTAlM5A==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR19MB6865
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Oct 2025 19:02:56.0156
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: b7407d29-1826-40ba-51d7-08de082f9f2c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 6931c963-07b7-4156-ab0e-35d1f79035b8:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: DS2PEPF0000343E.namprd02.prod.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: DS2PEPF0000343E.namprd02.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource: DS2PEPF0000343E.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: b7407d29-1826-40ba-51d7-08de082f9f2c
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:2;ARA:13230040|3092899012|3072899012|2092899012|4092899012|69100299015|5062899012|13102899012|12012899012|13012899012|5073199012|5082899009|4076899003|8096899003;
+X-Forefront-Antispam-Report: CIP:2a01:111:f403:c111::5;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DM1PR04CU001.outbound.protection.outlook.com;PTR:mail-centralusazlp170100005.outbound.protection.outlook.com;CAT:NONE;SFS:(13230040)(3092899012)(3072899012)(2092899012)(4092899012)(69100299015)(5062899012)(13102899012)(12012899012)(13012899012)(5073199012)(5082899009)(4076899003)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Oct 2025 19:02:55.8941
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b7407d29-1826-40ba-51d7-08de082f9f2c
+X-MS-Exchange-CrossTenant-Id: 6931c963-07b7-4156-ab0e-35d1f79035b8
+X-MS-Exchange-CrossTenant-AuthSource: DS2PEPF0000343E.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR02MB7394
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.0222032
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9203.007
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4713098)(4714117)(4999163)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZEZldEhhaE1mbDMrT0pNdE04bWpHeHk0ODQxek1uaTFDbTRHVFpYZWdGM3lF?=
+ =?utf-8?B?KzdUazExOWpJL3k2WjRUWEV5MjVnenRYM3U4TUtMWFVNSHJmaGM5SXBSaC9m?=
+ =?utf-8?B?eVAxMHlWVnpwcnBUaVVkSjBxa1dsWlRXYjFRUzI5dVJKTVdhVytQTFNqY21n?=
+ =?utf-8?B?amJoVVpVQmlaRFZNdzAxUkR5NFhaSmRwWEUvSTJ5azNtWlBrQXg0WFU0N2NH?=
+ =?utf-8?B?amJ3cG1ubzBTRS9ZdmpQZ3kra3dBZENCdjJ3Nkc5b3d4ZFBGbGJCMWpzUC9n?=
+ =?utf-8?B?dzkzdU9pVllSbVc3cHVUdnJLM0VjamhTTFhuL1l1N1F3WlBjUHllRzUyMzlH?=
+ =?utf-8?B?SzhXUFR6WGloTjhhdjlORTU1WE1PckF1b0JrWklLeWZCMkRJK2NPV1FpYkpH?=
+ =?utf-8?B?ZUhhZzlNUldBNkg4aFMybFRDYTVLeUU1NlBHbm14VHNvSEtKTUtmL05XM3Vn?=
+ =?utf-8?B?RCtqT3hjUGZsUHJlVFJnYkQvRGE4VnRqSkNwUjlxdHFtblYza3VyVUErYW94?=
+ =?utf-8?B?eEJkNVVvRDZzMmNwQmhMQWFaelhEL0EveW1tZk9WYzZQL05SLzhONVl6a1lP?=
+ =?utf-8?B?YkM4K29QZTNCdkowZXVpditjRFFNS3hFeU1vZkdFVUdaUHprcXo5RmR4WlF4?=
+ =?utf-8?B?SytIZ09zZWtCbTBLdnFURnhjUTdsSTFDQTNYY0IyVWErSDFpMDJwMUYwd01z?=
+ =?utf-8?B?SVlLZldjZWtYRWVmTlpPK2RQRXcwOEhvdldMZXpDdnRsNVhHVHNPekVTTExQ?=
+ =?utf-8?B?dzArT3JZb0pJY3djd01IUjRjOTZ0R3VDVDNOUUYzRmZhT25rV0dQZGVrN204?=
+ =?utf-8?B?aHdzOVZWSmJ3aWNodmMzMjFNQVZHMEc1MTl1Y2g0OUZOREsvRzdocEpIVmpG?=
+ =?utf-8?B?QVFCMmt2Kzk4K2NNdVRmU2kvUlhhVDFTTnZVcFNRV1NlanRhRVRJcmJmNDNI?=
+ =?utf-8?B?ekZFZ0R6WG5KUHNsMG9TZHFXT01xYldwT2Z3bXlWd1hYalNUOTFHM3NIM0Fo?=
+ =?utf-8?B?S2UzYlNaRkZSd3drT3VyTTduaDNrZ3d3cVB5YzhaSDBvTFZtMEpodlQvdWxB?=
+ =?utf-8?B?RFZyN2k3VTRoUXVRNm41dVREWmNtVFBQN0VRQkhBSzhKVnEyd2xmMVNtUEZN?=
+ =?utf-8?B?dDM3dTBQUEJzT09pNWhGRWlEd2llam1vclpvaEovYlZHN1BjQS92V3Jpbld1?=
+ =?utf-8?B?aWtWUnNOMW9jdVc1QklweHlaaG1xSm5hL3BzYnVMd3lCdWtLZEFTODVNcStC?=
+ =?utf-8?B?RFRYS1NvMThpeldVckZzb1hNQy8ydy95NmtpZG8yNjVFamcxQllJMXN3cllt?=
+ =?utf-8?B?RUw4RHQ5Zk14aUFjNXVleWVFTDNUakNPZTdaQkthcjkvWHZ3UGhkNTM0cEdG?=
+ =?utf-8?B?Q2RLY2FpMzZFT05saFcwa1llSjNwYUJ5RjRZZm9ESlRCQ0t3L3NnaG9jN2Nx?=
+ =?utf-8?B?QnphTERTNzduZElXaVE4dDBqVTBSeG1Rb081RU85Y21uTkhLWGViTFJnVHlE?=
+ =?utf-8?B?REFWdklXdTErNko1TE9qbi9Id1M2cVVMRWE3WS9CSmtGaHozd2hhR1hRWERa?=
+ =?utf-8?B?VXVDQWRMbzhlMVgwZ0ptV3ZxMFZxd0hwOXFWa3M3MzhvNjZPak85NWt1eUFw?=
+ =?utf-8?B?cUFGRkdGZTZWbWhRTldNV0hNR2V6bm9wVEdyUEpwMkFacWd2Z3VRMlNWNk93?=
+ =?utf-8?B?TXRwdlR1d2c5WkN5MzJ0ZVZUNllaR1U0SUt5bjNNREJzTFZweTU0VXdyeng4?=
+ =?utf-8?B?NmNYTGkxVDI5ZFA3WC9NN3luUGZaek5pOHViUWN6Z3ZEc0JSemZKUndEUGI3?=
+ =?utf-8?B?K1FGQ2ZnTDFxMVVkNDFadjI2ZTBEQ3FnUXMwZW8vVTZHdkZkUVAwRFVPZ3VL?=
+ =?utf-8?B?V0FOWUFaZXVBakZQK2lDa09Halk3RkJrL1ZmUVlOdzVuWTN0R0E2SjR3ZDl4?=
+ =?utf-8?B?NzZGR0ZKNkU2WTUzMGlmVStyNWlxeWQ5a2tVTWJ6NGdVSS9pV0VwWjBKdWta?=
+ =?utf-8?B?ZW9YZ05VT0xORHBQNGYzelJFZW1yTkJLNVZKdklmSGswd1lRQmlKcU1mTXlq?=
+ =?utf-8?B?UHJBL0FHNFRjTmpXSW9WVW5WZkszSDEveU9ubW1tS3NzUEhYQU1ibU1VK2l2?=
+ =?utf-8?B?bm9tNk1sVzBNZ3FsYk51U2IyU2JYTXY0ZTFybDNhc3VyMnExK0EybzVYVkx6?=
+ =?utf-8?B?d1phSW82S3FsOFRKM3k5cVVRRWdkYWh5QmdZTFc0V2hZZ01PMm5yMEQ4dk1z?=
+ =?utf-8?B?OGhZbHc2UVljMDdmQ1lQWkVBcEx0bi9VKzBDb0cvMHorQjhwbzc2VXpGRXpj?=
+ =?utf-8?B?YW9zUWlsNmdSYWp0MTRHWVFoN21DZmVDWk9qNjFSdVh5cmtQL2EvWkFYek91?=
+ =?utf-8?B?UDZUZ1RKamdPSEdQL0t1d3dnSGxuV1EweXNTY0ZxRkhGM2oxWENaamNrYXpF?=
+ =?utf-8?B?QktuaGJVaDhaRytPU0RVTGZwK0lWbHlQVEtNYjRjZ0o2dnBkdVVQczJKU0o0?=
+ =?utf-8?B?VmlZVk1RQ2ZMUlEwZmRCVk42Si9nd052K0JiTzBLNElyN2pQdVNUT3hCWG5C?=
+ =?utf-8?B?SnBlaU5yM244SG4xSWRwSENFeWE0WXhWVDk5TjEzZENEUFJyWU9QNTVsSldX?=
+ =?utf-8?B?dG4ybWZEZlZnWE5OdFFLMk5rNFpsazNLUU9sZjFXVmtCTnp2bkd2TjUwUnln?=
+ =?utf-8?B?L2IzZFNscTVrS1ZtZytIaE5Rd2lvQjIvalZncUZCR1piR1Z1bVBEdFQycjJ5?=
+ =?utf-8?B?WitXMXQwS2VzM1JyWGtyNDF4a1orZ1djZldTQ2UvRTFZbUg5bnpiQ3NtZzJv?=
+ =?utf-8?B?dEhGczNrM1IzbUpHKzUwVzB4bTdmUkNrRHVaaytBY2V0cVFnMTRFOWhiRXB1?=
+ =?utf-8?B?TVdQMHZrRHNRbXRScHBRVEtQOVRqZGsyaVNzelZnVjZETlJVWUk2U21qOTc5?=
+ =?utf-8?B?QzlaNGxPRjkvc0M4TXJkSGxVUkRTWTJwMy9Sb20yUUpYNk9tM1ljNGdFaUcr?=
+ =?utf-8?B?UnhDMTRTQ2VsdzFqbkJpVmQ2eXNDRzZjMkFlT3RaU2Z4bmc4emlGNkNvQVBK?=
+ =?utf-8?B?S1NuZW1FOGF5Y1paakpNSDZQMVY5bk43a1BvL0FCaEI3ZDFqZTZCZ2NaWkVI?=
+ =?utf-8?B?L3RkTmp1MjA0STB6aW85OWEwNkZRaWFZSXVQZFF5UT09?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- This is the new email te=
+mplate for SSPR which aligns well with the email that are sent out from IW =
+portal --><!-- To make use this template, you will need to add a new page t=
+o the EmailTemplates directory that has this page as the master page.=20
+    =20
+     The new page must specify the following placeholders:
+
+        - SubjectPlaceholder - The email subject
+        - HeaderPlaceholder - The header of the e-mail document
+        - BodyPlaceholder - The body of the e-mail document
+
+--><!-- For dir and lang attributes you will need to define them at the ind=
+ividual tables as well. Otherwise some email clients do not render the emai=
+l properly --><html xmlns=3D"http://www.w3.org/1999/xhtml" dir=3D"ltr" lang=
+=3D"en"><head id=3D"Head1">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title>Windows Defender membership fee 335 USD charged. If unknown to you, =
+verify via code or reach 18283904406 for help account email verification co=
+de</title>
+<meta name=3D"ROBOTS" content=3D"NOINDEX, NOFOLLOW">
+<!-- Template B O365 --><style>
+        table td {border-collapse:collapse;margin:0;padding:0;}
+    </style>
+</head>
+<body dir=3D"ltr" lang=3D"en">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"min-width: 100%;background-color:#FFEB9C;border-left:10px solid #87330=
+1;font-size:14px;line-height:1.5;font-family:Arial,sans-serif;color:#333333=
+;text-align:left;" role=3D"presentation">
+<tbody>
+<tr>
+<td style=3D"padding:5px 10px;"><span style=3D"color:#873301;"><b>External =
+Sender:</b></span> Use caution with links, attachments, or when sharing inf=
+ormation.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" dir=
+=3D"ltr" lang=3D"en">
+<tbody>
+<tr>
+<td valign=3D"top" width=3D"50%"></td>
+<td valign=3D"top"><!-- Email Header -->
+<table width=3D"640" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" dir=
+=3D"ltr" lang=3D"en" style=3D"border-left:1px solid #e3e3e3;border-right: 1=
+px solid #e3e3e3;">
+<tbody>
+<tr style=3D"background-color: #0072C6;">
+<td width=3D"1" style=3D"background:#0072C6; border-top:1px solid #e3e3e3;"=
+></td>
+<td width=3D"24" style=3D"border-top:1px solid #e3e3e3;border-bottom:1px so=
+lid #e3e3e3;">
+&nbsp;</td>
+<td width=3D"310" valign=3D"middle" style=3D"border-top:1px solid #e3e3e3; =
+border-bottom:1px solid #e3e3e3;padding:12px 0;">
+<h1 style=3D"line-height:20pt;font-family:Segoe UI Light; font-size:18pt; c=
+olor:#ffffff; font-weight:normal;">
+<span id=3D"HeaderPlaceholder_UserVerificationEmailHeader"><font color=3D"#=
+FFFFFF">Verify your email address</font></span>
+</h1>
+</td>
+<td width=3D"24" style=3D"border-top: 1px solid #e3e3e3;border-bottom: 1px =
+solid #e3e3e3;">
+&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!-- Email Content -->
+<table width=3D"640" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" dir=
+=3D"ltr" lang=3D"en">
+<tbody>
+<tr>
+<td width=3D"1" style=3D"background:#e3e3e3;"></td>
+<td width=3D"24">&nbsp;</td>
+<td id=3D"PageBody" width=3D"640" valign=3D"top" colspan=3D"2" style=3D"bor=
+der-bottom:1px solid #e3e3e3; padding:10px 0 20px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td width=3D"630" style=3D"font-size:10pt; line-height:13pt; color:#000;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"" dir=3D"ltr" lang=3D"en">
+<tbody>
+<tr>
+<td>
+<div style=3D"font-family:'Segoe UI', Tahoma, sans-serif; font-size:14px; c=
+olor:#333;">
+<span id=3D"BodyPlaceholder_UserVerificationEmailBodySentence1">Thanks for =
+verifying your IronGroveRis@roveRiscomapeny.onmicrosoft.com account!</span>
+</div>
+<br>
+<div style=3D"font-family:'Segoe UI', Tahoma, sans-serif; font-size:14px; c=
+olor:#333; font-weight: bold">
+<span id=3D"BodyPlaceholder_UserVerificationEmailBodySentence2">Your code i=
+s: 532219</span>
+</div>
+<br>
+<br>
+<div style=3D"font-family:'Segoe UI', Tahoma, sans-serif; font-size:14px; c=
+olor:#333;">
+Sincerely, </div>
+<div style=3D"font-family:'Segoe UI', Tahoma, sans-serif; font-size:14px; f=
+ont-style:italic; color:#333;">
+Windows Defender membership fee 335 USD charged. If unknown to you, verify =
+via code or reach 18283904406 for help
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"1">&nbsp;</td>
+<td width=3D"1"></td>
+<td width=3D"1">&nbsp;</td>
+<td width=3D"1" valign=3D"top"></td>
+<td width=3D"29">&nbsp;</td>
+<td width=3D"1" style=3D"background:#e3e3e3;"></td>
+</tr>
+<tr>
+<td width=3D"1" style=3D"background:#e3e3e3; border-bottom:1px solid #e3e3e=
+3;"></td>
+<td width=3D"24" style=3D"border-bottom:1px solid #e3e3e3;">&nbsp;</td>
+<td id=3D"PageFooterContainer" width=3D"585" valign=3D"top" colspan=3D"6" s=
+tyle=3D"border-bottom:1px solid #e3e3e3; padding:20px 0;">
+<table id=3D"PageFooter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" w=
+idth=3D"585">
+<tbody>
+<tr>
+<td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" dir=3D"ltr" lang=3D=
+"en" style=3D"margin-right:30px;">
+<tbody>
+<tr>
+<td>
+<p style=3D"font-family:'Segoe UI', Tahoma, sans-serif; margin:0px 0px 0px =
+5px; color:#666; font-size:10px;">
+<span id=3D"ContactInfo">Microsoft Corporation | One Microsoft Way Redmond,=
+ WA 98052-6399
+<br>
+<br>
+</span>This message was sent from an unmonitored email address. Please do n=
+ot reply to this message.
+<span id=3D"PrivacyAndLegalLinks" style=3D"color:#0072c6;"><br>
+<br>
+<a href=3D"https://privacy.microsoft.com/en-US/privacystatement" id=3D"Priv=
+acyLinkAnchor">Privacy
+</a>| <a href=3D"https://www.microsoft.com/en-US/servicesagreement/" id=3D"=
+LegalLinkAnchor">
+Legal </a></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style=3D"padding:0; text-align:right;"><img id=3D"CompanyLogo" src=3D"h=
+ttps://passwordreset.microsoftonline.com/images/1_MSLogo.png">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"29" style=3D"border-bottom:1px solid #e3e3e3;">&nbsp;</td>
+<td width=3D"1" style=3D"background:#e3e3e3; border-bottom:1px solid #e3e3e=
+3;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign=3D"top" width=3D"50%"></td>
+</tr>
+</tbody>
+</table>
+<img src=3D"https://mucp.api.account.microsoft.com/m/v2/v?d=3DAIAADVKG2WQSQ=
+NDBATZHIAYHI2XFFTXW2XA5MZE3SL25YMB6HL6TLITG5HV22C7PREGY5XAEW6LIPPBK74YLPYVR=
+TR2DNN3HPKTSBEUW5SQOMNIWJW7MOW4POLZK3E7I3AIIZBHQLGIVZGUNWVCAAIDQIQUWG2Y&amp=
+;i=3DAIAADVNHXVBEAULO52HIZEHWLZ3H4P6BQNWIAWNH2UWWMN2E7CVPCM6P2RXL4JV77ACDU4=
+DRNNB5FHTQMATK64XWMEIN3ZERG4NDEYJATGZECOFT3API4RDFZTE5FM5JZ7V56LLFTMBZL4SUC=
+LVFB5VCZYFI5VSBPPRAVLF63BZV753KSK4R52AMJWDVCZ6IQBCGGKEWAUDRMEN7XOPD6QGUIEEG=
+ZMT3CLPNWCHPYQTLJQGHJ6E57STDYRSPFVJ7EAY5ZCTT5F7OJE5GPLOAWYAX5336ATA" width=
+=3D"1" height=3D"1" tabindex=3D"-1" aria-hidden=3D"true" alt=3D""><!-- cV: =
+vp1QVFcV60WXs1NT.3.1.1.5 -->
+</div>
+</body>
+</html>

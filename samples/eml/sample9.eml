@@ -1,0 +1,550 @@
+Received: from SJ0PR02MB7230.namprd02.prod.outlook.com (2603:10b6:a03:29a::12)
+ by BY5PR02MB6130.namprd02.prod.outlook.com with HTTPS; Fri, 12 Sep 2025
+ 16:44:14 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=KxzuGhA0qOPlICxA30ED6/KV+t5N/xk6Dq9Md1LrC0j7tgDJV8LsWuJ4DkBhCRX9eF1WaKnzn80jTXwyrzMUrcNnBiM0Nz40sIk6YHM1yIlnCUJFW2KKPgaWPDkeomKtBofhyP6QGccK7oTaHzucWDHGN/aH86GSF7vRvN77oqovVNWGsz9DTh+lbQLPZFPRivVZ+16sQ0QInvg9NAbHcQ4cKd45RfquAnqPEwQK8Ii+DfQMci3U2DtywkL6y8PahGDQwuBa7n0FNjeFcGGiqK6kgTGfiS8bbGU/L6xKQ/sNpuW2kife9jOqh7uxTbZw1XZNYF7HL7ynNv4NuUnp7g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=nr+WjBVKkkp+3MjQEw2rEQwbjINjTPLF7oTQG7NMbaU=;
+ b=lK7IhEaqIXO7mX9N8g+wvj/JydcerWSmp7UXPFnTEjOoaAysCCvLownKB9u6hvlF/PQH+PT9QXKS3poMtVMCc9wiGDFdAjE5O/1D1eEx2q+i47z4F+OKhYh8UHkbQEGGVZsGHo3aDZhnIgzkjyAy8a2osVkGhHb3vd+wrBnlLNOtBxc8EXuU/ghZHhyTywB1lXX7Ax2wD4WolfDbRjZoqT8nOISB0NO/D50eRnwIw67IVvPxk9mKZKBalRTB0P2+Lg8LNFcapAK5/ANPv9+6r7MPR6TFf6vEtVpucBneTb/4oDLxP/qL3WjlzoaNV1uW9UvrXq59BSOnnSqTCY+tyA==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a01:111:f403:2413::709) smtp.rcpttodomain=erau.edu
+ smtp.mailfrom=odd.digital; dmarc=bestguesspass action=none
+ header.from=odd.digital; dkim=none (message not signed); arc=pass (0 oda=0
+ ltdi=1)
+Received: from SN1PR12CA0097.namprd12.prod.outlook.com (2603:10b6:802:21::32)
+ by SJ0PR02MB7230.namprd02.prod.outlook.com (2603:10b6:a03:29a::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9094.19; Fri, 12 Sep
+ 2025 16:44:11 +0000
+Received: from SA2PEPF00003AE9.namprd02.prod.outlook.com
+ (2603:10b6:802:21:cafe::2d) by SN1PR12CA0097.outlook.office365.com
+ (2603:10b6:802:21::32) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9115.17 via Frontend Transport; Fri,
+ 12 Sep 2025 16:44:11 +0000
+Authentication-Results: spf=pass (sender IP is 2a01:111:f403:2413::709)
+ smtp.mailfrom=odd.digital; dkim=none (message not signed)
+ header.d=none;dmarc=bestguesspass action=none
+ header.from=odd.digital;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of odd.digital designates
+ 2a01:111:f403:2413::709 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2a01:111:f403:2413::709;
+ helo=NAM10-DM6-obe.outbound.protection.outlook.com; pr=C
+Received: from NAM10-DM6-obe.outbound.protection.outlook.com
+ (2a01:111:f403:2413::709) by SA2PEPF00003AE9.mail.protection.outlook.com
+ (2603:10b6:80f:fc04::9) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9115.13 via Frontend Transport; Fri,
+ 12 Sep 2025 16:44:11 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=bv5doQSFTz6vxlZMuvMRRef6x6VApFGjWJ5Ww+1ExyTU4iqsWYp0ANqZl06x9xVckMTM9OMyM/T3Eal4F5J1W3o8eGpMdAhrhGlpkyCDzh51DdkmU0xLqEVK8L+5rGFJSxaaWXlNFIeBOndI2cpohUGKhYcPQewYBb01qCKv6cITYU6KjBSPP/+eZXeohGSKIgVnhe/W0FDVd6pZN7b57IRcSX/RV9MRlOey6O8DUpPnUOFtpPZTzk/lD2uVU8GjfKqRfB1eT3A3ORCO8dgmf15fXaEZVriyah17F/BNkED1k9PKod58LtChxn3C9mVE7rCl8EQv45j7vg1EoVitRQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=nr+WjBVKkkp+3MjQEw2rEQwbjINjTPLF7oTQG7NMbaU=;
+ b=v3ju3goYuyPX9h4/IcML73ywvOv2F98hT6GDRFNoQ5MI7k0dRoJS8hFVv5p6eF6CTIAJ75LPqMnvMOyMNntHCaWj8JRmkNBLT+RWzQQW2RD4CVvNLb9cS+fF6X1kDsO/xzy4AriPKskHQoMhUdFeYh/PWbpIFt2BnEyoZywBncXfcRfw7OFnShJglvsGqJZtoyJgfvYOr4dhLKtwIa+9L4ztwsdWNrfEsULcD5V0amEspXL6RKlRkbc3Qt8kHPK3IiR9TKOb234gp+HdYsGuRHvwHDMCiiniM3W00DZkkx0Yf8befAkoLZUpSvOPC+N2Hw+P1PN1w4YfRrRoUCyDJQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=fail (sender ip is
+ 198.23.213.220) smtp.rcpttodomain=erau.edu smtp.mailfrom=odd.digital;
+ dmarc=none action=none header.from=odd.digital; dkim=none (message not
+ signed); arc=none (0)
+Received: from BL1P221CA0043.NAMP221.PROD.OUTLOOK.COM (2603:10b6:208:5b5::13)
+ by SA1PR22MB5294.namprd22.prod.outlook.com (2603:10b6:806:3cd::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9094.22; Fri, 12 Sep
+ 2025 16:44:08 +0000
+Received: from MN1PEPF0000F0E2.namprd04.prod.outlook.com
+ (2603:10b6:208:5b5:cafe::1d) by BL1P221CA0043.outlook.office365.com
+ (2603:10b6:208:5b5::13) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9115.18 via Frontend Transport; Fri,
+ 12 Sep 2025 16:44:08 +0000
+X-MS-Exchange-Authentication-Results: spf=fail (sender IP is 198.23.213.220)
+ smtp.mailfrom=odd.digital; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=odd.digital;
+Received-SPF: Fail (protection.outlook.com: domain of odd.digital does not
+ designate 198.23.213.220 as permitted sender)
+ receiver=protection.outlook.com; client-ip=198.23.213.220; helo=[127.0.0.1];
+Received: from [127.0.0.1] (198.23.213.220) by
+ MN1PEPF0000F0E2.mail.protection.outlook.com (10.167.242.40) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9115.13
+ via Frontend Transport; Fri, 12 Sep 2025 16:44:08 +0000
+Content-Type: text/html; charset="utf-8"
+From: eDocumentSignatures|Systematic|sentviadocusigndonotreplyJw8Rqqrederich.archimbaude-1720-Docsxsz5s2Jw8RqgzzUWYyB81MpZ/DnOdK46Imrjnjp79c94dLZs9yeWFU3K5IplGfc9Ax6B1i3bPlnmyHAq05rs0wRXkByY5cdESw6Nyf16Lm5cfjNsde6Wfafy7HaIm1EGuA3yG2bRlTIMoN+l2LK2RileM5K+Dh4ZFpmYriK2tCxD/mIncdU9TBswKtJpTU7cJuXbzYfwAuqYdZGje8g-pcaal@odd.digital
+To: <osan@erau.edu>
+Subject: [EXTERNAL] Erau- Completed: Document signed Request for Review_Ref:
+ ff9638f7d912ee94dac37112d4ada46582fbc709
+Message-ID: <e1360fa7-ae24-6995-2327-44db4a515c9b@odd.digital>
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 12 Sep 2025 16:44:07 +0000
+Return-Path: eDocumentSignatures|Systematic|sentviadocusigndonotreplyJw8Rqqrederich.archimbaude-1720-Docsxsz5s2Jw8RqgzzUWYyB81MpZ/DnOdK46Imrjnjp79c94dLZs9yeWFU3K5IplGfc9Ax6B1i3bPlnmyHAq05rs0wRXkByY5cdESw6Nyf16Lm5cfjNsde6Wfafy7HaIm1EGuA3yG2bRlTIMoN+l2LK2RileM5K+Dh4ZFpmYriK2tCxD/mIncdU9TBswKtJpTU7cJuXbzYfwAuqYdZGje8g-pcaal@odd.digital
+X-EOPAttributedMessage: 1
+X-MS-TrafficTypeDiagnostic: MN1PEPF0000F0E2:EE_|SA1PR22MB5294:EE_|SA2PEPF00003AE9:EE_|SJ0PR02MB7230:EE_|BY5PR02MB6130:EE_
+X-MS-Office365-Filtering-Correlation-Id: ffe18595-73b5-4257-a26e-08ddf21b99dd
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230040|61400799027|82310400026|36860700013|38142699006|376014|8096899003|13003099007|35012699015|7053199007|13062299009|20082799003|95630200002;
+X-Microsoft-Antispam-Message-Info-Original: =?utf-8?B?a3ZkbVcxZEhRWmhGYWJyMUN5NEcxUTlwQTJoYVpCKzRQTlpZckdlZWx0elp1?=
+ =?utf-8?B?eDJKTi91UjRJdUVQdXBSMWo1UEFCS1dyZWNzVGcyZ1lTVkgxemFIa2w0TVM1?=
+ =?utf-8?B?Mk8zQU5hRHFxUndUMHlVUGtwa0gzUTd5bmZ6dmM0aUt4QmxFU256NzZzbXJR?=
+ =?utf-8?B?b0JJMFhSQUNJeEFqR25zQkRBZ3RIQURlNXRXVFNDN3VJZXhoVkJBWWcxZWx1?=
+ =?utf-8?B?Rk1WNDdtdGNiKzlaM2w5aUFMdkdsU0wxUmhoVG9vMXRIS3UrN1JRVlNTaEM3?=
+ =?utf-8?B?ZWFhbml6Q3NZS0VnK3NlNVdLNmNOVmErc1Izd2M5VGpBZ0p0dEU4TUZiZGZM?=
+ =?utf-8?B?MzltanYvazZPazVNYktLSnRKSmhvWnYvOEVPVkx5WjVJREY3Ym9TWnAwWnlP?=
+ =?utf-8?B?dHJzL0xaNEErNks0b3o2Uk5BRFRXZHVHdU1yTGlZOEVtRjByK3J5eDhPajRN?=
+ =?utf-8?B?MjZpZ0NXR0xhaWxTUEc3N05MNzRSWCtwYnJHeGRPUmFtRW1LQ050dnNobDFl?=
+ =?utf-8?B?ZDJiTlVwT2xUWGcyMFJQdW9hdjd4T3dBZGREYnB4eEdDanA5R2pLMWMvUXJ1?=
+ =?utf-8?B?Z3pjemZtS0NaUXVIVE1KRys2RVg4SlJQU3UzTDNPdFlMcFM4YTQxS28wYk40?=
+ =?utf-8?B?UjN5SXllRnRWVnpaV2pVcWxJU0JRK1gyY2NVbUVZZkNvbFp0d0NSd2VDNkFO?=
+ =?utf-8?B?NjZaNnRqdktFQUUwdmVkc2xOUlB2dEdxN1RHOXI3cHIyTTVNQjRtNzlqVWZr?=
+ =?utf-8?B?UC93OFdxVDJjWS81Tmt6TU4vc3dkYzdsUXZ5UmFOT2ZXdVp0TUJheG9Mbjc2?=
+ =?utf-8?B?eHU1SVVNSkZkZDhDbnI1Zmt3WGoxUS9UeU1tQmpNekEwVldrT2JocGQyQkE5?=
+ =?utf-8?B?ZVp0ZU5mYmdRdVJpNmt4RkRsYXdKbUJXZmRoNHpyZ3RaYjRocUlJZWVBUlo4?=
+ =?utf-8?B?bzVQMUhQV3VwNnpmZ29SQnVLbG1NclJsaERIbGs4VjdOOGRQTXVERVpGdURW?=
+ =?utf-8?B?ZlVGSmROWU9GL00xTnRiSjZOeUhlNm1sWGI0SEFLanc0MXdITkltZUlhY3Zn?=
+ =?utf-8?B?d0tKZi9pT0kzTTBzckxiWEpON2lvOFRFVWlMazBtN0piejhqSjB1TFU5bXJJ?=
+ =?utf-8?B?b2RrYVcvUE5vVVFzWE9paTR4dGVITk9RNTlSZnhuYkZhUHp6UXgzWmZmU0VR?=
+ =?utf-8?B?TFJvbUE4QWJ6eXNMS3IvYzliV1BjL3RlNlE0N3JRbGVheUk3a21Yb2tGU2Jp?=
+ =?utf-8?B?WlFhRHc1SGZUVEtuNGlGV2VtY2haWkxFSWoxU0RxaTU5TVI5bVh3R2JYaWZ3?=
+ =?utf-8?B?Ni9yekVkVWs5OXVucUlxOXpzbjZuNzQ4ekY0YW8yWlNZL3g2Zm15UkNGLzdD?=
+ =?utf-8?B?WktyYWpZVE9zVGdFL2NaTVQxeGs1RTE5bmxIU3pvWHVTYTdRZFNHaStVWW5Y?=
+ =?utf-8?B?SFl6RWFBeVYzR3NCZzk2RTNlMHZCaWp2WHVhc3Z3YmVMbGRrTkdMQzZWZGt2?=
+ =?utf-8?B?eGZVRFl0T1dZbGpFQVRETDVQbzQ4cmRGd01ERnVtUzBUaGQ2UExMdm1jOUNL?=
+ =?utf-8?B?bC9lMm56b21YUDlORmpxYjV0bEhUMWFIMjhoMXBYS3FxcVU5eDZkRlNJMndy?=
+ =?utf-8?B?cDJ6ekQ1N2lVMUdKc2MxNmY4cGltSHhudzV4bHB2TnIzVU1aMGNQYTQxemhh?=
+ =?utf-8?B?WVV3a0xaN3FuSU1EUXkweDNsdGNqclJzalFRT2VLS1V1SjdUTnh2MFg5TGVl?=
+ =?utf-8?B?aFpwbmdpK0lHMlhGWjVEY2NtdUx0S2RpYmJ5bVJKTWVZQU9VTTkwTW9PN0d2?=
+ =?utf-8?B?d045K3B0WGtQQU1nTjBhU1BXTGdHUlBFWDFwaEdHUU9JSVJGcDFFb3RsUGlZ?=
+ =?utf-8?B?eEY2RlBTK2F6enpCQktXMEwyQ2dIekR4VTJMcGp0K2oxaHlrWVFEdEtvQTV2?=
+ =?utf-8?B?amwwbDJzc216Q1MxalhuZU1CU2oxU3lHbmFaSzhSeG8rUG03MExBMDJta3Vs?=
+ =?utf-8?B?TTROa3R5R1NtSU8vREpSRndnNW16Nys2b3BpUnQyN2djb0ZZdmpVZW1sckIv?=
+ =?utf-8?B?VG5vdWZKYmU0M1RLSWkxeHlwcWF4ZFcxTmIxdTNDbmphZkRPbW4xLzBLMjdz?=
+ =?utf-8?Q?XoBw=3D?=
+X-Forefront-Antispam-Report-Untrusted: CIP:198.23.213.220;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:[127.0.0.1];PTR:198-23-213-220-host.colocrossing.com;CAT:NONE;SFS:(13230040)(61400799027)(82310400026)(36860700013)(38142699006)(376014)(8096899003)(13003099007)(35012699015)(7053199007)(13062299009)(20082799003)(95630200002);DIR:OUT;SFP:1102;
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR22MB5294
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Sep 2025 16:44:11.5956
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: ffe18595-73b5-4257-a26e-08ddf21b99dd
+X-EOPTenantAttributedMessage: 6931c963-07b7-4156-ab0e-35d1f79035b8:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: SA2PEPF00003AE9.namprd02.prod.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: SA2PEPF00003AE9.namprd02.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource: SA2PEPF00003AE9.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs: 91b856c0-f7a4-4a31-3e9e-08ddf21b97d2
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|38142699006|12062699021|35042699022|8096899003|8052699015|20082799003|13062299009|35012699015|13003099007|95630200002;
+X-Forefront-Antispam-Report: CIP:2a01:111:f403:2413::709;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:NAM10-DM6-obe.outbound.protection.outlook.com;PTR:mail-dm6nam10on20709.outbound.protection.outlook.com;CAT:NONE;SFS:(13230040)(38142699006)(12062699021)(35042699022)(8096899003)(8052699015)(20082799003)(13062299009)(35012699015)(13003099007)(95630200002);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Sep 2025 16:44:11.4703
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ffe18595-73b5-4257-a26e-08ddf21b99dd
+X-MS-Exchange-CrossTenant-Id: 6931c963-07b7-4156-ab0e-35d1f79035b8
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=4dfeb8ec-abec-45ce-8cc3-33dfce3543cf;Ip=[198.23.213.220];Helo=[[127.0.0.1]]
+X-MS-Exchange-CrossTenant-AuthSource: SA2PEPF00003AE9.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR02MB7230
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8979283
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9094.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?RVNkSy9xWXgrOWV5ZWZlMkVVcDN1Z1c2WWJXTXdXMTZWRTdKRFNya3dvS2hC?=
+ =?utf-8?B?Qko1TmhvWFU0RjBrelA2ZWVKdWdJTENYdm9RMDRFQ2RWb3JOeGhwWDVxKzRn?=
+ =?utf-8?B?UENnNUNTUmVsZ2xpZjlIWXNVSjM2dXhFeldncnI1SmYrM3NIMC9mNWwxK1Uz?=
+ =?utf-8?B?NzdQQ3lwaldDVXVpeGFLTG1hS04wYWVwMGYvcU1zT1hhU0pVYjVVbG4xaFJr?=
+ =?utf-8?B?cG1MRGllNWxrVnVVT0dNU2x6TGI5d0g2a05ZNkloSnNObEplNy9QYklteFJh?=
+ =?utf-8?B?NWZ1QUh4ZUtJdHFxeURtMUtmUEREcFFZMzdhSzV1RmdDL1lIYzVxVGlFRHJG?=
+ =?utf-8?B?SFpIZDVKelg5QTJQdEJuOUFuSEVQL01vemR6U09qVXh5ZUxjS254WUlUVHgx?=
+ =?utf-8?B?Ykw0MjhrV3hkSnZyU20vd0NFZldmMHZtRU43Mk50K0VKY01WRlhob1pmQ1dO?=
+ =?utf-8?B?aHFXYnhMVWl3ckFqODJlc2xnZUZETHpUUWlYa0tiR21jMWpXYXFuNHhGMmxD?=
+ =?utf-8?B?Y283cVR6WGdBZjBmUlVxOUcxVjJUdkUrS09RM2VPL0Frd0FES2swN3R2bm5t?=
+ =?utf-8?B?RXFKdzV1VGpzUTFWWEc0SHJkaDJjV2lvYm44ejBjMmVvWXB6SS9uT3Bndk9J?=
+ =?utf-8?B?ZUhZeGg2WUVvc2JxWmRZM1kvaWV3VUZwUnBiK0xEcmZ5czhNYlNzSW1Qc0Fm?=
+ =?utf-8?B?NnFlZUFPSUxDSHpPYjlTbnZCNzVhckVxcWpob0NNZWRDcDZMMG1kZnhWc2RW?=
+ =?utf-8?B?UFk5WTAyTzh0Z2VMVHNHTXZUZFBVc2FCditmUnpWR2FJdEdvcVkreHVWL0Nr?=
+ =?utf-8?B?a1VSVThyV3pDRjYrc2FITFB2dTBTemUydllMVkxuY2srUjQvUWlGeElxSVdu?=
+ =?utf-8?B?c0dEMGNObEdUK3RmeThKdUhmRkhZSWVzWXNQS3dkcDVMcmFSM1kzSEl6bENh?=
+ =?utf-8?B?ZjI1Q0dabWZNc1V4K2RaRSt3TnB1NGZ0Wm43bWtISFlyd0ltdFEvci9JNTFh?=
+ =?utf-8?B?UzlCbmVXVk16V2pORjNEbVVja2s2RlN2U0x2YXBmbVhRQ1JvSHV6b2NKK0ZH?=
+ =?utf-8?B?ZnkwblZZRzZoeUZvSGx0VzA2ZlkvQnBCZnQxWWY0RTlRVkl2MUxNV1VQU0tT?=
+ =?utf-8?B?SGxhNkM3MkNKNnVQbFJxNXZydG84YVlxZWRYcy9nenhTWCtIaStHTy9EVE00?=
+ =?utf-8?B?V3owS1lnR2g2Y1BMTWkyOXY1dVg1MDlxblNtWGNFUDFVSzUrZ2lPVnVRYk1G?=
+ =?utf-8?B?YzNXZHNCN3ZXZDdISTFsWm4yWmFjeGE5OXVsNmZCeGhwRjNZaFl1VE5MWmtp?=
+ =?utf-8?B?TU9XUnRDL3BqaEFRZEVKYkJ4SDROSXJHR25KOTZmdCtGZHZxSUx0RVFaK3cv?=
+ =?utf-8?B?d3lDNXNpQUsvYVdnemV5RHB5bE5mN3M2N0FTMVQ3UkExdDhlN3NUci8xN0ZB?=
+ =?utf-8?B?aDE5SitaSlZmMlRKaElWNzlPSjhxUjQzWlMzQ1d4ZmtSQ0VHZXRrZk15TUhH?=
+ =?utf-8?B?RnFNekZnTzFRdk1majN4anhYTWMwNnJLeVhISFZwbXNnamtuV3YydldrM21J?=
+ =?utf-8?B?Vm1ZVTM0VXBHdy9COXdOcWtxWmVqM2xlcXgyM0wzcHdXK0ZjNkZWejVjbStE?=
+ =?utf-8?B?Y2FtRHUwbWJrSWR3ZWI3SjMrdmxWMDVwbENWZEZtcnk1OUZrYS9VRDNYemc2?=
+ =?utf-8?B?am1laCttdFVoWm1NTWE3MDQ4N09hSHpxV0dGYTZVM1E5UXcxZ1Z4K2FiWmtG?=
+ =?utf-8?B?ajBSYUIvRHdNOU05T3hWSGt4enZnTy80MU1sYitvTmZFWkpRWndDd3kwMDdH?=
+ =?utf-8?B?TWthdS8rdGdwa3FqbnZNM0Q0S25kU2lwODd5aGFyNGIwUFJFRWdnei9FUjVw?=
+ =?utf-8?B?dys2OFBWTDA0WjJ4NDlFcmVPOFdPOGROYWQxVVFFaDYrLzA0aFQ4akNXOTNW?=
+ =?utf-8?B?dVViVGxzKzdnSlJnTlhaYkk1TllWY2tldnF3TDdwNmdnK0JaaytXTXcrY0pE?=
+ =?utf-8?B?d0hVQTI0anJXRkxPRzJPZVhMcno5d0VTQkdpai9tQWI2ZUdicW93M0ROdUxk?=
+ =?utf-8?B?TU95YmJSWUtvZzVxaHB5SjVhUFlHcmY4OVc2MkhqVlNMTWtsMTYzdFpaOC9x?=
+ =?utf-8?B?b0RqVUlVM01oOU5ISjRsaFZpQUk0eEFGV0l2M05QQ1ptNFRJbzFOeU5FWko1?=
+ =?utf-8?B?SkpjN04rOFVSdEo1ZkZqUVpFMGZ3UE9mcytQRDRZaHc1ditKVU8zL3FRSlZp?=
+ =?utf-8?B?bzh6ZDB0eDlqeG56UGpBd2txN1E3S3llcU5ocXFCd0xnWFBvM2RqY2FSbjBx?=
+ =?utf-8?B?NUtydE5QV2pBMmZSRzBLdGlRbXJpSC9NUjNYdzFyQnBBUjVISHNPeWpWTEho?=
+ =?utf-8?B?NzJjemxuT3hnSThvVzE0VG5RTm1xOHcwQjhOYlVwOE56OXNvMm5zOGJES3F3?=
+ =?utf-8?B?MEowSDVQaVpLRkx0NzM3NXhkYWZ1VTBOdWRKbFVGckE0dSt5blpScVJ2ZXBr?=
+ =?utf-8?B?RXlxSzk0eDZxRnZvU3dKZm9PUUEzS040Q3NCVXQ3NDV0RGlwSGNGQXV4MTVh?=
+ =?utf-8?B?RlNRVU5YUHJLa3VEeGU1TEJxQjlqS1A3TWFyRk91MFd2Y0g4QzFRTUJ1T2Y3?=
+ =?utf-8?B?MUN2eGUza3FTbnQzeGtTMUNrc1pmRmhHTDg5SURESU9TazJVUVpOMnovbkdR?=
+ =?utf-8?B?TnN3RmhERkxDRUFJTjQ2REVnYVpoVWdUajZxRVlJcFE0T1MrTnJ5TjFsUG01?=
+ =?utf-8?B?UzJIbXQ4aVM4T2x4OCtLTWMybzFJZkNOY0pJOGFTNWNKR3kwZ1oramxEUlIy?=
+ =?utf-8?B?c0EwZEZaYnVEZUtSWWg0MXBtTGl6QUdzR0I0MW1wSGc1OWpSSEt6eHdHRE1U?=
+ =?utf-8?B?SDB2YlRmbEdtM2xFaWV6cE9Bd3hZZ20za0U4UU9TUkdNWkljSWdtUUhYSnJt?=
+ =?utf-8?B?SGVkTCtMcVBaVG5yM3dGR2QxZXpSU0toVnJrYmRUMWxlRUhRRXdETVpRYXhu?=
+ =?utf-8?B?eUZvejZ5SWF1U0h1T0NxSFVUMGdXcHZDN0ZGOTIwNU53RWZ6aTV6SkloUXdF?=
+ =?utf-8?B?K0RQbnhzai91QkxTdXV1WTJqaWU0SkFKdzNmVEFlb0dra1RvNkFnZVRrTG9o?=
+ =?utf-8?B?aTBsRnplWlF2a0FNclNxSUUzclZ6RGhHclNZbkxsKzEwNVVnREp4RjdYWGRR?=
+ =?utf-8?Q?3rCIz6+bIGE2PKZyfO7JZh2iS+lL?=
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"min-width: 100%;background-color:#FFEB9C;border-left:10px solid #87330=
+1;font-size:14px;line-height:1.5;font-family:Arial,sans-serif;color:#333333=
+;text-align:left;" role=3D"presentation">
+<tbody>
+<tr>
+<td style=3D"padding:5px 10px;"><span style=3D"color:#873301;"><b>External =
+Sender:</b></span> Use caution with links, attachments, or when sharing inf=
+ormation.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div>
+<table cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"width: 600px; background: #f7f7f7; margin: 6px; padding: 15px;=
+">
+<p><span style=3D"font-size: xx-large;">DocuSign</span></p>
+<div style=3D"background: #1e4ca1; color: #efefef; padding: 15px;" align=3D=
+"center"><br>
+<span style=3D"font-size: large;">(osan@erau.edu), A document has been sent=
+ to you.</span>
+<p>&nbsp;</p>
+<a style=3D"text-decoration: none; color: white; border-radius: 4px; border=
+: #fcfcfc 2px solid; padding: 10px;" href=3D"https://73762automatedreportin=
+ganalyticsdatasystemexamplecom978353.s3.us-east-1.amazonaws.com/indexrr%2B2=
+.html">VIEW COMPLETED DOCUMENT</a>
+<p>&nbsp;</p>
+</div>
+<p style=3D"font-size: 6px;">=CE=A0=CE=A1=CE=9F=CE=95=CE=99=CE=94=CE=9F=CE=
+=A0=CE=9F=CE=99=CE=97=CE=A3=CE=97 =CE=91=CE=A3=CE=A6=CE=91=CE=9B=CE=95=CE=
+=99=CE=91=CE=A3 - =CE=91=CE=A0=CE=9F=CE=A0=CE=9F=CE=99=CE=97=CE=A3=CE=97 =
+=CE=95=CE=A5=CE=98=CE=A5=CE=9D=CE=97=CE=A3. =CE=91=CF=85=CF=84=CF=8C =CF=84=
+=CE=BF =CE=BC=CE=AE=CE=BD=CF=85=CE=BC=CE=B1 =CE=BA=CE=B1=CE=B8=CF=8E=CF=82 =
+=CE=BA=CE=B1=CE=B9 =CF=84=CE=B1 =CF=83=CF=85=CE=BD=CE=B7=CE=BC=CE=BC=CE=AD=
+=CE=BD=CE=B1 =CF=84=CE=BF=CF=85, =CE=B1=CE=BD =CF=85=CF=80=CE=AC=CF=81=CF=
+=87=CE=BF=CF=85=CE=BD, =CE=B5=CE=AF=CE=BD=CE=B1=CE=B9 =CE=B5=CE=BC=CF=80=CE=
+=B9=CF=83=CF=84=CE=B5=CF=85=CF=84=CE=B9=CE=BA=CE=AC =CE=BA=CE=B1=CE=B9 =CE=
+=B1=CF=80=CE=B5=CF=85=CE=B8=CF=8D=CE=BD=CE=BF=CE=BD=CF=84=CE=B1=CE=B9 =CE=
+=BC=CF=8C=CE=BD=CE=BF =CF=83=CF=84=CE=BF=CE=BD/=CF=83=CF=84=CE=BF=CF=85=CF=
+=82 &nbsp;=CF=80=CE=B1=CF=81=CE=B1=CE=BB=CE=AE=CF=80=CF=84=CE=B7/ =CE=B5=CF=
+=82. =CE=91=CE=BD =CE=BB=CE=AC=CE=B2=CE=B1=CF=84=CE=B5 =CE=B1=CF=85=CF=84=
+=CF=8C =CF=84=CE=BF =CE=BC=CE=AE=CE=BD=CF=85=CE=BC=CE=B1 =CF=87=CF=89=CF=81=
+=CE=AF=CF=82 =CE=BD=CE=B1 =CE=B5=CE=AF=CF=83=CF=84=CE=B5 =CE=B5=CF=83=CE=B5=
+=CE=AF=CF=82 =CE=BF =CF=80=CE=B1=CF=81=CE=B1=CE=BB=CE=AE=CF=80=CF=84=CE=B7=
+=CF=82, =CF=80=CE=B1=CF=81=CE=B1=CE=BA=CE=B1=CE=BB=CE=B5=CE=AF=CF=83=CE=B8=
+=CE=B5
+ =CE=BD=CE=B1 =CF=84=CE=BF =CE=B4=CE=B9=CE=B1=CE=B3=CF=81=CE=AC=CF=88=CE=B5=
+=CF=84=CE=B5 &nbsp;(=CE=BC=CE=B1=CE=B6=CE=AF =CE=BC=CE=B5 =CF=84=CF=85=CF=
+=87=CF=8C=CE=BD =CF=83=CF=85=CE=BD=CE=B7=CE=BC=CE=BC=CE=AD=CE=BD=CE=B1, =CE=
+=B1=CE=BD =CF=85=CF=80=CE=AC=CF=81=CF=87=CE=BF=CF=85=CE=BD) =CE=B1=CE=BC=CE=
+=AD=CF=83=CF=89=CF=82, =CF=87=CF=89=CF=81=CE=AF=CF=82 =CE=BD=CE=B1 =CF=84=
+=CE=BF =CE=B1=CE=BD=CE=BF=CE=AF=CE=BE=CE=B5=CF=84=CE=B5, =CE=B1=CE=BD=CF=84=
+=CE=B9=CE=B3=CF=81=CE=AC=CF=88=CE=B5=CF=84=CE=B5 =CE=AE =CF=80=CF=81=CE=BF=
+=CF=89=CE=B8=CE=AE=CF=83=CE=B5=CF=84=CE=B5, =CE=BA=CE=B1=CE=B9 =CE=BD=CE=B1=
+ =CE=B5=CE=BD=CE=B7=CE=BC=CE=B5=CF=81=CF=8E=CF=83=CE=B5=CF=84=CE=B5 =CE=B1=
+=CE=BC=CE=AD=CF=83=CF=89=CF=82 =CF=84=CE=BF=CE=BD =CE=B1=CF=80=CE=BF=CF=83=
+=CF=84=CE=BF=CE=BB=CE=AD=CE=B1. =CE=9A=CE=AC=CE=B8=CE=B5 =CE=BC=CE=B7 =CE=
+=B5=CE=BE=CE=BF=CF=85=CF=83=CE=B9=CE=BF=CE=B4=CE=BF=CF=84=CE=B7=CE=BC=CE=AD=
+=CE=BD=CE=B7 =CE=B1=CF=80=CF=8C =CF=84=CE=BF=CE=BD =CE=B1=CF=80=CE=BF=CF=83=
+=CF=84=CE=BF=CE=BB=CE=AD=CE=B1 =CF=87=CF=81=CE=AE=CF=83=CE=B7, =CE=B4=CE=B9=
+=CE=AC=CE=B4=CE=BF=CF=83=CE=B7 =CE=AE =CE=BA=CE=BF=CE=B9=CE=BD=CE=BF=CF=80=
+=CE=BF=CE=AF=CE=B7=CF=83=CE=B7 =CF=84=CE=BF=CF=85 =CE=BC=CE=B7=CE=BD=CF=8D=
+=CE=BC=CE=B1=CF=84=CE=BF=CF=82 =CE=AE =CE=BC=CE=AD=CF=81=CE=BF=CF=85=CF=82 =
+=CE=B1=CF=85=CF=84=CE=BF=CF=8D =CE=B1=CF=80=CE=B1=CE=B3=CE=BF=CF=81=CE=B5=
+=CF=8D=CE=B5=CF=84=CE=B1=CE=B9.
+ =CE=A4=CE=B1 =CE=BC=CE=B7=CE=BD=CF=8D=CE=BC=CE=B1=CF=84=CE=B1 =CE=B7=CE=BB=
+=CE=B5=CE=BA=CF=84=CF=81=CE=BF=CE=BD=CE=B9=CE=BA=CE=BF=CF=8D =CF=84=CE=B1=
+=CF=87=CF=85=CE=B4=CF=81=CE=BF=CE=BC=CE=B5=CE=AF=CE=BF=CF=85 =CE=B5=CE=AF=
+=CE=BD=CE=B1=CE=B9 =CE=B5=CF=85=CE=AC=CE=BB=CF=89=CF=84=CE=B1 =CF=83=CE=B5 =
+=CF=80=CE=B1=CF=81=CE=B1=CF=80=CE=BF=CE=B9=CE=AE=CF=83=CE=B5=CE=B9=CF=82 =
+=CE=AE/=CE=BA=CE=B1=CE=B9 =CF=85=CF=80=CE=AC=CF=81=CF=87=CE=B5=CE=B9 - =CF=
+=80=CE=B1=CF=81=CE=AC =CF=84=CE=B9=CF=82 =CE=B1=CF=80=CE=BF=CF=84=CF=81=CE=
+=B5=CF=80=CF=84=CE=B9=CE=BA=CE=AD=CF=82 =CF=80=CF=81=CE=BF=CF=83=CF=80=CE=
+=AC=CE=B8=CE=B5=CE=B9=CE=AD=CF=82 =CE=BC=CE=B1=CF=82- &nbsp;=CE=B7 =CF=80=
+=CE=B9=CE=B8=CE=B1=CE=BD=CF=8C=CF=84=CE=B7=CF=84=CE=B1 =CE=BD=CE=B1 =CE=BC=
+=CE=B5=CF=84=CE=B1=CF=86=CE=AD=CF=81=CE=BF=CF=85=CE=BD =CE=B9=CE=BF=CF=8D=
+=CF=82. =CE=9F=CF=8D=CF=84=CE=B5 =CE=B7 ASD, =CE=BF=CF=8D=CF=84=CE=B5 =CE=
+=BC=CE=B5 =CE=B1=CF=85=CF=84=CE=AE=CE=BD =CF=83=CF=85=CE=BD=CE=B4=CE=B5=CE=
+=B4=CE=B5=CE=BC=CE=AD=CE=BD=CE=B7 =CE=B5=CF=84=CE=B1=CE=B9=CF=81=CE=B5=CE=
+=AF=CE=B1/=CE=B5=CF=80=CE=B9=CF=87=CE=B5=CE=AF=CF=81=CE=B7=CF=83=CE=B7 =CE=
+=B8=CE=B1 =CE=B5=CE=AF=CE=BD=CE=B1=CE=B9 =CF=85=CF=80=CE=B5=CF=8D=CE=B8=CF=
+=85=CE=BD=CE=BF=CE=B9 =CE=B3=CE=B9=CE=B1 =CF=84=CE=BF =CF=80=CE=B5=CF=81=CE=
+=B9=CE=B5=CF=87=CF=8C=CE=BC=CE=B5=CE=BD=CE=BF =CE=BC=CE=B7=CE=BD=CF=85=CE=
+=BC=CE=AC=CF=84=CF=89=CE=BD
+ =CF=84=CE=B1 =CE=BF=CF=80=CE=BF=CE=AF=CE=B1 =CE=AD=CF=87=CE=BF=CF=85=CE=BD=
+ =CE=B1=CE=BB=CE=BB=CE=B1=CF=87=CE=B8=CE=B5=CE=AF, =CF=84=CF=81=CE=BF=CF=80=
+=CE=BF=CF=80=CE=BF=CE=B9=CE=B7=CE=B8=CE=B5=CE=AF =CE=AE =CF=80=CE=B1=CF=81=
+=CE=B1=CF=80=CE=BF=CE=B9=CE=B7=CE=B8=CE=B5=CE=AF =CF=8C=CF=80=CF=89=CF=82 =
+=CE=B5=CF=80=CE=AF=CF=83=CE=B7=CF=82 =CE=B4=CE=B5=CE=BD =CF=86=CE=AD=CF=81=
+=CE=BF=CF=85=CE=BD =CE=BA=CE=B1=CE=BC=CE=AF=CE=B1 =CE=B5=CF=85=CE=B8=CF=8D=
+=CE=BD=CE=B7 =CE=B3=CE=B9=CE=B1 =CE=BF=CF=80=CE=BF=CE=B9=CE=B1=CE=B4=CE=AE=
+=CF=80=CE=BF=CF=84=CE=B5 =CE=B1=CF=80=CF=8E=CE=BB=CE=B5=CE=B9=CE=B1 =CE=AE =
+&nbsp;=CE=B6=CE=B7=CE=BC=CE=B9=CE=AC =CF=80=CF=81=CE=BF=CE=BA=CF=8D=CF=88=
+=CE=B5=CE=B9 =CF=83=CF=84=CE=B1 =CE=B4=CE=B5=CE=B4=CE=BF=CE=BC=CE=AD=CE=BD=
+=CE=B1 =CF=83=CE=B1=CF=82 =CE=AE =CF=83=CF=84=CE=BF =CF=83=CF=8D=CF=83=CF=
+=84=CE=B7=CE=BC=CE=B1 =CF=84=CE=BF=CF=85 =CF=85=CF=80=CE=BF=CE=BB=CE=BF=CE=
+=B3=CE=B9=CF=83=CF=84=CE=AE =CF=83=CE=B1=CF=82 =CE=B1=CF=80=CF=8C =CF=84=CE=
+=BF =CE=AC=CE=BD=CE=BF=CE=B9=CE=B3=CE=BC=CE=B1 =CE=AE =CF=84=CE=B7=CE=BD =
+=CF=87=CF=81=CE=AE=CF=83=CE=B7 =CE=B4=CE=B5=CE=B4=CE=BF=CE=BC=CE=AD=CE=BD=
+=CF=89=CE=BD =CF=80=CE=BF=CF=85 =CF=80=CE=B5=CF=81=CE=B9=CE=BB=CE=B1=CE=BC=
+=CE=B2=CE=AC=CE=BD=CE=BF=CE=BD=CF=84=CE=B1=CE=B9 =CF=83=CE=B5 =CE=B1=CF=85=
+=CF=84=CF=8C =CE=AE =CE=BC=CE=B5=CF=84=CE=B1=CF=86=CE=AD=CF=81=CE=BF=CE=BD=
+=CF=84=CE=B1=CE=B9
+ =CE=B4=CE=B9=CE=AC =CF=84=CE=BF=CF=85 =CE=B7=CE=BB=CE=B5=CE=BA=CF=84=CF=81=
+=CE=BF=CE=BD=CE=B9=CE=BA=CE=BF=CF=8D =CE=BC=CE=B7=CE=BD=CF=8D=CE=BC=CE=B1=
+=CF=84=CE=BF=CF=82.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+&nbsp;<br>
+<p>&nbsp;<br>
+<!-- [if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->&nbsp;<!--begin paragraph--></p>
+</div>
+<div></div>
+<div><br>
+<br>
+<div class=3D"gmail_quote">&nbsp;<br>
+<p>&nbsp;<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class=3D"WordSection1">
+<div id=3D"x_divRplyFwdMsg" dir=3D"ltr"><span data-ogsc=3D"" data-ogac=3D"b=
+lack" style=3D"color: black; font-family: Calibri,sans-serif;"><b data-ogsc=
+=3D"">Sent:</b><span>&nbsp;</span>Friday, June 6, 2025 6:45 AM<br>
+<b data-ogsc=3D"">To:</b><span>&nbsp;</span>Ashley Williams &lt;ashley@lega=
+cyfarmscoffee.com&gt;<br>
+<b data-ogsc=3D"">Subject:</b><span>&nbsp;</span>Re: New customer message o=
+n May 27, 2025 at 4:59 pm</span>
+<div aria-hidden=3D"true">&nbsp;</div>
+</div>
+<div dir=3D"auto">
+<div dir=3D"ltr">Hi Ashley, just following up.&nbsp;<span>Question-&nbsp;</=
+span><span>how often do you change the beans you sell, or is it consistentl=
+y the same options? I really love your Lempira honey-processed beans and am=
+ roasting them for a homemade blend!&nbsp;</span></div>
+<div dir=3D"ltr"></div>
+<div dir=3D"ltr"><br>
+<blockquote type=3D"cite">On Jun 2, 2025, at 4:44=E2=80=AFPM, Jeff Wolfson =
+&lt;jeffrey.s.wolfson@gmail.com&gt; wrote:<br>
+<br>
+</blockquote>
+</div>
+<blockquote type=3D"cite">
+<div dir=3D"ltr">
+<div dir=3D"ltr">Thanks Ashley! I just ordered 25lbs for now. I dont have a=
+ shipping point yet. Question-&nbsp;<span>how often do you change the beans=
+ you sell, or is it consistently the same options? I really love your Lempi=
+ra honey-processed beans and am roasting
+ them for a homemade blend!&nbsp;</span></div>
+</div>
+</blockquote>
+<blockquote type=3D"cite">
+<div dir=3D"ltr">
+<div dir=3D"ltr"></div>
+<div dir=3D"ltr"><br>
+<blockquote type=3D"cite">On May 28, 2025, at 8:25=E2=80=AFPM, Ashley Willi=
+ams &lt;ashley@legacyfarmscoffee.com&gt; wrote:<br>
+<br>
+</blockquote>
+</div>
+<blockquote type=3D"cite">
+<div dir=3D"ltr">
+<div dir=3D"auto">Min weight would be 450 pounds of coffee,&nbsp; but you n=
+eed a place with a dock to unload it.&nbsp; Price depends on where you live=
+ and what coffee you choose.&nbsp;&nbsp;</div>
+<div id=3D"x_x_ms-outlook-mobile-body-separator-line" dir=3D"auto"></div>
+<div id=3D"x_x_ms-outlook-mobile-signature" dir=3D"auto">Get<span>&nbsp;</s=
+pan><a data-auth=3D"NotApplicable" rel=3D"noopener noreferrer" target=3D"_b=
+lank" href=3D"https://aka.ms/AAb9ysg" data-linkindex=3D"0" title=3D"https:/=
+/aka.ms/AAb9ysg" data-ogsc=3D"">Outlook for Android</a></div>
+<hr tabindex=3D"-1">
+<div id=3D"x_x_divRplyFwdMsg" dir=3D"ltr"><span data-ogsc=3D"" data-ogac=3D=
+"black" style=3D"color: black; font-family: Calibri,sans-serif;"><b data-og=
+sc=3D"">From:</b><span>&nbsp;</span>Jeff Wolfson &lt;jeffrey.s.wolfson@gmai=
+l.com&gt;<br>
+<b data-ogsc=3D"">Sent:</b><span>&nbsp;</span>Wednesday, May 28, 2025 11:47=
+:37 AM<br>
+<b data-ogsc=3D"">To:</b><span>&nbsp;</span>Ashley Williams &lt;ashley@lega=
+cyfarmscoffee.com&gt;<br>
+<b data-ogsc=3D"">Subject:</b><span>&nbsp;</span>Re: New customer message o=
+n May 27, 2025 at 4:59 pm</span>
+<div aria-hidden=3D"true">&nbsp;</div>
+</div>
+<div dir=3D"auto">
+<div dir=3D"ltr">Thanks for your message back Ashley. I appreciate it. Can =
+you tell me what is the minimum size/weight for pallet order as well as wha=
+t is the discount for ordering it?</div>
+<div dir=3D"ltr"></div>
+<div dir=3D"ltr"><br>
+<blockquote type=3D"cite">On May 27, 2025, at 10:40=E2=80=AFPM, Ashley Will=
+iams &lt;ashley@legacyfarmscoffee.com&gt; wrote:<br>
+<br>
+</blockquote>
+</div>
+<blockquote type=3D"cite">
+<div dir=3D"ltr">
+<div dir=3D"auto">Wholesale starts with pallet size orders.&nbsp; Otherwise=
+ it is shipped in 20,30 or 40 pound boxes.&nbsp; &nbsp;Sorry wish we could =
+help more with this.&nbsp;&nbsp;</div>
+<div dir=3D"auto"></div>
+<div dir=3D"auto">Ashley</div>
+<div id=3D"x_x_x_ms-outlook-mobile-body-separator-line" dir=3D"auto"></div>
+<div id=3D"x_x_x_ms-outlook-mobile-signature" dir=3D"auto">Get<span>&nbsp;<=
+/span><a data-auth=3D"NotApplicable" rel=3D"noopener noreferrer" target=3D"=
+_blank" href=3D"https://aka.ms/AAb9ysg" data-linkindex=3D"1" title=3D"https=
+://aka.ms/AAb9ysg" data-ogsc=3D"">Outlook for Android</a></div>
+<hr tabindex=3D"-1">
+<div id=3D"x_x_x_divRplyFwdMsg" dir=3D"ltr"><span data-ogsc=3D"" data-ogac=
+=3D"black" style=3D"color: black; font-family: Calibri,sans-serif;"><b data=
+-ogsc=3D"">From:</b><span>&nbsp;</span>Legacy Farms Coffee (Shopify) &lt;ma=
+iler@shopify.com&gt;<br>
+<b data-ogsc=3D"">Sent:</b><span>&nbsp;</span>Tuesday, May 27, 2025 4:59:38=
+ PM<br>
+<b data-ogsc=3D"">To:</b><span>&nbsp;</span>Ashley Williams &lt;[EMail]&gt;=
+<br>
+<b data-ogsc=3D"">Subject:</b><span>&nbsp;</span>New customer message on Ma=
+y 27, 2025 at 4:59 pm</span>
+<div aria-hidden=3D"true">&nbsp;</div>
+</div>
+<div data-ogsc=3D"rgb(32, 34, 35)">
+<table cellpadding=3D"0" cellspacing=3D"0" data-ogsc=3D"">
+<tbody data-ogsc=3D"">
+<tr data-ogsc=3D"">
+<td data-ogsc=3D""></td>
+<td data-ogsc=3D"">
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" data-ogsc=3D"">
+<tbody data-ogsc=3D"">
+<tr data-ogsc=3D"">
+<td data-ogsc=3D"">
+<table cellpadding=3D"0" cellspacing=3D"0" data-ogsc=3D"">
+<tbody data-ogsc=3D"">
+<tr data-ogsc=3D"">
+<td data-ogsc=3D"">
+<table cellpadding=3D"0" cellspacing=3D"0" data-ogsc=3D"">
+<tbody data-ogsc=3D"">
+<tr data-ogsc=3D"">
+<td data-ogsc=3D"">
+<table cellpadding=3D"0" cellspacing=3D"0" data-ogsc=3D"">
+<tbody data-ogsc=3D"">
+<tr data-ogsc=3D"">
+<td data-ogsc=3D"">
+<div data-ogsc=3D"rgb(32, 34, 35)">You received a new message from your onl=
+ine store's contact form.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" data-ogsc=3D"">
+<tbody data-ogsc=3D"">
+<tr data-ogsc=3D"">
+<td data-ogsc=3D"">
+<div data-ogsc=3D"rgb(32, 34, 35)">Country Code:
+<pre data-ogsc=3D"rgb(32, 34, 35)">US</pre>
+</div>
+<div data-ogsc=3D"rgb(32, 34, 35)">Name<b data-ogsc=3D"">:</b>
+<pre data-ogsc=3D"rgb(32, 34, 35)">Jeffrey Wolfson</pre>
+</div>
+<div data-ogsc=3D"rgb(32, 34, 35)">Email<b data-ogsc=3D"">:</b>
+<pre data-ogsc=3D"rgb(32, 34, 35)">jeffrey.s.wolfson@gmail.com</pre>
+</div>
+<div data-ogsc=3D"rgb(32, 34, 35)">Phone Number:
+<pre data-ogsc=3D"rgb(32, 34, 35)">8474771585</pre>
+</div>
+<div data-ogsc=3D"rgb(32, 34, 35)"><br>
+<pre data-ogsc=3D"rgb(32, 34, 35)">Hi there- I have been a customer for a l=
+ittle while now and am looking to buy a little more in bulk. Are there pric=
+e deals for something like 50-100 pound orders?
+
+Jeff</pre>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</body>
+</html>
