@@ -1,4 +1,5 @@
 Param (
+    [String] [Parameter(Mandatory=$true)] $inputFile = "..\samples\eml\sample1.eml",
     [bool] [Parameter(Mandatory=$False)] $log = $False,
     [String] [Parameter(Mandatory=$False)] $logfile = "script_log_file.log"
 )
@@ -21,9 +22,18 @@ Function Write-LogMessage {
 $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }
 
-###
 # New code goes in this section
-###
+# Read email from file
+$email_content = Get-Content -Path $inputFile -Raw
+# Define pattern to extract Recevied: headers
+$link_pattern = "http://.*?|https://.*?(?=>)"
+$mail_pattern = "mailto:.*?(?=>)"
+# Use regex engine to find matches
+$link_matches = [regex]::Matches($email_content, $link_pattern)
+# Print headers - reverse order 
+for ($i = $header_matches.Count - 1; $i -ge 0; $i--) {
+    Write-Host $header_matches[$i]
+}
 
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds

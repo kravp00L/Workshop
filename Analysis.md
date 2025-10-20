@@ -1,4 +1,4 @@
-# Email Investigation
+# Analysis
 
 ## Overview of analysis objectives
 - Adapting the Microsoft playbook to meet our requirements, we'll start with the analysis of a single message. 
@@ -47,29 +47,33 @@
             - Extract text from images
         - Links
         - Attachments
+- Analysis tools
+    - Headers
+        [Microsoft Message Header Analyzer](https://mha.azurewebsites.net/)
+    - Extracted content
+        - Website and link analysis
+            - [urlscan.io](https://urlscan.io/search/#*)
+            - [urlquery.net](https://urlquery.net/search)
+            - [virustotal.com](https://www.virustotal.com/gui/home/search)
+        - Attachment analysis
+            - [any.run](https://any.run)
+            - [virustotal.com](https://www.virustotal.com/gui/home/search)
 
 ### Adding initial automation steps
 - Moving from the fully manual process, tools can be used to help with the analysis
-- Extract and parse the key headers from the message
-    - Website option: [Microsoft Message Header Analyzer](https://mha.azurewebsites.net/)
-    - Offline option: create a script to parse a stored email message that includes the headers
-- Analyze extracted content using third-party tools
-    - Link analysis
-        - [urlscan.io](https://urlscan.io/search/#*)
-        - [urlquery.net](https://urlquery.net/search)
-        - [virustotal.com](https://www.virustotal.com/gui/home/search)
+- Offline option to perform the initial artifact extraction
+- Read file that has the headers and email content
+- Extract and parse the key headers from the message with a script  
 
 ### Extending the automation
 - Read file that has the headers and email content
 - Extract important artifacts
 - Perform online lookups to enrich and analyze extracted artifacts
 - Output summary of information and findings
-- Run script against multiple files
-
+- Run script against multiple files  
 
 ### AI vibes
 - Generative AI provides the opportunity to get the analysis done in a single operation
 - Obtain API key for Claude Code
 - Submit mail sample and prompt to Claude Code via API
-
 

@@ -10,6 +10,7 @@ Artifacts to be examined
 The scripts and code that take the artifact analysis from manual to automated
 
 ### Preparation
+The first part of the workshop can be done using any text editing program. For the latter parts of the workshop, there will be some scripting. 
 The scripts are written in PowerShell. For a Windows system, nothing will need to be done other
 than to install several PowerShell modules. For non-Windows systems, you will need to install
 PowerShell core and then install the required modules.
@@ -18,20 +19,21 @@ PowerShell core and then install the required modules.
 - Linux: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.5
 - macOS: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.5
 
+#### Module for import and export in Excel format
+```PowerShell
+Install-Module ImportExcel -Scope CurrentUser
+```
+
 #### Module for Exchange Online
 ```PowerShell
 Install-Module ExchangeOnlineManagement -Scope CurrentUser -RequiredVersion 3.9.0 
 ```
+
 **References**  
 https://www.powershellgallery.com/packages/ExchangeOnlineManagement/  
 https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps  
 Cmdlet permissions  
 https://learn.microsoft.com/en-us/powershell/exchange/find-exchange-cmdlet-permissions?view=exchange-ps
-
-#### Module for import and export in Excel format
-```PowerShell
-Install-Module ImportExcel -Scope CurrentUser
-```
 
 #### Microsoft Graph
 ```PowerShell
