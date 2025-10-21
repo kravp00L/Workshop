@@ -1,6 +1,5 @@
 Param (
-    [String] [parameter(Mandatory=$true)] $inputFile,
-    [String] [parameter(Mandatory=$true)] $importColumns,
+    [String] [Parameter(Mandatory=$true)] $userId,
     [String] [Parameter(Mandatory=$False)] $outfile = ".\data\account_review.xlsx",
     [bool] [Parameter(Mandatory=$False)] $log = $False,
     [String] [Parameter(Mandatory=$False)] $logfile = "script_log_file.log"
