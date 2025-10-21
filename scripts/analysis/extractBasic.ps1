@@ -22,23 +22,15 @@ Function Write-LogMessage {
 $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }
 
+###
 # New code goes in this section
-# Read email from file
-$email_content = Get-Content -Path $inputFile -Raw
-# Define pattern to extract Recevied: headers
-$link_pattern = '(?ms)https?://.*?(?=\"|>)'
-$mail_pattern = '(?<=mailto:).*?(?=\"|>)'
-# Use regex engine to find matches
-$link_matches = [regex]::Matches($email_content, $link_pattern)
-$unique_links = $link_matches | Select-Object -Unique 
-$email_matches = [regex]::Matches($email_content, $mail_pattern)
-# Print data
-foreach ($link in $unique_links) {
-    Write-Host "Extracted link: $link"
-}
-foreach ($email in $email_matches) {
-    Write-Host "Extracted email address: $email"
-}
+# Need to read the data
+# Options: Get-Content & Select-String
+# Select-String ideal for single line matches
+# [regex]::Matches() better choice for multi-line data
+# Use -match or [regex]::Match() or [regex]::Matches() with Get-Content
+###
+
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds
 if ($log) { Write-LogMessage -message $("Script complete in " + $runtime + " seconds.") }

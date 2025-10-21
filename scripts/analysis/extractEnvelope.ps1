@@ -23,21 +23,18 @@ $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }
 
 # New code goes in this section
-# Read email from file
-$email_content = Get-Content -Path $inputFile -Raw
-# Define pattern to extract Recevied: headers
-$link_pattern = '(?ms)https?://.*?(?=\"|>)'
-$mail_pattern = '(?<=mailto:).*?(?=\"|>)'
-# Use regex engine to find matches
-$link_matches = [regex]::Matches($email_content, $link_pattern)
-$unique_links = $link_matches | Select-Object -Unique 
-$email_matches = [regex]::Matches($email_content, $mail_pattern)
-# Print data
-foreach ($link in $unique_links) {
-    Write-Host "Extracted link: $link"
+# Read email from file, not using -Raw because don't care about multiline
+$email_content = Get-Content -Path $inputFile
+# Create hash table to store extracted data
+$extracted_data = @{}
+# Extract key fields from email
+$header_names = @("To","From","Reply-To","Return-Path")
+foreach ($header in $header_names) {
+    $extracted_data[$header] = $email_content | Select-String -Pattern "^$($header):.+"
 }
-foreach ($email in $email_matches) {
-    Write-Host "Extracted email address: $email"
+# Print extracted values
+foreach ($key in $extracted_data.Keys) {
+    Write-Host $extracted_data[$key]
 }
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds

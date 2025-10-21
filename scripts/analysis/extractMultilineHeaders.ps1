@@ -26,19 +26,22 @@ if ($log) { Write-LogMessage -message "Script started" }
 # Read email from file
 $email_content = Get-Content -Path $inputFile -Raw
 # Define pattern to extract Recevied: headers
-$link_pattern = '(?ms)https?://.*?(?=\"|>)'
-$mail_pattern = '(?<=mailto:).*?(?=\"|>)'
+$header_pattern =  "(?ms)^Received:.*?(?=^Received|^ARC|Authentication|^Reply\-To|^From|^X\-|\z)"
+$dmarc_pattern = "(?ms)^Authentication.*?(?=^Received|^ARC|Authentication|^X\-|\z)"
+$spf_pattern = "(?ms)^Received\-SPF:.*?(?=^Received|^ARC|Authentication|^X\-|^This|\z)"
 # Use regex engine to find matches
-$link_matches = [regex]::Matches($email_content, $link_pattern)
-$unique_links = $link_matches | Select-Object -Unique 
-$email_matches = [regex]::Matches($email_content, $mail_pattern)
-# Print data
-foreach ($link in $unique_links) {
-    Write-Host "Extracted link: $link"
+$header_matches = [regex]::Matches($email_content, $header_pattern,[System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$dmarc_header = [regex]::Match($email_content, $dmarc_pattern,[System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$spf_header = [regex]::Match($email_content, $spf_pattern,[System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+# Print DMARC header
+Write-Host $dmarc_header.Value
+# Print SPF header
+Write-Host $spf_header.Value
+# Print trace headers - reverse order 
+for ($i = $header_matches.Count - 1; $i -ge 0; $i--) {
+    Write-Host $header_matches[$i]
 }
-foreach ($email in $email_matches) {
-    Write-Host "Extracted email address: $email"
-}
+
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds
 if ($log) { Write-LogMessage -message $("Script complete in " + $runtime + " seconds.") }
