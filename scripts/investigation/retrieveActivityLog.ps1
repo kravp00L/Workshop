@@ -1,12 +1,14 @@
 Param (
+    [String] [Parameter(Mandatory=$true)] $startDate,
+    [String] [Parameter(Mandatory=$true)] $endDate,
     [String] [Parameter(Mandatory=$true)] $userId,
-    [String] [Parameter(Mandatory=$False)] $outfile = ".\data\account_review.xlsx",
+    [String] [Parameter(Mandatory=$False)] $outfile = ".\account_activity.xlsx",
     [bool] [Parameter(Mandatory=$False)] $log = $False,
     [String] [Parameter(Mandatory=$False)] $logfile = "script_log_file.log"
 )
 
 # Imports
-Import-Module ActiveDirectory
+Import-Module ExchangeOnlineManagement
 Import-Module ImportExcel
 
 # Variables
@@ -21,82 +23,34 @@ Function Write-LogMessage {
     Write-Output "$timestamp $message" | Out-File $logfile ascii -Append
 }
 
-Function Write-AnalysisOutput($data_hashtable_array) {
-    Write-LogMessage -message "Exporting results"    
-    $output_array = @()
-    # Array of hashtables (user data) is the input, array of custom objects is output
-    foreach ($entry in $data_hashtable_array) {
-        $output_object = New-Object psobject -Property $entry
-        $output_array += $output_object
-    }
-    # writes out an Excel file
-    $output_array | Select-Object 'username','name','email','active','title','supervisor' `
+Function Write-AnalysisOutput($ps_object_array) {
+    if ($log) { Write-LogMessage -message "Exporting results" }
+    # Array of PS custom objects is ready to export
+    $ps_object_array | Select-Object -Unique -Property CreationTime,UserId,ClientIP,Operation,RuleDetails `
     | Export-Excel -Path $outfile -AutoFilter
 }
 
 # Execution starts below
 $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }
-
 ###
 # New code goes in this section
-# Could use any AzureAD PS cmdlets or API calls to any directory service
-# Example below using RSAT PS cmdlets
 ###
-
-# Importing the list of user accounts
-$user_list = Import-Excel -Path $inputFile -ImportColumns @($($importColumns)) -NoHeader -StartRow 2
-
-$lookup_results = @()
-foreach ($user_record in $user_list) {
-    $user_identifier = $user_record.P1    
-    $acctname = $user_identifier.Split('@')[0]
-    Write-LogMessage -message "Looking up account information for $($acctname)"
-    try {
-        $user_details = Get-ADUser -Properties DisplayName,EmailAddress,Title,Manager $acctname
+Connect-ExchangeOnline -ShowBanner:$false | Out-Null
+$activity_results = Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -Operations "New-InboxRule","Set-InboxRule","Remove-InboxRule" -UserIds $userId
+# Convert from JSON to PS object
+$working_data = $activity_results.AuditData | ConvertFrom-Json
+foreach ($record in $working_data) {
+    $rule_array = @()
+    foreach ($rule_element in $record.Parameters) {
+        $rule_array += "$($rule_element.Name): $($rule_element.Value)"
     }
-    catch {
-        Write-LogMessage -message "Error trying to retrieve account info for $($acctname)"
-        Write-LogMessage -message "Error details: $($_.Exception.Message)"
-    }
-    if ($user_details.Manager) {
-        # Student employees will not have a manager listed in AD
-        try { 
-            $user_manager = Get-ADUser -Properties DisplayName $user_details.Manager
-        }
-        catch {
-            Write-LogMessage -message "Error trying to retrieve manager info for $($acctname)"
-            Write-LogMessage -message "Error details: $($_.Exception.Message)"
-        }
-    }
-    if ($user_details) {
-        $current_user = @{
-            username = $user_details.SAMAccountName
-            name = $user_details.DisplayName;
-            email = $user_details.EmailAddress;
-            active = $user_details.Enabled;
-            title = $user_details.Title;
-            supervisor = $user_manager.DisplayName;
-        }
-    }
-    else {
-        $current_user = @{
-            username = $acctname
-            name = $null
-            email = $null
-            active = $null
-            title = $null
-            supervisor = $null
-        }
-    }
-    $lookup_results += $current_user
-    $user_details = $null
-    $user_manager = $null
-    $current_user = $null
+    $rule_info = $rule_array -join "; "
+    $record | Add-Member -Force -MemberType NoteProperty -Name "RuleDetails" -Value $rule_info 
 }
 # Write analysis output results
-Write-AnalysisOutput($lookup_results)
-
+Write-AnalysisOutput($working_data)
+Disconnect-ExchangeOnline -Confirm:$False
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds
 if ($log) { Write-LogMessage -message $("Script complete in " + $runtime + " seconds.") }
