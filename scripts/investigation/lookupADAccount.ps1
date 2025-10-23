@@ -1,14 +1,13 @@
 Param (
-    [String] [Parameter(Mandatory=$true)] $userId,
+    [String] [parameter(Mandatory=$true)] $userId,
     [bool] [Parameter(Mandatory=$False)] $log = $False,
     [String] [Parameter(Mandatory=$False)] $logfile = "script_log_file.log"
 )
 
 # Imports
-Import-Module Microsoft.Graph.Users.Actions
+Import-Module ActiveDirectory
 
 # Variables
-$graph_api_scopes = "User.ReadWrite.All,Directory.ReadWrite.All"
 
 # Functions
 Function Write-LogMessage {
@@ -19,21 +18,26 @@ Function Write-LogMessage {
     Write-Host $timestamp $message
     Write-Output "$timestamp $message" | Out-File $logfile ascii -Append
 }
+
 # Execution starts below
 $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }
+
 ###
 # New code goes in this section
+# Could use any AzureAD, Graph PS cmdlets or API calls to any directory service
+# Example below using RSAT PS cmdlets
 ###
-# open Graph API session
-Connect-MgGraph -Scopes $graph_api_scopes
-if ($log) {Write-LogMessage -message "Revoking all refresh tokens for $userId"}
-# A UPN can also be used as -UserId.
-$result = Revoke-MgUserSignInSession -UserId $userId
-if ($result -eq $true) {
-    if ($log) {Write-LogMessage -message "Refresh tokens revoked for $userId"}
+
+if ($log) { Write-LogMessage -message "Looking up account information for $($userId)" }
+try {
+    $user_details = Get-ADUser -Properties DisplayName,EmailAddress,Title,Manager $userId
 }
-Disconnect-MgGraph | Out-Null
+catch {
+    Write-LogMessage -message "Error trying to retrieve account info for $($userId)"
+    Write-LogMessage -message "Error details: $($_.Exception.Message)"
+}
+$user_details | Select-Object -Property DisplayName,EmailAddress,UserPrincipalName,SAMAccountName,Title | Format-List
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds
 if ($log) { Write-LogMessage -message $("Script complete in " + $runtime + " seconds.") }

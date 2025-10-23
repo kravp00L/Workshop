@@ -48,7 +48,21 @@ foreach ($file in $filenames) {
     # Extract key fields from email
     $header_names = @("To","From","Reply-To","Return-Path")
     foreach ($header in $header_names) {
+        # Naive match
         $extracted_data[$header] = $email_content | Select-String -Pattern "^$($header):.+"
+        <#
+        $matched_content = $email_content | Select-String -Pattern "^$($header):.+"
+        # Match inclues the header name, so need to remove that and only store the data
+        if ($matched_content -and $matched_content.Count -eq 1) {
+            $extracted_data[$header] = ($matched_content -split ":")[1].Trim()
+        } elseif ($matched_content -and $matched_content.Count -gt 1) {
+            $extracted_data[$header] = ($matched_content[0] -split ":")[1].Trim()
+        }
+         else {
+            $extracted_data[$header] = $matched_content
+        }
+        #>
+        
     }
     $extracted_data["Filename"] = $file.Name
     $analyzed_messages += $extracted_data

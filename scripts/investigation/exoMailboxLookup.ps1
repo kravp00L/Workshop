@@ -22,14 +22,11 @@ Function Write-LogMessage {
 # Execution starts below
 $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }
-
 ###
 # New code goes in this section
 ###
-
 # open EXO Management session
 Connect-ExchangeOnline -ShowBanner:$false
-
 # Get all mailbox rules
 $mbox = Get-Mailbox -Identity $mailbox
 Write-LogMessage -message "Mailbox SMTP forwarding settings"
@@ -55,9 +52,7 @@ do {
     # Properties: Description, From, ForwardTo
     Get-InboxRule -Mailbox $mailbox -Identity $ruleid | Format-List From,ForwardTo,Description
 } while ($lookup_rule)
-
 Disconnect-ExchangeOnline -Confirm:$false
-
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds
 if ($log) { Write-LogMessage -message $("Script complete in " + $runtime + " seconds.") }

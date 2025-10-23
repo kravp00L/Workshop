@@ -29,7 +29,6 @@ Function Write-AnalysisOutput($ps_object_array) {
     $ps_object_array | Select-Object -Unique -Property CreationTime,UserId,ClientIP,Operation,RuleDetails `
     | Export-Excel -Path $outfile -AutoFilter
 }
-
 # Execution starts below
 $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }

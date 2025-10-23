@@ -34,7 +34,6 @@ Function Write-AnalysisOutput($data_hashtable_array) {
     $output_array | Select-Object 'username','name','email','active','title','supervisor' `
     | Export-Excel -Path $outfile -AutoFilter
 }
-
 # Execution starts below
 $start_ts = Get-Date
 if ($log) { Write-LogMessage -message "Script started" }
@@ -61,7 +60,6 @@ foreach ($user_record in $user_list) {
         Write-LogMessage -message "Error details: $($_.Exception.Message)"
     }
     if ($user_details.Manager) {
-        # Student employees will not have a manager listed in AD
         try { 
             $user_manager = Get-ADUser -Properties DisplayName $user_details.Manager
         }

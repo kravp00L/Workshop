@@ -68,7 +68,6 @@
 ### Extending the automation
 - Read file that has the headers and email content
 - Extract important artifacts
-- Output summary of information and findings
 - Perform online lookups to enrich and analyze extracted artifacts
 - Run script against multiple files  
 
