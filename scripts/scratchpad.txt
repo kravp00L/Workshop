@@ -1,0 +1,42 @@
+curl --request GET --url https://www.virustotal.com/api/v3/domains/erau.edu --header 'accept: application/json' --header 'x-apikey:'
+
+
+PS C:\> Get-InstalledModule
+
+Version    Name                                Repository           Description
+-------    ----                                ----------           -----------
+6.3.1.0    AdmPwd.PS                           PSGallery            Provides cmdlets for configuration and usage of ...
+2.0.2.182  AzureAD                             PSGallery            Azure Active Directory V2 General Availability M...
+3.8.0      ExchangeOnlineManagement            PSGallery            This is a General Availability (GA) release of t...
+7.8.10     ImportExcel                         PSGallery            PowerShell module to import/export Excel spreads...
+2.32.0     Microsoft.Graph.Authentication      PSGallery            Microsoft Graph PowerShell Authentication Module.
+1.23.0     Microsoft.Graph.Compliance          PSGallery            Microsoft Graph PowerShell Cmdlets
+1.23.0     Microsoft.Graph.Groups              PSGallery            Microsoft Graph PowerShell Cmdlets
+1.23.0     Microsoft.Graph.Mail                PSGallery            Microsoft Graph PowerShell Cmdlets
+1.23.0     Microsoft.Graph.Security            PSGallery            Microsoft Graph PowerShell Cmdlets
+2.32.0     Microsoft.Graph.Teams               PSGallery            Microsoft Graph PowerShell Cmdlets
+1.23.0     Microsoft.Graph.Users               PSGallery            Microsoft Graph PowerShell Cmdlets
+1.23.0     Microsoft.Graph.Users.Actions       PSGallery            Microsoft Graph PowerShell Cmdlets
+1.1.183.81 MSOnline                            PSGallery            Microsoft Azure Active Directory Module for Wind...
+1.1.2      Microsoft.PowerShell.SecretManag... PSGallery            This module provides a convenient way for a user...
+1.0.6      Microsoft.PowerShell.SecretStore    PSGallery            This PowerShell module is an extension vault for...
+1.4.7      PackageManagement                   PSGallery            PackageManagement (a.k.a. OneGet) is a new way t..
+
+Removing
+Uninstall-Module <>
+
+Upgrading
+Update-Module <> -Force
+
+Reinstalling
+Install-Module -Name AzureAD
+Install-Module -Name ExchangeOnlineManagement -RequiredVersion 3.9.0
+Install-Module -Name ImportExcel
+Install-Module -Name Microsoft.Graph -RequiredVersion 2.24.0
+Install-Module -Name MSOnline
+Install-Module -Name Microsoft.PowerShell.SecretManagement
+Install-Module -Name Microsoft.PowerShell.SecretStore
+Install-Module -Name PackageManagement
+
+Checking on stuff
+Get-Command -Module <>
