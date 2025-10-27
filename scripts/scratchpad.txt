@@ -40,3 +40,4 @@ Install-Module -Name PackageManagement
 
 Checking on stuff
 Get-Command -Module <>
+Find-MgGraphCommand -Command
