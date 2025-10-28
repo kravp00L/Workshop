@@ -37,7 +37,8 @@ https://learn.microsoft.com/en-us/powershell/exchange/find-exchange-cmdlet-permi
 
 #### Microsoft Graph
 ```PowerShell
-Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery -Force
+Install-Module Microsoft.Graph.Authentication -Scope CurrentUser -Repository PSGallery -Force
+Install-Module Microsoft.Graph.Users -Scope CurrentUser -Repository PSGallery -Force
 ```
 **References**  
 https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation?view=graph-powershell-1.0  

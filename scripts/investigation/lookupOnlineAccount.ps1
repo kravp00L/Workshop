@@ -30,15 +30,15 @@ if ($log) { Write-LogMessage -message "Script started" }
 if ($log) { Write-LogMessage -message "Looking up account information for $($userId)" }
 try {
     # Option for AzureAD
-    <#
     Connect-AzureAD
     $user_details = Get-AzureADUser -ObjectId $userId
     Disconnect-AzureAD
-    #>
     ### Option for Microsoft Graph
-    Connect-Graph
+    <#       
+    Connect-Graph -Scopes "User.Read.All"
     $user_details = Get-MgUser -UserId $userId
     Disconnect-Graph
+     #>
 }
 catch {
     Write-LogMessage -message "Error trying to retrieve account info for $($userId)"
