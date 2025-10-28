@@ -1,5 +1,6 @@
 Param (
     [String] [parameter(Mandatory=$true)] $inputFile,
+    [String] [parameter(Mandatory=$true)] $importColumns,
     [bool] [Parameter(Mandatory=$False)] $log = $False,
     [String] [Parameter(Mandatory=$False)] $logfile = "script_log_file.log"
 )
@@ -26,7 +27,13 @@ if ($log) { Write-LogMessage -message "Script started" }
 ###
 # New code goes in this section
 ###
-$data = Import-Excel -Path $inputFile -StartRow 1
+$data = Import-Excel -Path $inputFile -StartRow 1 
+# options for import: -ImportColumns @($($importColumns)) -NoHeader
+foreach ($data_element in $data) {
+    $thing_to_be_processed = $data_element.P1
+    # process the thing
+    Write-Host "Doing things to "$thing_to_be_processed
+}
 
 $finish_ts = Get-Date
 $runtime = $($finish_ts - $start_ts).TotalSeconds
